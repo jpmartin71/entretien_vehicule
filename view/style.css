@@ -1,0 +1,98 @@
+article,
+aside
+{
+	border: 1px solid blue;
+	border-radius: 4px;
+	margin-top: 10px;
+	display: inline-block;
+	vertical-align:top;
+}
+
+article
+{
+	width: 79%;
+
+}
+
+table.infos_vehicule td 
+{
+		font-size: 2em;
+}
+
+article div.infos_vehicule,
+article div.ope_a_echeance,
+article div.ope_a_venir,
+article div.kilometrage
+{
+	border-bottom: 1px solid blue;
+}
+
+article div.infos_vehicule h2
+{
+	background-color: silver;
+	margin: 0px;
+	padding: 20px;
+}
+
+aside
+{
+	width: 20%;
+}
+
+form.form_operation
+{
+
+}
+form.form_kilometrage input,
+form.form_kilometrage legend
+{
+	width: 150px;
+	display: inline-block;
+}
+
+div.form_operation
+{
+	display: inline-block;
+	vertical-align: top;
+	width: 49%;
+
+}
+form.form_operation input,
+form.form_operation select
+{
+	height: 30px;
+	margin-bottom: 5px;
+
+}
+
+form.form_operation input,
+form.form_operation legend,
+form.form_operation select
+{
+	
+	width: 200px;	
+}
+
+form.form_operation textarea
+{
+	width: 100%;
+}
+
+.erreur
+{
+	border-radius: 4px;
+	border: 1px solid red;
+	background-color: AntiqueWhite;
+	color:red;
+	padding:10px;
+}
+
+.no_erreur
+{
+	border-radius: 4px;
+	border: 1px solid green;
+	background-color: LightGreen;
+	color:green;
+	padding:10px;
+}
+}
