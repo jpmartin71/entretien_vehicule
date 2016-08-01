@@ -11,7 +11,7 @@
 		$passwordSql='client';
 	}*/
 	$loginSql='vehicule';
-	$passwordSql='vehicule';
+	$passwordSql='';
 	try
 	{
 		$servername='localhost';
