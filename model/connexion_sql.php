@@ -11,7 +11,7 @@
 		$passwordSql='client';
 	}*/
 	$loginSql='root';
-	$passwordSql='';
+	$passwordSql='root';
 	try
 	{
 		$servername='localhost';
