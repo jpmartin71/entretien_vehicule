@@ -1,4 +1,5 @@
-<?php echo "</br>view formulaire opération"; ?>
+<?php 	echo "</br>view formulaire opération"; 
+	echo "<p>Branche nouvelle opération</p>";?>
 <!DOCTYPE html>
 <html>
     <head>
