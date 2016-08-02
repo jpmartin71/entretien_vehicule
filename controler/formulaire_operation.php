@@ -24,7 +24,7 @@ if(isset($_GET['action']) and $_GET['action']=='create_operation')
 		$operation['id_vehicule']=0;
 		$erreur+=1;
 	}
-	
+	/*
 	if(isset($_POST['denomination']) and !empty($_POST['denomination']))
 	{//si denomination est present et que denomination n'est pas vide
 		$operation['denomination']=$_POST['denomination'];
@@ -50,7 +50,7 @@ if(isset($_GET['action']) and $_GET['action']=='create_operation')
 	}
 	
 	
-	
+	*/
 	
 	echo '$operation:';print_r($operation);echo '</br>';
 	echo '$erreur:';print_r($erreur);echo '</br>';
