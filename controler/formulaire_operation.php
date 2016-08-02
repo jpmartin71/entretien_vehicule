@@ -13,7 +13,7 @@ if(isset($_GET['action']) and $_GET['action']=='create_operation')
 {
 	$erreur=0;
 	$vehicule=get_infos_vehicule($_POST['id_vehicule']);
-	//echo '$vehicule:';print_r($vehicule);echo '</br>';
+	echo '$vehicule:';print_r($vehicule);echo '</br>';
 	/*
 	if(isset($_POST['id_vehicule']) and !empty($vehicule))
 	{//si id_vehicule est present et que le vehicule existe
