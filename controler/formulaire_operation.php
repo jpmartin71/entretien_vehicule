@@ -49,6 +49,31 @@ if(isset($_GET['action']) and $_GET['action']=='create_operation')
 		$erreur+=4;
 	}
 	
+	if(isset($_POST['periodicite_tps']))and !empty($_POST['periodicite_tps']) and is_numeric($_POST['periodicite_tps'])
+	{//si periodicite_tps est present et que periodicite_tps n'est pas vide et est un nombre
+		$operation['periodicite_tps']=$_POST['periodicite_tps'];
+	}
+	elseif(isset($_POST['inib_periodicite_tps']))
+	{//si l'operation n'est pas soumise à une périodicité en km
+		$operation['periodicite_tps']=0;
+	}
+	else
+	{
+		$operation['periodicite_tps']=0;
+		$erreur+=6;
+	}
+	
+	if(isset($_POST['effectuee_km']))and !empty($_POST['effectuee_km']) and is_numeric($_POST['effectuee_km'])
+	{//si effectuee_km est present et que effectuee_km n'est pas vide et est un nombre
+		$operation['effectuee_km']=$_POST['effectuee_km'];
+	}
+	else
+	{
+		$operation['effectuee_km']=0;
+		$erreur+=8;
+	}
+	
+	
 	
 	
 	
