@@ -11,7 +11,7 @@ echo '$operation:';print_r($operation);echo '</br>';
 //verification des information du post avant de creer la ligne sql ou renvoie au formulaire pour correction
 if(isset($_GET['action']) and $_GET['action']=='create_operation')
 {
-	$erreur=0;
+	/*$erreur=0;
 	$vehicule=get_infos_vehicule($_POST['id_vehicule']);
 	echo '$vehicule:';print_r($vehicule);echo '</br>';
 	/*
