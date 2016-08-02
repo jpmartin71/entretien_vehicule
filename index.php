@@ -1,4 +1,7 @@
 <?php 
+# test.php
+error_reporting(E_ALL);
+ini_set('display_errors','On');
 
 foreach ($_GET as $key => $value) $_GET[$key]=htmlspecialchars($value);
 foreach ($_POST as $key => $value) $_POST[$key]=htmlspecialchars($value);
