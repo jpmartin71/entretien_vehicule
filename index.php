@@ -16,6 +16,7 @@ foreach ($_POST as $key => $value) $_POST[$key]=htmlspecialchars($value);
 	{
 		if($_GET['action']=='create_vehicule')include_once './controler/create_vehicule.php';
 		elseif($_GET['action']=='maj_vehicule')include_once './controler/update_vehicule.php';
+		elseif($_GET['action']=='create_operation')include_once './controler/formulaire_opération.php';
 	}
 	else if(isset($_GET['page']) and !empty($_GET['page']))
 	{
