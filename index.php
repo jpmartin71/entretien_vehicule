@@ -9,7 +9,6 @@ foreach ($_POST as $key => $value) $_POST[$key]=htmlspecialchars($value);
 	
 	if(isset($_GET['form']) and !empty($_GET['form']))
 	{
-		echo 'section form';
 		if ($_GET['form']=='create_vehicule') include_once './view/formulaire_vehicule.php';
 		else if($_GET['form']=='new_operation')include_once './controler/formulaire_operation.php';
 	}
