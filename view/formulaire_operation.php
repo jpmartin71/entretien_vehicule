@@ -23,7 +23,7 @@
 						</select>
 						
 						<legend for="denomination">Dénomination:</legend>
-						<input type="text" name="denomination" id="denomination">
+						<input type="text" name="denomination" id="denomination" value="<?php echo $opreration['denomination'];?>">
 
 						<legend for="periodicite_km">Périodicité (en km)</legend>
 						<input type="number" name="periodicite_km" id="periodicite_km">
