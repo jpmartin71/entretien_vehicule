@@ -13,8 +13,8 @@ if(isset($_GET['action']) and $_GET['action']=='create_operation')
 {
 	$erreur=0;
 	$vehicule=get_infos_vehicule($_POST['id_vehicule']);
-	echo '$vehicule:';print_r($vehicule);echo '</br>';
-	/*
+	//echo '$vehicule:';print_r($vehicule);echo '</br>';
+	
 	if(isset($_POST['id_vehicule']) and !empty($vehicule))
 	{//si id_vehicule est present et que le vehicule existe
 		$operation['id_vehicule']=$vehicule['id'];
@@ -24,7 +24,7 @@ if(isset($_GET['action']) and $_GET['action']=='create_operation')
 		$operation['id_vehicule']=0;
 		$erreur+=1;
 	}
-	/*
+	
 	if(isset($_POST['denomination']) and !empty($_POST['denomination']))
 	{//si denomination est present et que denomination n'est pas vide
 		$operation['denomination']=$_POST['denomination'];
@@ -55,7 +55,7 @@ if(isset($_GET['action']) and $_GET['action']=='create_operation')
 	echo '$operation:';print_r($operation);echo '</br>';
 	echo '$erreur:';print_r($erreur);echo '</br>';
 	
-	*/
+	
 }
 	
 $liste_vehicules=get_liste_vehicule();
