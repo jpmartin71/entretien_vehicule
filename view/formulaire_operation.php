@@ -14,7 +14,7 @@
 		<?php include_once 'erreurs.php';?>
 		<section>
 			<article >
-				<form class="form_operation" method="post" action="#">
+				<form class="form_operation" method="post" action="?action=create_operation">
 					<div class="form_operation">
 						<legend for="id_vehicule">Véhicule:</legend>
 						<select name="id_vehicule" id="id_vehicule">
