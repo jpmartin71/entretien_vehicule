@@ -35,14 +35,14 @@
 						<legend for="effectuee_km">Effectué à</legend>
 						<input type="number" name="effectuee_km" id="effectuee_km" value="<?php echo $operation['effectuee_km'];?>">
 
-						<legend for="effectuee_tps">Effectué le</legend>
-						<input type="date" name="effectuee_tps" id="effectuee_tps" value="<?php echo $operation['effectuee_tps'];?>">
+						<legend for="effectuee_date">Effectué le</legend>
+						<input type="date" name="effectuee_date" id="effectuee_date" value="<?php echo $operation['effectuee_date'];?>">
 
 						<legend for="echeance_km">Prochaine échéance (km)</legend>
 						<input type="number" name="echeance_km" id="echeance_km" value="<?php echo $operation['echeance_km'];?>">
 
 						<legend for="echeance_date">Prochaine échéance (date)</legend>
-						<input type="date" name="echeance_date" id="echeance_date" value="<?php echo $operation['echeance_date'];?>">
+						<input type="date" name="echeance_date" id="echeance_date" value="<?php echo $operation['echeance_date'];?>" enable=false>
 
 						
 					</div>
@@ -54,39 +54,6 @@
 						<input type="submit" valuer="Créer">
 
 				</form>
-
-				<!--<legend for=""></legend>
-				<input type="" name="" id="">
-				
-				<legend for=""></legend>
-				<input type="" name="" id="">
-
-				<legend for=""></legend>
-				<input type="" name="" id="">
-
-				<legend for=""></legend>
-				<input type="" name="" id="">
-
-				<legend for=""></legend>
-				<input type="" name="" id="">
-
-				<legend for=""></legend>
-				<input type="" name="" id="">
-
-				<legend for=""></legend>
-				<input type="" name="" id="">
-
-				<legend for=""></legend>
-				<input type="" name="" id="">
-
-				<legend for=""></legend>
-				<input type="" name="" id="">
-
-				<legend for=""></legend>
-				<input type="submit" valuer="Créer">-->
-
-				
-
 			</article>
 			<aside>
 			

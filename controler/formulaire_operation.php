@@ -4,7 +4,7 @@ echo "controler formulaire opération</br>";
 include_once './model/formulaire_operation.php';
 
 //$operation pour le remplissage des champs
-$operation=array('id_vehicule'=>null, 'denomination'=>null, 'periodicite_km'=>null, 'periodicite_tps'=>null, 'effectuee_km'=>null, 'effectuee_tps'=>null, 'echeance_km'=>null, 'echeance_date'=>null, 'obs'=>null);
+$operation=array('id_vehicule'=>null, 'denomination'=>null, 'periodicite_km'=>null, 'periodicite_tps'=>null, 'effectuee_km'=>null, 'effectuee_date'=>null, 'echeance_km'=>null, 'echeance_date'=>null, 'obs'=>null);
 echo '$operation:';print_r($operation);echo '</br>';
 
 
@@ -13,7 +13,7 @@ if(isset($_GET['action']) and $_GET['action']=='create_operation')
 {
 	$erreur=0;
 	$vehicule=get_infos_vehicule($_POST['id_vehicule']);
-	//echo '$vehicule:';print_r($vehicule);echo '</br>';
+	echo '$vehicule:';print_r($vehicule);echo '</br>';
 	
 	if(isset($_POST['id_vehicule']) and !empty($vehicule))
 	{//si id_vehicule est present et que le vehicule existe
@@ -73,11 +73,77 @@ if(isset($_GET['action']) and $_GET['action']=='create_operation')
 		$erreur+=8;
 	}
 	
+	if(isset($_POST['effectuee_date']) and !empty($_POST['effectuee_date']) and (check_date_format("d-m-Y", $_POST['effectuee_date'])))
+	{//si effectuee_date est present et que effectuee_date n'est pas vide et est un nombre
+		$operation['effectuee_date'] = $_POST['effectuee_date'];
+		echo '</br>$date:';print_r($operation['effectuee_date']);echo '</br>';
+		/*function check_date_format($date,$id) 
+{ 
+    preg_match("#(\d{2})/(\d{2})/(\d{4})#" , $date, $matches); 
+    $return = 0; 
+    ## Perform all the checks 
+    if (!empty($matches) && 
+        ## check dd OR mm if American 
+        $matches[1] >= 0 && $matches[1] <= ($id != 'US' ? 31 : 12) && 
+        ## check mm OR dd if American 
+        $matches[2] >= 0 && $matches[2] <= ($id != 'US' ? 12 : 31) && 
+        ## check yyyy (adjust the figures to suitable ones) 
+        $matches[3] >= 1950 && $matches[3] <= 2004 
+        ) 
+    { $return = 1;} 
+    return $return; 
+} 
+
+########### Examples: ########### 
+
+## Format: dd/mm/yyyy leave the second argumant blank 
+$string = '25/12/2004'; 
+if (check_date_format($string,"") == 1) 
+{ echo "Entry is acceptable."; } 
+else { echo "Entry in NOT acceptable"; } 
+
+$string = '12/25/2004'; 
+## Format: mm/dd/yyyy Input "US" as second argument 
+if (check_date_format($string,"US") == 1) 
+{ echo "Entry is acceptable."; } 
+else { echo "Entry in NOT acceptable"; } 
+
+
+?>*/
+		//$operation['effectuee_date']=$_POST['effectuee_date'];
+	}
+	elseif (isset($vehicule['date_1_immat']) and !empty($vehicule['date_1_immat']) and empty($_POST['effectuee_date'])) 
+	{
+		$operation['effectuee_date']=$vehicule['date_1_immat'];
+	}
+	else
+	{
+		$operation['effectuee_date']='1900-01-01';
+		$erreur+=16;
+	}
+	
+	if($operation['periodicite_km']!=0)
+	{
+		$operation['echeance_km']=$operation['effectuee_km']+$operation['periodicite_km'];
+	}
+	else $operation['echeance_km']=0;
+
+	if($operation['periodicite_tps']!=0 and $operation['effectuee_date']!='1900-01-01')
+	{
+		$date = new DateTime($operation['effectuee_date']);
+		$date->add(new DateInterval('P'.$operation['periodicite_tps'].'M'));
+		$operation['echeance_date']=$date->format('Y-m-d');
+	}
+	else $operation['echeance_date']='2099-01-01';
+
+	if(isset($_POST['obs']))
+	{
+		$operation['obs']=$_POST['obs'];
+	}
+	else $operation['obs']="";
 	
 	
-	
-	
-	//echo '$operation:';print_r($operation);echo '</br>';
+	echo '$operation:';print_r($operation);echo '</br>';
 	echo '$erreur:';print_r($erreur);echo '</br>';
 	
 	
