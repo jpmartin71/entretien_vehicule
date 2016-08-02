@@ -4,8 +4,8 @@ echo "controler formulaire opération";
 include_once './model/formulaire_operation.php';
 
 //$operation pour le remplissage des champs
-//$operation=array('id_vehicule'=>, 'denomination'=>, 'periodicite_km'=>, 'periodicite_tps'=>, 'effectuee_km'=>, 'effectuee_tps'=>, 'echeance_km'=>, 'echeance_date'=>, 'obs'=>);
-//echo '$operation:';print_r($operation);echo '</br>';
+$operation=array('id_vehicule'=>null, 'denomination'=>null, 'periodicite_km'=>null, 'periodicite_tps'=>null, 'effectuee_km'=>null, 'effectuee_tps'=>null, 'echeance_km'=>null, 'echeance_date'=>null, 'obs'=>null);
+echo '$operation:';print_r($operation);echo '</br>';
 
 //verification des information du post avant de creer la ligne sql ou renvoie au formulaire pour correction
 if(isset($_GET['action']) and $_GET['action']=='create_operation')
