@@ -1,6 +1,6 @@
 <?php 
 # test.php
-error_reporting(E_ALL);
+//error_reporting(E_ALL);
 ini_set('display_errors','On');
 
 foreach ($_GET as $key => $value) $_GET[$key]=htmlspecialchars($value);
