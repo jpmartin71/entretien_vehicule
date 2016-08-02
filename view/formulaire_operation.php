@@ -42,7 +42,7 @@
 						<input type="number" name="echeance_km" id="echeance_km" value="<?php echo $operation['echeance_km'];?>">
 
 						<legend for="echeance_date">Prochaine échéance (date)</legend>
-						<input type="date" name="echeance_date" id="echeance_date" value="<?php echo $operation['echeance_tps'];?>">
+						<input type="date" name="echeance_date" id="echeance_date" value="<?php echo $operation['echeance_date'];?>">
 
 						
 					</div>
