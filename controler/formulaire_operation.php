@@ -49,7 +49,7 @@ if(isset($_GET['action']) and $_GET['action']=='create_operation')
 		$erreur+=4;
 	}
 	
-	if(isset($_POST['periodicite_tps']))and !empty($_POST['periodicite_tps']) and is_numeric($_POST['periodicite_tps'])
+	if(isset($_POST['periodicite_tps'])and !empty($_POST['periodicite_tps']) and is_numeric($_POST['periodicite_tps']))
 	{//si periodicite_tps est present et que periodicite_tps n'est pas vide et est un nombre
 		$operation['periodicite_tps']=$_POST['periodicite_tps'];
 	}
@@ -63,7 +63,7 @@ if(isset($_GET['action']) and $_GET['action']=='create_operation')
 		$erreur+=6;
 	}
 	
-	if(isset($_POST['effectuee_km']))and !empty($_POST['effectuee_km']) and is_numeric($_POST['effectuee_km'])
+	if(isset($_POST['effectuee_km'])and !empty($_POST['effectuee_km']) and is_numeric($_POST['effectuee_km']))
 	{//si effectuee_km est present et que effectuee_km n'est pas vide et est un nombre
 		$operation['effectuee_km']=$_POST['effectuee_km'];
 	}
