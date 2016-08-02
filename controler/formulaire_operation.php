@@ -50,12 +50,12 @@ if(isset($_GET['action']) and $_GET['action']=='create_operation')
 	}
 	
 	
-	*/
+	
 	
 	echo '$operation:';print_r($operation);echo '</br>';
 	echo '$erreur:';print_r($erreur);echo '</br>';
 	
-	
+	*/
 }
 	
 $liste_vehicules=get_liste_vehicule();
