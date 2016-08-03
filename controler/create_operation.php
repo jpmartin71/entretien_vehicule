@@ -1,4 +1,32 @@
 <?php
+//----------fonctions----------//
+function check_date_format($date) 
+		{ 
+echo '</br>check_date_format date:';print_r($date);echo '</br>';
+    		preg_match("#(\d{1,2})[-/](\d{1,2})[-/](\d{4})#" , $date, $matches); //format dd-mm-YYYY
+    		$return['is_date'] = 0; 
+		 ## Perform all the checks 
+		 if (!empty($matches) && 
+		        ## check dd
+		        /*$matches[1] > 0 && $matches[1] <= 31 && 
+		        ## check mm OR dd if American 
+		        $matches[2] > 0 && $matches[2] <= 12 && 
+		        ## check yyyy (adjust the figures to suitable ones) 
+		        $matches[3] >= 1950 &&*/
+		        ## check date valid (mois jour annee)
+		        checkdate($matches[2], $matches[1], $matches[3])
+		        ) 
+		  { 
+		  	$return ['is_date']= 1;
+		  	$date_form = new DateTime();
+			$date_form->setDate($matches[3], $matches[2], $matches[1]);
+			$return ['date']=$date_form->format('Y-m-d');
+		  }
+echo '</br>check_date_format matches:';print_r ($matches);echo '</br>';
+		    return $return; 
+		}
+		
+//----------Code---------//
 	$erreur=0;
 	$vehicule=get_infos_vehicule($_POST['id_vehicule']);
 	echo '$vehicule:';print_r($vehicule);echo '</br>';
@@ -63,24 +91,7 @@
 	
 	if(isset($_POST['effectuee_date']) and !empty($_POST['effectuee_date']))
 	{//si effectuee_date est present et que effectuee_date n'est pas vide et est un nombre
-		function check_date_format($date) 
-		{ 
-echo '</br>check_date_format date:';print_r($date);echo '</br>';
-    		preg_match("#(\d{1,2})[-/](\d{1,2})[-/](\d{4})#" , $date, $matches); 
-    		$return = 0; 
-		    ## Perform all the checks 
-		    /*if (!empty($matches) && 
-		        ## check dd OR mm if American 
-		        $matches[1] >= 0 && $matches[1] <= ($id != 'US' ? 31 : 12) && 
-		        ## check mm OR dd if American 
-		        $matches[2] >= 0 && $matches[2] <= ($id != 'US' ? 12 : 31) && 
-		        ## check yyyy (adjust the figures to suitable ones) 
-		        $matches[3] >= 1950 && $matches[3] <= 2004 
-		        ) 
-		    { $return = 1;} */
-echo '</br>check_date_format matches:';print_r ($matches);echo '</br>';
-		    return $return; 
-		}
+		
 		print_r(check_date_format($_POST['effectuee_date']));
 		
 		$operation['effectuee_date'] = $_POST['effectuee_date'];
