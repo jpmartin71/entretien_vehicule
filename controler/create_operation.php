@@ -119,7 +119,7 @@ function check_date_format($date)
 		$operation['effectuee_date']='1900-01-01';
 		$erreur+=16;
 	}
-	echo '</br>$date:';print_r($date_temp);echo '</br>';
+	echo '</br>$date_temp:';print_r($date_temp);echo '</br>';
 	if($operation['periodicite_km']!=0)
 	{
 		$operation['echeance_km']=$operation['effectuee_km']+$operation['periodicite_km'];
