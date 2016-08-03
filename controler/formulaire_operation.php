@@ -90,10 +90,10 @@ if(isset($_GET['action']) and $_GET['action']=='create_operation')
 		        $matches[3] >= 1950 && $matches[3] <= 2004 
 		        ) 
 		    { $return = 1;} */
-		    print_r ($matches);
+		    echo '</br>check_date_format matches:';print_r ($matches);;echo '</br>';
 		    return $return; 
 		}
-		echo '</br>check_date_format matches:';check_date_format($_POST['effectuee_date']);echo '</br>';
+		check_date_format($_POST['effectuee_date'])
 		
 		$operation['effectuee_date'] = $_POST['effectuee_date'];
 		//echo '</br>$date:';print_r($operation['effectuee_date']);echo '</br>';
