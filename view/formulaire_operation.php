@@ -36,7 +36,7 @@
 						<input type="number" name="effectuee_km" id="effectuee_km" value="<?php echo $operation['effectuee_km'];?>">
 
 						<legend for="effectuee_date">Effectué le</legend>
-						<input type="date" name="effectuee_date" id="effectuee_date" value="<?php echo new DateTime($operation['effectuee_date'])->format('d/m/Y');?>">
+						<input type="date" name="effectuee_date" id="effectuee_date" value="<?php echo date_create($operation['effectuee_date'])->format('d/m/Y');?>">
 
 						<legend for="echeance_km">Prochaine échéance (km)</legend>
 						<input type="number" name="echeance_km" id="echeance_km" value="<?php echo $operation['echeance_km'];?>">
