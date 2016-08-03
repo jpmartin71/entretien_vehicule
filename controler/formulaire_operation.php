@@ -11,7 +11,8 @@ echo '$operation:';print_r($operation);echo '</br>';
 //verification des information du post avant de creer la ligne sql ou renvoie au formulaire pour correction
 if(isset($_GET['action']) and $_GET['action']=='create_operation')
 {
-	$erreur=0;
+	include_once './controler/create_operation.php';
+	/*$erreur=0;
 	$vehicule=get_infos_vehicule($_POST['id_vehicule']);
 	echo '$vehicule:';print_r($vehicule);echo '</br>';
 	
@@ -75,7 +76,7 @@ if(isset($_GET['action']) and $_GET['action']=='create_operation')
 	
 	if(isset($_POST['effectuee_date']) and !empty($_POST['effectuee_date']))
 	{//si effectuee_date est present et que effectuee_date n'est pas vide et est un nombre
-		function check_date_format($date/*,$id*/) 
+		function check_date_format($date/*,$id) 
 		{ 
 		echo '</br>check_date_format date:';print_r($date);echo '</br>';
     		preg_match("#(\d{1,2})/(\d{1,2})/(\d{4})#" , $date, $matches); 
@@ -89,7 +90,7 @@ if(isset($_GET['action']) and $_GET['action']=='create_operation')
 		        ## check yyyy (adjust the figures to suitable ones) 
 		        $matches[3] >= 1950 && $matches[3] <= 2004 
 		        ) 
-		    { $return = 1;} */
+		    { $return = 1;} 
 		    echo '</br>check_date_format matches:';print_r ($matches);echo '</br>';
 		    return $return; 
 		}
@@ -129,7 +130,7 @@ if (check_date_format($string,"US") == 1)
 else { echo "Entry in NOT acceptable"; } 
 
 
-?>*/
+?>
 		//$operation['effectuee_date']=$_POST['effectuee_date'];
 	}
 	elseif (isset($vehicule['date_1_immat']) and !empty($vehicule['date_1_immat']) and empty($_POST['effectuee_date'])) 
@@ -150,9 +151,9 @@ else { echo "Entry in NOT acceptable"; }
 
 	if($operation['periodicite_tps']!=0 and $operation['effectuee_date']!='1900-01-01')
 	{
-		/*$date = new DateTime($operation['effectuee_date']);
+		$date = new DateTime($operation['effectuee_date']);
 		$date->add(new DateInterval('P'.$operation['periodicite_tps'].'M'));
-		$operation['echeance_date']=$date->format('Y-m-d');*/
+		$operation['echeance_date']=$date->format('Y-m-d');
 	}
 	else $operation['echeance_date']='2099-01-01';
 
@@ -166,7 +167,7 @@ else { echo "Entry in NOT acceptable"; }
 	echo '$operation:';print_r($operation);echo '</br>';
 	echo '$erreur:';print_r($erreur);echo '</br>';
 	
-	
+	*/
 }
 	
 $liste_vehicules=get_liste_vehicule();
