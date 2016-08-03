@@ -2,28 +2,32 @@
 //----------fonctions----------//
 function check_date_format($date) 
 		{ 
-echo '</br>check_date_format date:';print_r($date);echo '</br>';
-    		preg_match("#(\d{1,2})[-/](\d{1,2})[-/](\d{4})#" , $date, $matches); //format dd-mm-YYYY
-    		$return['is_date'] = 0; 
-		 ## Perform all the checks 
-		 if (!empty($matches) && 
-		        ## check dd
-		        /*$matches[1] > 0 && $matches[1] <= 31 && 
-		        ## check mm OR dd if American 
-		        $matches[2] > 0 && $matches[2] <= 12 && 
-		        ## check yyyy (adjust the figures to suitable ones) 
-		        $matches[3] >= 1950 &&*/
-		        ## check date valid (mois jour annee)
-		        checkdate($matches[2], $matches[1], $matches[3])
-		        ) 
-		  { 
-		  	$return ['is_date']= 1;
-		  	$date_form = new DateTime();
-			$date_form->setDate($matches[3], $matches[2], $matches[1]);
-			$return ['date']=$date_form->format('Y-m-d');
-		  }
-echo '</br>check_date_format matches:';print_r ($matches);echo '</br>';
-		    return $return; 
+//echo '</br>check_date_format date:';print_r($date);echo '</br>';
+	    		$return['is_date'] = 0;
+	    		
+	    		if(preg_match("#(\d{1,2})[-/](\d{1,2})[-/](\d{4})#" , $date, $matches)) //format dd-mm-YYYY
+	    		{
+		    		## Perform all the checks 
+				 if (!empty($matches) && checkdate($matches[2], $matches[1], $matches[3])) //checkdate(mois,jour,annee)
+				 { 
+				  	$return ['is_date']= 1;
+				  	$date_form = new DateTime();
+					$date_form->setDate($matches[3], $matches[2], $matches[1]);//setdate(annee,mois,jour)
+					$return ['date']=$date_form->format('Y-m-d');
+				 }	
+	    		}
+			elseif(preg_match("#(\d{4})[-/](\d{1,2})[-/](\d{1,2})#" , $date, $matches))//format YYYY-mm-dd
+			{
+				if (!empty($matches) && checkdate($matches[2],$matches[3], $matches[1])) //checkdate(mois,jour,annee)
+				 { 
+				  	$return ['is_date']= 1;
+				  	$date_form = new DateTime();
+					$date_form->setDate($matches[1], $matches[2], $matches[3]);//setdate(annee,mois,jour)
+					$return ['date']=$date_form->format('Y-m-d');
+				 }	
+			}
+//echo '</br>check_date_format matches:';print_r ($matches);echo '</br>';
+			    return $return; 
 		}
 		
 //----------Code---------//
