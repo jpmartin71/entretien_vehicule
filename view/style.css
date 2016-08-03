@@ -57,7 +57,7 @@ div.form_operation
 	width: 49%;
 
 }
-form.form_operation input,
+form.form_operation input:not([type="checkbox"]),
 form.form_operation select
 {
 	height: 30px;
@@ -65,11 +65,16 @@ form.form_operation select
 
 }
 
-form.form_operation input,
+div.form.operation legend
+{
+	margin-top: 10px;
+}
+
+/*form.form_operation input,*/
+form.form_operation input:not([type="checkbox"]),
 form.form_operation legend,
 form.form_operation select
-{
-	
+{	
 	width: 200px;	
 }
 
@@ -77,6 +82,9 @@ form.form_operation textarea
 {
 	width: 100%;
 }
+
+
+
 
 .erreur
 {
