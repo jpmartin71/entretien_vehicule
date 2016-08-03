@@ -106,7 +106,7 @@ function check_date_format($date)
 			$erreur+=16;
 		}
 		
-echo '</br>$date:';print_r($operation['effectuee_date']);echo '</br>';
+//echo '</br>$date:';print_r($operation['effectuee_date']);echo '</br>';
 	}
 	elseif (isset($vehicule['date_1_immat']) and !empty($vehicule['date_1_immat']) and empty($_POST['effectuee_date'])) 
 	{
@@ -135,6 +135,6 @@ echo '</br>$date_temp:';print_r($date_temp);echo '</br>';
 	else $operation['obs']="";
 	
 	
-echo '$operation:';print_r($operation);echo '</br>';
-echo '$erreur:';print_r($erreur);echo '</br>';
+echo '</br>$operation:';print_r($operation);echo '</br>';
+echo '</br>$erreur:';print_r($erreur);echo '</br>';
 	
