@@ -81,7 +81,7 @@
 		    echo '</br>check_date_format matches:';print_r ($matches);echo '</br>';
 		    return $return; 
 		}
-		check_date_format($_POST['effectuee_date']);
+		print_r(check_date_format($_POST['effectuee_date']));
 		
 		$operation['effectuee_date'] = $_POST['effectuee_date'];
 		//echo '</br>$date:';print_r($operation['effectuee_date']);echo '</br>';
