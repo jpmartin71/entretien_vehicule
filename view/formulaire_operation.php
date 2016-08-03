@@ -27,7 +27,9 @@
 
 						<legend for="periodicite_km">Périodicité (en km)</legend>
 						<input type="number" name="periodicite_km" id="periodicite_km" value="<?php echo $operation['periodicite_km'];?>">
-
+						<label for="inib_periodicite_km">Pas de périodicité kilométrique</label>
+						<input type="checkbox" name="inib_periodicite_km" id="inib_periodicite_km" />
+						
 						<legend for="periodicite_tps">Périodicité (en mois)</legend>
 						<input type="number" name="periodicite_tps" id="periodicite_tps" value="<?php echo $operation['periodicite_tps'];?>">
 					</div>
