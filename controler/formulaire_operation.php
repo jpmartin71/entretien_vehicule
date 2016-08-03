@@ -150,9 +150,9 @@ else { echo "Entry in NOT acceptable"; }
 
 	if($operation['periodicite_tps']!=0 and $operation['effectuee_date']!='1900-01-01')
 	{
-		$date = new DateTime($operation['effectuee_date']);
+		/*$date = new DateTime($operation['effectuee_date']);
 		$date->add(new DateInterval('P'.$operation['periodicite_tps'].'M'));
-		$operation['echeance_date']=$date->format('Y-m-d');
+		$operation['echeance_date']=$date->format('Y-m-d');*/
 	}
 	else $operation['echeance_date']='2099-01-01';
 
