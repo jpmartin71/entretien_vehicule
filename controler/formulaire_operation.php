@@ -96,7 +96,7 @@ if(isset($_GET['action']) and $_GET['action']=='create_operation')
 		echo '</br>check_date_format matches:';check_date_format($_POST['effectuee_date']);echo '</br>';
 		
 		$operation['effectuee_date'] = $_POST['effectuee_date'];
-		echo '</br>$date:';print_r($operation['effectuee_date']);echo '</br>';
+		//echo '</br>$date:';print_r($operation['effectuee_date']);echo '</br>';
 		/*function check_date_format($date,$id) 
 { 
     preg_match("#(\d{2})/(\d{2})/(\d{4})#" , $date, $matches); 
