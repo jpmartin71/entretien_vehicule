@@ -73,8 +73,26 @@ if(isset($_GET['action']) and $_GET['action']=='create_operation')
 		$erreur+=8;
 	}
 	
-	if(isset($_POST['effectuee_date']) and !empty($_POST['effectuee_date']) and (check_date_format("d-m-Y", $_POST['effectuee_date'])))
+	if(isset($_POST['effectuee_date']) and !empty($_POST['effectuee_date']))
 	{//si effectuee_date est present et que effectuee_date n'est pas vide et est un nombre
+		function check_date_format($date/*,$id*/) 
+		{ 
+    		preg_match("#(\d{1,2})/(\d{1,2})/(\d{4})#" , $date, $matches); 
+    		$return = 0; 
+		    ## Perform all the checks 
+		    /*if (!empty($matches) && 
+		        ## check dd OR mm if American 
+		        $matches[1] >= 0 && $matches[1] <= ($id != 'US' ? 31 : 12) && 
+		        ## check mm OR dd if American 
+		        $matches[2] >= 0 && $matches[2] <= ($id != 'US' ? 12 : 31) && 
+		        ## check yyyy (adjust the figures to suitable ones) 
+		        $matches[3] >= 1950 && $matches[3] <= 2004 
+		        ) 
+		    { $return = 1;} */
+		    print_r $matches;
+		    return $return; 
+		}
+		check_date_format($_POST['effectuee_date']) ;
 		$operation['effectuee_date'] = $_POST['effectuee_date'];
 		echo '</br>$date:';print_r($operation['effectuee_date']);echo '</br>';
 		/*function check_date_format($date,$id) 
