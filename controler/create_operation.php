@@ -33,7 +33,7 @@ function check_date_format($date)
 //----------Code---------//
 	$erreur=0;
 	$vehicule=get_infos_vehicule($_POST['id_vehicule']);
-	echo '$vehicule:';print_r($vehicule);echo '</br>';
+//echo '$vehicule:';print_r($vehicule);echo '</br>';
 	
 	if(isset($_POST['id_vehicule']) and !empty($vehicule))
 	{//si id_vehicule est present et que le vehicule existe
@@ -106,9 +106,7 @@ function check_date_format($date)
 			$erreur+=16;
 		}
 		
-		echo '</br>$date:';print_r($operation['effectuee_date']);echo '</br>';
- 
-		//$operation['effectuee_date']=$_POST['effectuee_date'];
+echo '</br>$date:';print_r($operation['effectuee_date']);echo '</br>';
 	}
 	elseif (isset($vehicule['date_1_immat']) and !empty($vehicule['date_1_immat']) and empty($_POST['effectuee_date'])) 
 	{
@@ -119,7 +117,7 @@ function check_date_format($date)
 		$operation['effectuee_date']='1900-01-01';
 		$erreur+=16;
 	}
-	echo '</br>$date_temp:';print_r($date_temp);echo '</br>';
+echo '</br>$date_temp:';print_r($date_temp);echo '</br>';
 	if($operation['periodicite_km']!=0)
 	{
 		$operation['echeance_km']=$operation['effectuee_km']+$operation['periodicite_km'];
@@ -127,9 +125,7 @@ function check_date_format($date)
 	else $operation['echeance_km']=0;
 	if($operation['periodicite_tps']!=0 and $operation['effectuee_date']!='1900-01-01')
 	{
-		/*$date = new DateTime($operation['effectuee_date']);
-		$date->add(new DateInterval('P'.$operation['periodicite_tps'].'M'));
-		$operation['echeance_date']=$date->format('Y-m-d');*/
+		
 	}
 	else $operation['echeance_date']='2099-01-01';
 	if(isset($_POST['obs']))
@@ -139,6 +135,6 @@ function check_date_format($date)
 	else $operation['obs']="";
 	
 	
-	echo '$operation:';print_r($operation);echo '</br>';
-	echo '$erreur:';print_r($erreur);echo '</br>';
+echo '$operation:';print_r($operation);echo '</br>';
+echo '$erreur:';print_r($erreur);echo '</br>';
 	
