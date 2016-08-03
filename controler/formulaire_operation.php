@@ -77,6 +77,7 @@ if(isset($_GET['action']) and $_GET['action']=='create_operation')
 	{//si effectuee_date est present et que effectuee_date n'est pas vide et est un nombre
 		function check_date_format($date/*,$id*/) 
 		{ 
+		echo '</br>check_date_format date:';print_r($date);echo '</br>';
     		preg_match("#(\d{1,2})/(\d{1,2})/(\d{4})#" , $date, $matches); 
     		$return = 0; 
 		    ## Perform all the checks 
@@ -89,10 +90,11 @@ if(isset($_GET['action']) and $_GET['action']=='create_operation')
 		        $matches[3] >= 1950 && $matches[3] <= 2004 
 		        ) 
 		    { $return = 1;} */
-		    print_r $matches;
+		    print_r ($matches);
 		    return $return; 
 		}
-		check_date_format($_POST['effectuee_date']) ;
+		echo '</br>check_date_format date:';check_date_format($_POST['effectuee_date']);echo '</br>';
+		
 		$operation['effectuee_date'] = $_POST['effectuee_date'];
 		echo '</br>$date:';print_r($operation['effectuee_date']);echo '</br>';
 		/*function check_date_format($date,$id) 
