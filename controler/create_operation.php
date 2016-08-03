@@ -63,10 +63,10 @@
 	
 	if(isset($_POST['effectuee_date']) and !empty($_POST['effectuee_date']))
 	{//si effectuee_date est present et que effectuee_date n'est pas vide et est un nombre
-		function check_date_format($date/*,$id*/) 
+		function check_date_format($date) 
 		{ 
-		echo '</br>check_date_format date:';print_r($date);echo '</br>';
-    		preg_match("#(\d{1,2})/(\d{1,2})/(\d{4})#" , $date, $matches); 
+echo '</br>check_date_format date:';print_r($date);echo '</br>';
+    		preg_match("#(\d{1,2})[-/](\d{1,2})[-/](\d{4})#" , $date, $matches); 
     		$return = 0; 
 		    ## Perform all the checks 
 		    /*if (!empty($matches) && 
@@ -78,7 +78,7 @@
 		        $matches[3] >= 1950 && $matches[3] <= 2004 
 		        ) 
 		    { $return = 1;} */
-		    echo '</br>check_date_format matches:';print_r ($matches);echo '</br>';
+echo '</br>check_date_format matches:';print_r ($matches);echo '</br>';
 		    return $return; 
 		}
 		print_r(check_date_format($_POST['effectuee_date']));
