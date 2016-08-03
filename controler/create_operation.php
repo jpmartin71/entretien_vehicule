@@ -95,24 +95,19 @@ function check_date_format($date)
 	
 	if(isset($_POST['effectuee_date']) and !empty($_POST['effectuee_date']))
 	{//si effectuee_date est present et que effectuee_date n'est pas vide et est un nombre
+		$date_temp=check_date_format($_POST['effectuee_date']);
+		if($date_temp['is_date'])
+		{
+			$operation['effectuee_date'] = $date_temp['date'];
+		}
+		else
+		{
+			$operation['effectuee_date']='1900-01-01';
+			$erreur+=16;
+		}
 		
-		print_r(check_date_format($_POST['effectuee_date']));
-		
-		$operation['effectuee_date'] = $_POST['effectuee_date'];
-		//echo '</br>$date:';print_r($operation['effectuee_date']);echo '</br>';
+		echo '</br>$date:';print_r($operation['effectuee_date']);echo '</br>';
  
-/*########### Examples: ########### 
-## Format: dd/mm/yyyy leave the second argumant blank 
-$string = '25/12/2004'; 
-if (check_date_format($string,"") == 1) 
-{ echo "Entry is acceptable."; } 
-else { echo "Entry in NOT acceptable"; } 
-$string = '12/25/2004'; 
-## Format: mm/dd/yyyy Input "US" as second argument 
-if (check_date_format($string,"US") == 1) 
-{ echo "Entry is acceptable."; } 
-else { echo "Entry in NOT acceptable"; } 
-?>*/
 		//$operation['effectuee_date']=$_POST['effectuee_date'];
 	}
 	elseif (isset($vehicule['date_1_immat']) and !empty($vehicule['date_1_immat']) and empty($_POST['effectuee_date'])) 
