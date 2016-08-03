@@ -93,7 +93,7 @@ if(isset($_GET['action']) and $_GET['action']=='create_operation')
 		    print_r ($matches);
 		    return $return; 
 		}
-		echo '</br>check_date_format date:';check_date_format($_POST['effectuee_date']);echo '</br>';
+		echo '</br>check_date_format matches:';check_date_format($_POST['effectuee_date']);echo '</br>';
 		
 		$operation['effectuee_date'] = $_POST['effectuee_date'];
 		echo '</br>$date:';print_r($operation['effectuee_date']);echo '</br>';
