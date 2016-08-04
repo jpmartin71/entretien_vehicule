@@ -65,14 +65,11 @@ form.form_operation select
 
 }
 
-div.form.operation legend
+form.form_operation label
 {
-	margin-top: 10px;
+	width:170px;
 }
-
-/*form.form_operation input,*/
 form.form_operation input:not([type="checkbox"]),
-form.form_operation legend,
 form.form_operation select
 {	
 	width: 200px;	
