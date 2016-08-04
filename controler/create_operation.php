@@ -35,8 +35,8 @@ function check_date_format($date)
 //----------Code---------//
 	$erreur=0;
 	$vehicule=get_infos_vehicule($_POST['id_vehicule']);
-//echo '$vehicule:';print_r($vehicule);echo '</br>';
 	
+	##Vehicule
 	if(isset($_POST['id_vehicule']) and !empty($vehicule))
 	{//si id_vehicule est present et que le vehicule existe
 		$operation['id_vehicule']=$vehicule['id'];
@@ -47,6 +47,7 @@ function check_date_format($date)
 		$erreur+=1;
 	}
 	
+	##Denomination
 	if(isset($_POST['denomination']) and !empty($_POST['denomination']))
 	{//si denomination est present et que denomination n'est pas vide
 		$operation['denomination']=$_POST['denomination'];
@@ -57,6 +58,7 @@ function check_date_format($date)
 		$erreur+=2;
 	}
 	
+	##periodicite_km
 	if(isset($_POST['periodicite_km']) and !empty($_POST['periodicite_km']) and is_numeric($_POST['periodicite_km']))
 	{//si periodicite_km est present et que periodicite_km n'est pas vide et est un nombre
 		$operation['periodicite_km']=$_POST['periodicite_km'];
@@ -71,6 +73,7 @@ function check_date_format($date)
 		$erreur+=4;
 	}
 	
+	##periodicite_tps
 	if(isset($_POST['periodicite_tps'])and !empty($_POST['periodicite_tps']) and is_numeric($_POST['periodicite_tps']))
 	{//si periodicite_tps est present et que periodicite_tps n'est pas vide et est un nombre
 		$operation['periodicite_tps']=$_POST['periodicite_tps'];
@@ -85,17 +88,19 @@ function check_date_format($date)
 		$erreur+=6;
 	}
 	
+	##effectuee_km
 	if(isset($_POST['effectuee_km'])and !empty($_POST['effectuee_km']) and is_numeric($_POST['effectuee_km']))
 	{//si effectuee_km est present et que effectuee_km n'est pas vide et est un nombre
 		$operation['effectuee_km']=$_POST['effectuee_km'];
 	}
-	elseif(isset($_POST['inib_effectuee']))$operation['effectuee_km']=null;
+	elseif(isset($_POST['inib_effectuee']))$operation['effectuee_km']=0;
 	else
 	{
 		$operation['effectuee_km']=null;
 		$erreur+=8;
 	}
 	
+	##effectuee_tps
 	if(isset($_POST['effectuee_date']) and !empty($_POST['effectuee_date']))
 	{//si effectuee_date est present et que effectuee_date n'est pas vide et est un nombre
 		$date_temp=check_date_format($_POST['effectuee_date']);
@@ -108,25 +113,29 @@ function check_date_format($date)
 			$operation['effectuee_date']=null;
 			$erreur+=16;
 		}
-		
-//echo '</br>$date:';print_r($operation['effectuee_date']);echo '</br>';
 	}
-	elseif(isset($_POST['inib_effectuee']))$operation['effectuee_date']=null;
-	elseif (isset($vehicule['date_1_immat']) and !empty($vehicule['date_1_immat']) and empty($_POST['effectuee_date'])) 
+	elseif(isset($_POST['inib_effectuee']))
 	{
-		$operation['effectuee_date']=$vehicule['date_1_immat'];
-	}
+		if (isset($vehicule['date_1_immat']) and !empty($vehicule['date_1_immat'])) 
+		{
+			$operation['effectuee_date']=$vehicule['date_1_immat'];
+		}
+		else $operation['effectuee_date']=null;
 	else
 	{
 		$operation['effectuee_date']=null;
 		$erreur+=16;
 	}
-echo '</br>$date_temp:';print_r($date_temp);echo '</br>';
+//echo '</br>$date_temp:';print_r($date_temp);echo '</br>';
+	
+	##echeance km
 	if($operation['periodicite_km']!=0)
 	{
 		$operation['echeance_km']=$operation['effectuee_km']+$operation['periodicite_km'];
 	}
 	else $operation['echeance_km']=0;
+	
+	##echeance tps
 	if($operation['periodicite_tps']!=0 and $operation['effectuee_date']!='1900-01-01')
 	{
 		
