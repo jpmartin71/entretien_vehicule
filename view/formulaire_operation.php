@@ -27,63 +27,65 @@
 								</option>
 							</select>
 						</div>
-							
+						<div class="form_operation <?php if(isset($erreur_view['denomination']))echo 'erreur';?>">
+							<?php if(isset($erreur_view['denomination']))echo $erreur_view['denomination'];?>
 							<label for="denomination">Dénomination:</label>
 							<input type="text" name="denomination" id="denomination" value="<?php echo $operation['denomination'];?>">
-						</fieldset>
-						
-						<fieldset>
-							<legend>Périodicité</legend>
-							
+						</div>
+					</fieldset>
+					
+					<fieldset>
+						<legend>Périodicité</legend>
+						<div class="form_operation <?php if(isset($erreur_view['periodicite_km']))echo 'erreur';?>">
+							<?php if(isset($erreur_view['periodicite_km']))echo $erreur_view['periodicite_km'];?>	
 							<label for="periodicite_km">Périodicité (en km)</label>
 							<input type="number" name="periodicite_km" id="periodicite_km" value="<?php echo $operation['periodicite_km'];?>" <?php if(isset($_POST['inib_periodicite_km']))echo 'disabled';?>>
 							</br>
 							<input type="checkbox" onchange="checkbox_inib_periodicite_km()" name="inib_periodicite_km" id="inib_periodicite_km" <?php if(isset($_POST['inib_periodicite_km']))echo 'checked';?> />
 							<label for="inib_periodicite_km" class="label_checkbox">Pas de périodicité kilométrique</label>
-							</br>
-							
+						</div>
+						<div class="form_operation <?php if(isset($erreur_view['periodicite_tps']))echo 'erreur';?>">
+							<?php if(isset($erreur_view['periodicite_tps']))echo $erreur_view['periodicite_tps'];?>		
 							<label for="periodicite_tps">Périodicité (en mois)</label>
 							<input type="number" name="periodicite_tps" id="periodicite_tps" value="<?php echo $operation['periodicite_tps'];?>" <?php if(isset($_POST['inib_periodicite_tps']))echo 'disabled';?>>
 							</br>
 							<input type="checkbox" onchange="checkbox_inib_periodicite_tps()" name="inib_periodicite_tps" id="inib_periodicite_tps" <?php if(isset($_POST['inib_periodicite_tps']))echo 'checked';?>/>
 							<label for="inib_periodicite_tps" class="label_checkbox">Pas de périodicité temporelle</label>
-						</fieldset>
+						</div>
+					</fieldset>
 						
+					<fieldset>
+						<legend>Opération effectuée:</legend>
+						<div class="form_operation <?php if(isset($erreur_view['effectuee_km']) or isset($erreur_view['effectuee_date']))echo 'erreur';?>">
 					
-					<div class="form_operation">
-						<fieldset>
-							<legend>Opération effectuée:</legend>
-							
 							<input type="checkbox" onchange="checkbox_inib_operation_effectuee()" name="inib_effectuee" id="inib_effectuee" <?php if(isset($_POST['inib_effectuee']))echo 'checked';?>/>
 							<label for="inib_effectuee" class="label_checkbox">Opération jamais éffectuée.</label>
 							</br>
 							
+							<?php if(isset($erreur_view['effectuee_km']))echo $erreur_view['effectuee_km'];?>
 							<label for="effectuee_km">Effectué à (en km):</label>
 							<input type="number" name="effectuee_km" id="effectuee_km" value="<?php echo $operation['effectuee_km'];?>" <?php if(isset($_POST['inib_effectuee']))echo 'disabled';?>>
 							</br>
 							
+							<?php if(isset($erreur_view['effectuee_date']))echo $erreur_view['effectuee_date'];?>
 							<label for="effectuee_date">Effectué le (jj/mm/aaaa):</label>
 							<input type="date" name="effectuee_date" id="effectuee_date" value="<?php if($operation['effectuee_date']!=null)echo date_create($operation['effectuee_date'])->format('d/m/Y');?>" <?php if(isset($_POST['inib_effectuee']))echo 'disabled';?>>
 							</br>
+						</div>
 							
-							
-						</fieldset>
+					</fieldset>
 						
-						<fieldset>
-							<legend>Prochaine écheance:</legend>
+					<fieldset>
+						<legend>Prochaine écheance:</legend>
 							
-							<label for="echeance_km">Prochaine échéance (km)</label>
-							<input type="number" name="echeance_km" id="echeance_km" value="<?php echo $operation['echeance_km'];?>"  disabled>
-							</br>
+						<label for="echeance_km">Prochaine échéance (km)</label>
+						<input type="number" name="echeance_km" id="echeance_km" value="<?php echo $operation['echeance_km'];?>"  disabled>
+						</br>
 
-							<label for="echeance_date">Prochaine échéance (date)</label>
-							<input type="date" name="echeance_date" id="echeance_date" value="<?php if($operation['echeance_date']!=null)echo date_create($operation['echeance_date'])->format('d/m/Y');?>"  disabled>
-						</fieldset>
-							
-							
-						
-					</div>
-
+						<label for="echeance_date">Prochaine échéance (date)</label>
+						<input type="date" name="echeance_date" id="echeance_date" value="<?php if($operation['echeance_date']!=null)echo date_create($operation['echeance_date'])->format('d/m/Y');?>"  disabled>
+					</fieldset>
+					
 						<label for="obs">Observations:</label>
 						<textarea name="obs" id="obs" ><?php echo $operation['obs'];?></textarea>
 					
