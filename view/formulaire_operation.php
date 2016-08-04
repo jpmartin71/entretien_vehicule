@@ -16,7 +16,7 @@
 			<article >
 				<form class="form_operation" method="post" action="?action=create_operation">
 					<fieldset>
-						<div class="form_operation <?php if(isset($erreur_view['vehicule']))echo 'class="erreur"';?>">
+						<div class="form_operation <?php if(isset($erreur_view['vehicule']))echo 'erreur';?>">
 							<?php if(isset($erreur_view['vehicule']))echo $erreur_view['vehicule'];?>
 							<label for="id_vehicule">Véhicule:</label>
 							<select name="id_vehicule" id="id_vehicule" >
@@ -27,7 +27,6 @@
 								</option>
 							</select>
 						</div>
-							//</br>
 							
 							<label for="denomination">Dénomination:</label>
 							<input type="text" name="denomination" id="denomination" value="<?php echo $operation['denomination'];?>">
