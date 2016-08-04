@@ -1,5 +1,7 @@
 <?php
 //----------fonctions----------//
+
+
 function check_date_format($date) 
 		{ 
 //echo '</br>check_date_format date:';print_r($date);echo '</br>';
@@ -61,11 +63,11 @@ function check_date_format($date)
 	}
 	elseif(isset($_POST['inib_periodicite_km']))
 	{//si l'operation n'est pas soumise à une périodicité en km
-		$operation['periodicite_km']=0;
+		$operation['periodicite_km']=null;
 	}
 	else
 	{
-		$operation['periodicite_km']=0;
+		$operation['periodicite_km']=null;
 		$erreur+=4;
 	}
 	
@@ -75,11 +77,11 @@ function check_date_format($date)
 	}
 	elseif(isset($_POST['inib_periodicite_tps']))
 	{//si l'operation n'est pas soumise à une périodicité en km
-		$operation['periodicite_tps']=0;
+		$operation['periodicite_tps']=null;
 	}
 	else
 	{
-		$operation['periodicite_tps']=0;
+		$operation['periodicite_tps']=null;
 		$erreur+=6;
 	}
 	
@@ -87,9 +89,10 @@ function check_date_format($date)
 	{//si effectuee_km est present et que effectuee_km n'est pas vide et est un nombre
 		$operation['effectuee_km']=$_POST['effectuee_km'];
 	}
+	elseif(isset($_POST['inib_effectuee']))$operation['effectuee_km']=null;
 	else
 	{
-		$operation['effectuee_km']=0;
+		$operation['effectuee_km']=null;
 		$erreur+=8;
 	}
 	
@@ -100,9 +103,10 @@ function check_date_format($date)
 		{
 			$operation['effectuee_date'] = $date_temp['date'];
 		}
+		elseif(isset($_POST['inib_effectuee']))$operation['effectuee_date']=null;
 		else
 		{
-			$operation['effectuee_date']='1900-01-01';
+			$operation['effectuee_date']=null;
 			$erreur+=16;
 		}
 		
