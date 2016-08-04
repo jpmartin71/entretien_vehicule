@@ -56,17 +56,17 @@
 						
 					<fieldset>
 						<legend>Opération effectuée:</legend>
-						<div class="form_operation <?php if(isset($erreur_view['effectuee_km']) or isset($erreur_view['effectuee_date']))echo 'erreur';?>">
-					
+						
 							<input type="checkbox" onchange="checkbox_inib_operation_effectuee()" name="inib_effectuee" id="inib_effectuee" <?php if(isset($_POST['inib_effectuee']))echo 'checked';?>/>
 							<label for="inib_effectuee" class="label_checkbox">Opération jamais éffectuée.</label>
-							</br>
-							
+						
+						<div class="form_operation <?php if(isset($erreur_view['effectuee_km']))echo 'erreur';?>">
 							<?php if(isset($erreur_view['effectuee_km']))echo $erreur_view['effectuee_km'];?>
 							<label for="effectuee_km">Effectué à (en km):</label>
 							<input type="number" name="effectuee_km" id="effectuee_km" value="<?php echo $operation['effectuee_km'];?>" <?php if(isset($_POST['inib_effectuee']))echo 'disabled';?>>
-							</br>
-							
+						</div>
+						
+						<div class="form_operation <?php if(isset($erreur_view['effectuee_date']))echo 'erreur';?>">
 							<?php if(isset($erreur_view['effectuee_date']))echo $erreur_view['effectuee_date'];?>
 							<label for="effectuee_date">Effectué le (jj/mm/aaaa):</label>
 							<input type="date" name="effectuee_date" id="effectuee_date" value="<?php if($operation['effectuee_date']!=null)echo date_create($operation['effectuee_date'])->format('d/m/Y');?>" <?php if(isset($_POST['inib_effectuee']))echo 'disabled';?>>
