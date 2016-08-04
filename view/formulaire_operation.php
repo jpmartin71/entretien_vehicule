@@ -50,6 +50,10 @@
 						<fieldset>
 							<legend>Opération effectuée:</legend>
 							
+							<input type="checkbox" name="inib_effectuee" id="inib_effectuee" />
+							<label for="inib_effectuee" class="label_checkbox">Opération jamais éffectuée.</label>
+							</br>
+							
 							<label for="effectuee_km">Effectué à (en km):</label>
 							<input type="number" name="effectuee_km" id="effectuee_km" value="<?php echo $operation['effectuee_km'];?>">
 							</br>
@@ -83,8 +87,8 @@
 						<input type="submit" valuer="Créer">
 
 				</form>
-			</article>
-			<aside>
+			<!--</article>
+			<aside>-->
 			
 			</aside>
 		</section>
