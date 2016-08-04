@@ -28,8 +28,7 @@ function check_date_format($date)
 					$return ['date']=$date_form->format('Y-m-d');
 				 }	
 			}
-//echo '</br>check_date_format matches:';print_r ($matches);echo '</br>';
-			    return $return; 
+			return $return; 
 		}
 		
 //----------Code---------//
@@ -85,7 +84,7 @@ function check_date_format($date)
 	else
 	{
 		$operation['periodicite_tps']=null;
-		$erreur+=6;
+		$erreur+=8;
 	}
 	
 	##effectuee_km
@@ -98,7 +97,7 @@ function check_date_format($date)
 	{
 		echo '</br>effectuee_km:sortie 3</br>';	
 		$operation['effectuee_km']=null;
-		$erreur+=8;
+		$erreur+=16;
 	}
 	
 	##effectuee_tps
@@ -112,7 +111,7 @@ function check_date_format($date)
 		else
 		{
 			$operation['effectuee_date']=null;
-			$erreur+=16;
+			$erreur+=32;
 		}
 	}
 	elseif(isset($_POST['inib_effectuee']))
@@ -126,7 +125,7 @@ function check_date_format($date)
 	else
 	{
 		$operation['effectuee_date']=null;
-		$erreur+=16;
+		$erreur+=32;
 	}
 	
 	##echeance km
@@ -154,6 +153,11 @@ function check_date_format($date)
 	else $operation['obs']="";
 	
 	
-echo '</br>$operation:';print_r($operation);echo '</br>';
-echo '</br>$erreur:';print_r($erreur);echo '</br>';
-	
+echo '</br>$operation:';print_r($operation);
+echo '</br>$erreur:';print_r($erreur);
+echo '</br>$erreur vehicule:'$erreur&1;
+echo '</br>$erreur denomination:'$erreur&2;
+echo '</br>$erreur period km:'$erreur&4;
+echo '</br>$erreur period tps:'$erreur&8;
+echo '</br>$erreur effectuée km:'$erreur&16;
+echo '</br>$erreur effectuée date:'$erreur&32;
