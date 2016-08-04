@@ -13,5 +13,6 @@
 		
 		elseif ($_GET['erreur']=='releve_kilometrique') echo '<p class="erreur">Date ET kilométrage requis</p>';
 	}
+	if(isset($erreur_view['view']) and !empty($erreur_view['view']))echo '<p class="erreur">'.$erreur_view['view'].'</p>';
 ?>
 </section>
