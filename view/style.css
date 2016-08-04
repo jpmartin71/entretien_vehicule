@@ -65,14 +65,17 @@ form.form_operation select
 
 }
 
-form.form_operation label
-{
-	width:170px;
-}
 form.form_operation input:not([type="checkbox"]),
-form.form_operation select
+form.form_operation select,
+form.form_operation label
 {	
-	width: 200px;	
+	width:170px;
+	display:inline-block;	
+}
+
+form.form_operation label.label-checbox
+{
+	width:auto;
 }
 
 form.form_operation textarea
