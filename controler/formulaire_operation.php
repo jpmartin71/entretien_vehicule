@@ -21,6 +21,4 @@ if(!empty($liste_vehicules))
 	}
 }
 
-//echo "</br>Liste vehicules:";print_r($liste_vehicules);
-
 include_once './view/formulaire_operation.php';
