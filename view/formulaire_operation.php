@@ -15,18 +15,19 @@
 		<section>
 			<article >
 				<form class="form_operation" method="post" action="?action=create_operation">
-					<div class="form_operation">
-						<fieldset>
+					<fieldset>
+						<div class="form_operation <?php if(isset($erreur_view['vehicule']))echo 'class="erreur"';?>">
 							<?php if(isset($erreur_view['vehicule']))echo $erreur_view['vehicule'];?>
 							<label for="id_vehicule">Véhicule:</label>
-							<select name="id_vehicule" id="id_vehicule" <?php if(isset($erreur_view['vehicule']))echo 'class="erreur"';?>>
+							<select name="id_vehicule" id="id_vehicule" >
 								<option value='0' selected>Choisir un vehicule</option>
 								<?php	foreach($liste_vehicules as $vehicule)?> 
 								<option value='<?php echo $vehicule['id'];?>' <?php if ($operation['id_vehicule']==$vehicule['id'])echo 'selected';?>>
 									<?php echo $vehicule['libelle'];?>
 								</option>
 							</select>
-							</br>
+						</div>
+							//</br>
 							
 							<label for="denomination">Dénomination:</label>
 							<input type="text" name="denomination" id="denomination" value="<?php echo $operation['denomination'];?>">
@@ -49,7 +50,7 @@
 							<label for="inib_periodicite_tps" class="label_checkbox">Pas de périodicité temporelle</label>
 						</fieldset>
 						
-					</div>
+					
 					<div class="form_operation">
 						<fieldset>
 							<legend>Opération effectuée:</legend>
