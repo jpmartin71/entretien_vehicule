@@ -76,7 +76,7 @@
 							</br>
 							
 							<label for="echeance_date">Prochaine échéance (date)</label>
-							<input type="date" name="echeance_date" id="echeance_date" value="<?php echo $operation['echeance_date'];?>"  disabled>
+							<input type="date" name="echeance_date" id="echeance_date" value="<?php date_create($operation['echeance_date'])->format('d/m/Y');?>"  disabled>
 						</fieldset>
 							
 							
