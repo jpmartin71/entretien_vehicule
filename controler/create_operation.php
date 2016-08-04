@@ -155,9 +155,9 @@ function check_date_format($date)
 	
 echo '</br>$operation:';print_r($operation);
 echo '</br>$erreur:';print_r($erreur);
-echo '</br>$erreur vehicule:'$erreur&1;
-echo '</br>$erreur denomination:'$erreur&2;
-echo '</br>$erreur period km:'$erreur&4;
-echo '</br>$erreur period tps:'$erreur&8;
-echo '</br>$erreur effectuée km:'$erreur&16;
-echo '</br>$erreur effectuée date:'$erreur&32;
+echo '</br>$erreur vehicule:'.$erreur&1;
+echo '</br>$erreur denomination:'.$erreur&2;
+echo '</br>$erreur period km:'.$erreur&4;
+echo '</br>$erreur period tps:'.$erreur&8;
+echo '</br>$erreur effectuée km:'.$erreur&16;
+echo '</br>$erreur effectuée date:'.$erreur&32;
