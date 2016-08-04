@@ -139,9 +139,13 @@ function check_date_format($date)
 	##echeance tps
 	if($operation['periodicite_tps']!=null and $operation['effectuee_date']!=null)
 	{
+echo '</br>date_temp:';print_r ($date_temp);echo '</br>';
 		$date_temp = new DateTime($operation['effectuee_date']);
+echo '</br>date_temp:';print_r ($date_temp);echo '</br>';		
 		$date_temp->add(new DateInterval('P'.$operation['periodicite_tps'].'M')); //Où 'P12M' indique 'Période de 12 Mois'
+echo '</br>date_temp:';print_r ($date_temp);echo '</br>';
 		$operation['echeance_date']=$date_temp->format('Y-m-d');
+echo '</br>date_temp:'.$operation['echeance_date'];echo '</br>';
 	}
 	else $operation['echeance_date']=null;
 	
