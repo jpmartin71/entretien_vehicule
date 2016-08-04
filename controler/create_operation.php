@@ -89,12 +89,8 @@ function check_date_format($date)
 	}
 	
 	##effectuee_km
-echo '</br>effectuee_km numeric:';echo is_numeric($_POST['effectuee_km']);echo '</br>';	
-echo '</br>effectuee_km !vide : ';echo empty($_POST['effectuee_km']);echo '</br>';	
-echo '</br>effectuee_km present:';echo isset($_POST['effectuee_km']);echo '</br>';	
 	if(isset($_POST['effectuee_km']) and (!empty($_POST['effectuee_km']) or $_POST['effectuee_km']==0) and is_numeric($_POST['effectuee_km']))
 	{//si effectuee_km est present et que effectuee_km n'est pas vide et est un nombre
-echo '</br>effectuee_km:sortie 1</br>';	
 		$operation['effectuee_km']=$_POST['effectuee_km'];
 	}
 	elseif(isset($_POST['inib_effectuee'])){$operation['effectuee_km']=0;echo '</br>effectuee_km:sortie 2</br>';	}
