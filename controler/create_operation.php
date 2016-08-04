@@ -171,11 +171,11 @@ if($erreur==0)
 else
 {
 	$erreur_view['view']='Echec de la création de l\'opération.</br>Corriger les champs.';
-	if(($erreur & 1)!=0)$erreur_view['vehicule']='Veuillez selectionner un véhicule';
-	if(($erreur & 2)!=0)$erreur_view['denomination']='Saisir l\'intitulé de l\'operation';
-	if(($erreur & 4)!=0)$erreur_view['periodicite_km']='Saisir un nombre de km ou cocher la case "Pas de périodicité kilométrique"';
-	if(($erreur & 8)!=0)$erreur_view['periodicite_tps']='Saisir un nombre de mois ou cocher la case"Pas de périodicité temporelle"';
-	if(($erreur & 16)!=0)$erreur_view['effectuee_km']='Saisir un nombre de km ou cocher la case "Opération jamais éffectuée."';
-	if(($erreur & 32)!=0)$erreur_view['effectuee_date']='Saisir une date correcte(jj/mm/aaaa) ou cocher la case "Opération jamais éffectuée."';
+	if(($erreur & 1)!=0)$erreur_view['vehicule']='<p>Veuillez selectionner un véhicule</p>';
+	if(($erreur & 2)!=0)$erreur_view['denomination']='<p>Saisir l\'intitulé de l\'operation</p>';
+	if(($erreur & 4)!=0)$erreur_view['periodicite_km']='<p>Saisir un nombre de km ou cocher la case "Pas de périodicité kilométrique"</p>';
+	if(($erreur & 8)!=0)$erreur_view['periodicite_tps']='<p>Saisir un nombre de mois ou cocher la case"Pas de périodicité temporelle"</p>';
+	if(($erreur & 16)!=0)$erreur_view['effectuee_km']='<p>Saisir un nombre de km ou cocher la case "Opération jamais éffectuée."</p>';
+	if(($erreur & 32)!=0)$erreur_view['effectuee_date']='<p>Saisir une date correcte(jj/mm/aaaa) ou cocher la case "Opération jamais éffectuée."</p>';
 //echo '</br>$erreur_view:';print_r($erreur_view);	
 }
