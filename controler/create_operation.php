@@ -92,10 +92,12 @@ function check_date_format($date)
 	{//si effectuee_km est present et que effectuee_km n'est pas vide et est un nombre
 		$operation['effectuee_km']=$_POST['effectuee_km'];
 	}
-	elseif(isset($_POST['inib_effectuee'])){$operation['effectuee_km']=0;echo '</br>effectuee_km:sortie 2</br>';	}
+	elseif(isset($_POST['inib_effectuee']))
+	{
+		$operation['effectuee_km']=0;
+	}
 	else
 	{
-		echo '</br>effectuee_km:sortie 3</br>';	
 		$operation['effectuee_km']=null;
 		$erreur+=16;
 	}
@@ -168,5 +170,11 @@ if($erreur>0)
 }
 else
 {
-	
+	if(($erreur & 1)!=0)$erreur_view['vehicule']='Veuillez selectionner un véhicule';
+	if(($erreur & 2)!=0)$erreur_view['denomination']='Saisir l\'intitulé de l\'operation';
+	if(($erreur & 4)!=0)$erreur_view['periodicite_km']='Saisir un nombre de km ou cocher la case "Pas de périodicité kilométrique"';
+	if(($erreur & 8)!=0)$erreur_view['periodicite_tps']='Saisir un nombre de mois ou cocher la case"Pas de périodicité temporelle"';
+	if(($erreur & 16)!=0)$erreur_view['effectuee_km']='Saisir un nombre de km ou cocher la case "Opération jamais éffectuée."';
+	if(($erreur & 32)!=0)$erreur_view['effectuee_date']='Saisir une date correcte(jj/mm/aaaa) ou cocher la case "Opération jamais éffectuée."';
+echo '</br>$erreur_view:';print_r($erreur_view);	
 }
