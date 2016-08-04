@@ -103,7 +103,6 @@ function check_date_format($date)
 		{
 			$operation['effectuee_date'] = $date_temp['date'];
 		}
-		elseif(isset($_POST['inib_effectuee']))$operation['effectuee_date']=null;
 		else
 		{
 			$operation['effectuee_date']=null;
@@ -112,13 +111,14 @@ function check_date_format($date)
 		
 //echo '</br>$date:';print_r($operation['effectuee_date']);echo '</br>';
 	}
+	elseif(isset($_POST['inib_effectuee']))$operation['effectuee_date']=null;
 	elseif (isset($vehicule['date_1_immat']) and !empty($vehicule['date_1_immat']) and empty($_POST['effectuee_date'])) 
 	{
 		$operation['effectuee_date']=$vehicule['date_1_immat'];
 	}
 	else
 	{
-		$operation['effectuee_date']='1900-01-01';
+		$operation['effectuee_date']=null;
 		$erreur+=16;
 	}
 echo '</br>$date_temp:';print_r($date_temp);echo '</br>';
