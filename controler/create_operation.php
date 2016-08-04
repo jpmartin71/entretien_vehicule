@@ -121,6 +121,7 @@ function check_date_format($date)
 			$operation['effectuee_date']=$vehicule['date_1_immat'];
 		}
 		else $operation['effectuee_date']=null;
+	}
 	else
 	{
 		$operation['effectuee_date']=null;
