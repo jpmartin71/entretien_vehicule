@@ -17,8 +17,9 @@
 				<form class="form_operation" method="post" action="?action=create_operation">
 					<div class="form_operation">
 						<fieldset>
+							<?php if(isset($erreur_view['vehicule']))echo $erreur_view['vehicule'];?>
 							<label for="id_vehicule">Véhicule:</label>
-							<select name="id_vehicule" id="id_vehicule">
+							<select name="id_vehicule" id="id_vehicule" <?php if(isset($erreur_view['vehicule']))echo 'class="erreur"';?>>
 								<option value='0' selected>Choisir un vehicule</option>
 								<?php	foreach($liste_vehicules as $vehicule)?> 
 								<option value='<?php echo $vehicule['id'];?>' <?php if ($operation['id_vehicule']==$vehicule['id'])echo 'selected';?>>
