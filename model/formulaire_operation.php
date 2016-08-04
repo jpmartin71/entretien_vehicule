@@ -22,3 +22,13 @@ function get_infos_vehicule($id_vehicule)
 	$req->closecursor();
 return $infos;
 }
+
+//ajout d'une nouvelle opération
+function create_operation($operation)
+{
+	global $bdd;
+	$req=$bdd->prepare('INSERT INTO operations (id_vehicule,denomination,periodicite_km,periodicite_tps,effectuee_km,effectuee_date,echeance_km,echeance_date,observations)
+				VALUE (:id_vehicule,denomination,periodicite_km,periodicite_tps,effectuee_km,effectuee_date,echeance_km,echeance_date,observations)');
+	$req->execute(array());
+	
+}
