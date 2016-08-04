@@ -176,5 +176,5 @@ else
 	if(($erreur & 8)!=0)$erreur_view['periodicite_tps']='Saisir un nombre de mois ou cocher la case"Pas de périodicité temporelle"';
 	if(($erreur & 16)!=0)$erreur_view['effectuee_km']='Saisir un nombre de km ou cocher la case "Opération jamais éffectuée."';
 	if(($erreur & 32)!=0)$erreur_view['effectuee_date']='Saisir une date correcte(jj/mm/aaaa) ou cocher la case "Opération jamais éffectuée."';
-//echo '</br>$erreur_view:';print_r($erreur_view);	
+echo '</br>$erreur_view:';print_r($erreur_view);	
 }
