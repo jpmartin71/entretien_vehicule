@@ -22,38 +22,42 @@
 								foreach($liste_vehicules as $vehicule)?> <option value='<?php echo $vehicule['id'];?>'><?php echo $vehicule['libelle'];?></option>
 						</select>
 						
-						<legend for="denomination">Dénomination:</legend>
+						<label for="denomination">Dénomination:</label>
 						<input type="text" name="denomination" id="denomination" value="<?php echo $operation['denomination'];?>">
-
-						<legend for="periodicite_km">Périodicité (en km)</legend>
-						<input type="number" name="periodicite_km" id="periodicite_km" value="<?php echo $operation['periodicite_km'];?>">
-						</br>
-						<input type="checkbox" name="inib_periodicite_km" id="inib_periodicite_km" />
-						<label for="inib_periodicite_km">Pas de périodicité kilométrique</label>
 						
-						<legend for="periodicite_tps">Périodicité (en mois)</legend>
-						<input type="number" name="periodicite_tps" id="periodicite_tps" value="<?php echo $operation['periodicite_tps'];?>">
-						</br>
-						<input type="checkbox" name="inib_periodicite_tps" id="inib_periodicite_tps" />
-						<label for="inib_periodicite_tps">Pas de périodicité temporelle</label>
+						<fieldset>
+							<legend>Périodicité</legend>
+							<label for="periodicite_km">Périodicité (en km)</label>
+							<input type="number" name="periodicite_km" id="periodicite_km" value="<?php echo $operation['periodicite_km'];?>">
+							</br>
+							<input type="checkbox" name="inib_periodicite_km" id="inib_periodicite_km" />
+							<label for="inib_periodicite_km">Pas de périodicité kilométrique</label>
+							
+							<label for="periodicite_tps">Périodicité (en mois)</label>
+							<input type="number" name="periodicite_tps" id="periodicite_tps" value="<?php echo $operation['periodicite_tps'];?>">
+							</br>
+							<input type="checkbox" name="inib_periodicite_tps" id="inib_periodicite_tps" />
+							<label for="inib_periodicite_tps">Pas de périodicité temporelle</label>
+						</fieldset>
+						
 					</div>
 					<div class="form_operation">
-						<legend for="effectuee_km">Effectué à</legend>
+						<label for="effectuee_km">Effectué à</label>
 						<input type="number" name="effectuee_km" id="effectuee_km" value="<?php echo $operation['effectuee_km'];?>">
 
-						<legend for="effectuee_date">Effectué le</legend>
+						<label for="effectuee_date">Effectué le</label>
 						<input type="date" name="effectuee_date" id="effectuee_date" value="<?php echo date_create($operation['effectuee_date'])->format('d/m/Y');?>">
 
-						<legend for="echeance_km">Prochaine échéance (km)</legend>
+						<label for="echeance_km">Prochaine échéance (km)</label>
 						<input type="number" name="echeance_km" id="echeance_km" value="<?php echo $operation['echeance_km'];?>">
 
-						<legend for="echeance_date">Prochaine échéance (date)</legend>
+						<label for="echeance_date">Prochaine échéance (date)</label>
 						<input type="date" name="echeance_date" id="echeance_date" value="<?php echo $operation['echeance_date'];?>" enable=false>
 
 						
 					</div>
 
-						<legend for="obs">Observations:</legend>
+						<label for="obs">Observations:</label>
 						<textarea name="obs" id="obs" ><?php echo $operation['obs'];?></textarea>
 					
 						<input type="hidden" name="" id="" value="">
