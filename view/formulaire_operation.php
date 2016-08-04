@@ -1,4 +1,4 @@
-<?php 	echo "</br>view formulaire opération"; 
+<?php 	echo "</br>view formulaire opération"; ?>
 <!DOCTYPE html>
 <html>
     <head>
