@@ -135,9 +135,10 @@ function check_date_format($date)
 		$operation['echeance_km']=$operation['effectuee_km']+$operation['periodicite_km'];
 	}
 	else $operation['echeance_km']=null;
-
-echo '</br>$operation['periodicite_tps']!=null ->'.$operation['periodicite_tps']!=null;echo '</br>';
-echo '</br>$operation['effectuee_date']!=null ->'.$operation['effectuee_date']!=null;echo '</br>';
+echo '</br>$operation[\'periodicite_tps\'] ->'.$operation['periodicite_tps'];echo '</br>';
+echo '</br>$operation[\'periodicite_tps\']!=null ->'.$operation['periodicite_tps']!=null;echo '</br>';
+echo '</br>$operation[\'effectuee_date\'] ->'.$operation['effectuee_date'];echo '</br>';
+echo '</br>$operation[\'effectuee_dat\']!=null ->'.$operation['effectuee_date']!=null;echo '</br>';
 	##echeance tps
 	if($operation['periodicite_tps']!=null and $operation['effectuee_date']!=null)
 	{
