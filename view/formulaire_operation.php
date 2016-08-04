@@ -32,17 +32,15 @@
 							<label for="periodicite_km">Périodicité (en km)</label>
 							<input type="number" name="periodicite_km" id="periodicite_km" value="<?php echo $operation['periodicite_km'];?>">
 							</br>
-							
 							<input type="checkbox" name="inib_periodicite_km" id="inib_periodicite_km" />
-							<label for="inib_periodicite_km">Pas de périodicité kilométrique</label>
+							<label for="inib_periodicite_km" class="label_checkbox">Pas de périodicité kilométrique</label>
 							</br>
 							
 							<label for="periodicite_tps">Périodicité (en mois)</label>
 							<input type="number" name="periodicite_tps" id="periodicite_tps" value="<?php echo $operation['periodicite_tps'];?>">
 							</br>
-							
 							<input type="checkbox" name="inib_periodicite_tps" id="inib_periodicite_tps" />
-							<label for="inib_periodicite_tps">Pas de périodicité temporelle</label>
+							<label for="inib_periodicite_tps" class="label_checkbox">Pas de périodicité temporelle</label>
 						</fieldset>
 						
 					</div>
