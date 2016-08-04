@@ -164,7 +164,7 @@ echo '</br>$erreur period tps:';print_r($erreur&8);
 echo '</br>$erreur effectuée km:';print_r($erreur&16);
 echo '</br>$erreur effectuée date:';print_r($erreur&32);
 
-if($erreur>0)
+if($erreur==0)
 {
 	//code pour ajout sql
 }
