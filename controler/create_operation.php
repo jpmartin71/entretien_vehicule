@@ -155,14 +155,14 @@ function check_date_format($date)
 	else $operation['obs']="";
 	
 	
-echo '</br>$operation:';print_r($operation);
+/*echo '</br>$operation:';print_r($operation);
 echo '</br>$erreur:';print_r($erreur);
 echo '</br>$erreur vehicule:';print_r($erreur & 1);
 echo '</br>$erreur denomination:';print_r($erreur & 2);
 echo '</br>$erreur period km:';print_r($erreur & 4);
 echo '</br>$erreur period tps:';print_r($erreur&8);
 echo '</br>$erreur effectuée km:';print_r($erreur&16);
-echo '</br>$erreur effectuée date:';print_r($erreur&32);
+echo '</br>$erreur effectuée date:';print_r($erreur&32);*/
 
 if($erreur==0)
 {
@@ -176,5 +176,5 @@ else
 	if(($erreur & 8)!=0)$erreur_view['periodicite_tps']='Saisir un nombre de mois ou cocher la case"Pas de périodicité temporelle"';
 	if(($erreur & 16)!=0)$erreur_view['effectuee_km']='Saisir un nombre de km ou cocher la case "Opération jamais éffectuée."';
 	if(($erreur & 32)!=0)$erreur_view['effectuee_date']='Saisir une date correcte(jj/mm/aaaa) ou cocher la case "Opération jamais éffectuée."';
-echo '</br>$erreur_view:';print_r($erreur_view);	
+//echo '</br>$erreur_view:';print_r($erreur_view);	
 }
