@@ -39,10 +39,7 @@ aside
 	width: 20%;
 }
 
-form.form_operation
-{
 
-}
 form.form_kilometrage input,
 form.form_kilometrage legend
 {
@@ -52,9 +49,9 @@ form.form_kilometrage legend
 
 div.form_operation
 {
-	display: inline-block;
+	/*display: inline-block;
 	vertical-align: top;
-	width: 49%;
+	width: 49%;*/
 
 }
 form.form_operation input:not([type="checkbox"]),
