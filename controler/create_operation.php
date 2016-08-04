@@ -170,7 +170,7 @@ if($erreur==0)
 }
 else
 {
-	$erreur_view['view']='Echec de la création de l\'opération.</br>Corriger les champs.'
+	$erreur_view['view']='Echec de la création de l\'opération.</br>Corriger les champs.';
 	if(($erreur & 1)!=0)$erreur_view['vehicule']='Veuillez selectionner un véhicule';
 	if(($erreur & 2)!=0)$erreur_view['denomination']='Saisir l\'intitulé de l\'operation';
 	if(($erreur & 4)!=0)$erreur_view['periodicite_km']='Saisir un nombre de km ou cocher la case "Pas de périodicité kilométrique"';
