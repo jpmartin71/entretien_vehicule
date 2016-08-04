@@ -32,16 +32,16 @@
 							<legend>Périodicité</legend>
 							
 							<label for="periodicite_km">Périodicité (en km)</label>
-							<input type="number" name="periodicite_km" id="periodicite_km" value="<?php echo $operation['periodicite_km'];?>">
+							<input type="number" name="periodicite_km" id="periodicite_km" value="<?php echo $operation['periodicite_km'];?>" <?php if(isset($_POST['inib_periodicite_km']))echo 'disabled';?>>
 							</br>
-							<input type="checkbox" name="inib_periodicite_km" id="inib_periodicite_km" />
+							<input type="checkbox" name="inib_periodicite_km" id="inib_periodicite_km" <?php if(isset($_POST['inib_periodicite_km']))echo 'checked';?> />
 							<label for="inib_periodicite_km" class="label_checkbox">Pas de périodicité kilométrique</label>
 							</br>
 							
 							<label for="periodicite_tps">Périodicité (en mois)</label>
-							<input type="number" name="periodicite_tps" id="periodicite_tps" value="<?php echo $operation['periodicite_tps'];?>">
+							<input type="number" name="periodicite_tps" id="periodicite_tps" value="<?php echo $operation['periodicite_tps'];?>" <?php if(isset($_POST['inib_periodicite_tps']))echo 'disabled';?>>
 							</br>
-							<input type="checkbox" name="inib_periodicite_tps" id="inib_periodicite_tps" />
+							<input type="checkbox" name="inib_periodicite_tps" id="inib_periodicite_tps" <?php if(isset($_POST['inib_periodicite_tps']))echo 'checked';?>/>
 							<label for="inib_periodicite_tps" class="label_checkbox">Pas de périodicité temporelle</label>
 						</fieldset>
 						
@@ -50,16 +50,16 @@
 						<fieldset>
 							<legend>Opération effectuée:</legend>
 							
-							<input type="checkbox" name="inib_effectuee" id="inib_effectuee" />
+							<input type="checkbox" name="inib_effectuee" id="inib_effectuee" <?php if(isset($_POST['inib_effectuee']))echo 'checked';?>/>
 							<label for="inib_effectuee" class="label_checkbox">Opération jamais éffectuée.</label>
 							</br>
 							
 							<label for="effectuee_km">Effectué à (en km):</label>
-							<input type="number" name="effectuee_km" id="effectuee_km" value="<?php echo $operation['effectuee_km'];?>">
+							<input type="number" name="effectuee_km" id="effectuee_km" value="<?php echo $operation['effectuee_km'];?>" <?php if(isset($_POST['inib_effectuee']))echo 'disabled';?>>
 							</br>
 							
 							<label for="effectuee_date">Effectué le (jj/mm/aaaa):</label>
-							<input type="date" name="effectuee_date" id="effectuee_date" value="<?php echo date_create($operation['effectuee_date'])->format('d/m/Y');?>">
+							<input type="date" name="effectuee_date" id="effectuee_date" value="<?php echo date_create($operation['effectuee_date'])->format('d/m/Y');?>" <?php if(isset($_POST['inib_effectuee']))echo 'disabled';?>>
 							</br>
 							
 							
