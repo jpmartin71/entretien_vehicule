@@ -28,7 +28,15 @@ function create_operation($operation)
 {
 	global $bdd;
 	$req=$bdd->prepare('INSERT INTO operations (id_vehicule,denomination,periodicite_km,periodicite_tps,effectuee_km,effectuee_date,echeance_km,echeance_date,observations)
-				VALUE (:id_vehicule,denomination,periodicite_km,periodicite_tps,effectuee_km,effectuee_date,echeance_km,echeance_date,observations)');
-	$req->execute(array());
+				VALUE (:id_vehicule,:denomination,:periodicite_km,:periodicite_tps,:effectuee_km,:effectuee_date,:echeance_km,:echeance_date,:observations)');
+	$req->execute(array(	':id_vehicule'=>$operation['id_vehicule'],
+				':denomination'=>$operation['denomination'],
+				':periodicite_km'=>$operation['periodicite_km'],
+				':periodicite_tps'=>$operation['periodicite_tps'],
+				':effectuee_km'=>$operation['effectuee_km'],
+				':effectuee_date'=>$operation['effectuee_date'],
+				':echeance_km'=>$operation['echeance_km'],
+				':echeance_date'=>$operation['echeance_date'],
+				':observations'=>$operation['obs']));
 	
 }
