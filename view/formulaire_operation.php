@@ -16,15 +16,17 @@
 			<article >
 				<form class="form_operation" method="post" action="?action=create_operation">
 					<div class="form_operation">
-						<label for="id_vehicule">Véhicule:</label>
-						<select name="id_vehicule" id="id_vehicule">
-							<?php
-								foreach($liste_vehicules as $vehicule)?> <option value='<?php echo $vehicule['id'];?>'><?php echo $vehicule['libelle'];?></option>
-						</select>
-						</br>
-						
-						<label for="denomination">Dénomination:</label>
-						<input type="text" name="denomination" id="denomination" value="<?php echo $operation['denomination'];?>">
+						<fieldset>
+							<label for="id_vehicule">Véhicule:</label>
+							<select name="id_vehicule" id="id_vehicule">
+								<?php
+									foreach($liste_vehicules as $vehicule)?> <option value='<?php echo $vehicule['id'];?>'><?php echo $vehicule['libelle'];?></option>
+							</select>
+							</br>
+							
+							<label for="denomination">Dénomination:</label>
+							<input type="text" name="denomination" id="denomination" value="<?php echo $operation['denomination'];?>">
+						</fieldset>
 						
 						<fieldset>
 							<legend>Périodicité</legend>
