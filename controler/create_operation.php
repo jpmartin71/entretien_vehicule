@@ -169,6 +169,8 @@ if($erreur==0)
 	//code pour ajout sql
 	create_operation($operation);
 	$no_erreur_view['view']='Opération ajoutée avec succès.';
+	$operation=array('id_vehicule'=>null, 'denomination'=>null, 'periodicite_km'=>null, 'periodicite_tps'=>null, 'effectuee_km'=>null, 'effectuee_date'=>null, 'echeance_km'=>null, 'echeance_date'=>null, 'obs'=>null);
+
 }
 else
 {
