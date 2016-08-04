@@ -95,7 +95,7 @@ echo '</br>effectuee_km:';echo is_numeric($_POST['effectuee_km']);echo '</br>';
 echo '</br>effectuee_km:sortie 1</br>';	
 		$operation['effectuee_km']=$_POST['effectuee_km'];
 	}
-	elseif(isset($_POST['inib_effectuee']))$operation['effectuee_km']=0;echo '</br>effectuee_km:sortie 1</br>';	
+	elseif(isset($_POST['inib_effectuee'])){$operation['effectuee_km']=0;echo '</br>effectuee_km:sortie 1</br>';	}
 	else
 	{
 		echo '</br>effectuee_km:sortie 1</br>';	
