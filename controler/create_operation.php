@@ -167,6 +167,8 @@ echo '</br>$erreur effectuée date:';print_r($erreur&32);*/
 if($erreur==0)
 {
 	//code pour ajout sql
+	create_operation($operation);
+	$no_erreur_view['view']='Opération ajoutée avec succès.';
 }
 else
 {
