@@ -128,21 +128,25 @@ function check_date_format($date)
 		$operation['effectuee_date']=null;
 		$erreur+=16;
 	}
-//echo '</br>$date_temp:';print_r($date_temp);echo '</br>';
 	
 	##echeance km
-	if($operation['periodicite_km']!=0)
+	if($operation['periodicite_km']!=null)
 	{
 		$operation['echeance_km']=$operation['effectuee_km']+$operation['periodicite_km'];
 	}
-	else $operation['echeance_km']=0;
+	else $operation['echeance_km']=null;
 	
 	##echeance tps
-	if($operation['periodicite_tps']!=0 and $operation['effectuee_date']!='1900-01-01')
+	if($operation['periodicite_tps']!=null and $operation['effectuee_date']!=null)
 	{
-		
+		$date_temp = new DateTime($operation['effectuee_date']);
+		$date_temp->add(new DateInterval('P'.$operation['periodicite_tps'].'M')); //Où 'P12M' indique 'Période de 12 Mois'
+		$operation['echeance_date']=$date_temp->format('Y-m-d');
 	}
-	else $operation['echeance_date']='2099-01-01';
+	else $operation['echeance_date']=null;
+	
+	
+	##observations
 	if(isset($_POST['obs']))
 	{
 		$operation['obs']=$_POST['obs'];
