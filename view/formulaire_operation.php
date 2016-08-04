@@ -74,9 +74,9 @@
 							<label for="echeance_km">Prochaine échéance (km)</label>
 							<input type="number" name="echeance_km" id="echeance_km" value="<?php echo $operation['echeance_km'];?>"  disabled>
 							</br>
-							
+
 							<label for="echeance_date">Prochaine échéance (date)</label>
-							<input type="date" name="echeance_date" id="echeance_date" value="<?php date_create($operation['echeance_date'])->format('d/m/Y');?>"  disabled>
+							<input type="date" name="echeance_date" id="echeance_date" value="<?php echo date_create($operation['echeance_date'])->format('d/m/Y');?>"  disabled>
 						</fieldset>
 							
 							
