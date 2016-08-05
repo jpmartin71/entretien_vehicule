@@ -1,16 +1,5 @@
 <?php 
 
-	include_once './model/fonctions_vehicule.php';
-	
-	if(isset($_POST))
-	{
-		foreach ($_POST as $key => $value) 
-		{
-			$_POST[$key]=htmlspecialchars($value);
-		}
-		
-	}
-
 	if(isset($_POST['modele']) and !empty($_POST['modele']))
 	{
 		if(!isset($_POST['date_1_immat']) or empty($_POST['date_1_immat']))
