@@ -6,5 +6,12 @@ $vehicule=array('id'=>null,'marque'=>null,'modele'=>null,'date_1_immat'=>null,'d
 	
 if(isset($_GET['action']) and $_GET['action']=='create_vehicule')
 {
-		  include_once './controler/create_vehicule.php'
+		  include_once './controler/create_vehicule.php';
 }
+
+elseif(isset($_GET['action']) and $_GET['action']=='udate_vehicule')
+{
+		  include_once './controler/update_vehicule.php';
+}
+
+include_once './view/formulaire_vehicule.php';
