@@ -47,7 +47,7 @@
 						<input type="checkbox" name="possession" id="possession"/>
 					</div>
 	
-					<input type="submit" value="Mettre a jour"/>
+					<input type="submit" value="<?php echo $text_submit;?>"/>
 				</form>
 					
 				<p>*: champs obligatoire.</p>
