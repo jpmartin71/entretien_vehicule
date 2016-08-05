@@ -74,6 +74,7 @@
 	else $vehicule['possession']=0;
 	
 		//set_new_vehicule($_POST);
+		
 echo '</br>$vehicule:';print_r($vehicule);
 
 		
