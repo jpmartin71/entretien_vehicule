@@ -6,9 +6,14 @@ include_once './model/fonctions_vehicule.php';
 include_once './controler/fonctions_divers.php';
 $vehicule=array('id'=>null,'marque'=>null,'modele'=>null,'date_1_immat'=>null,'date_achat'=>null,'km_achat'=>null,'vin'=>null,'immatriculation'=>null);
 	
+if ($_GET['form']=='create_vehicule')$action_form='?action="create_vehicule"';
+elseif($_GET['form']=='update_vehicule') $action_form='?action="update_vehicule"';
+else $action_form='?form="create_vehicule"';
+	
 if(isset($_GET['action']) and $_GET['action']=='create_vehicule')
 {
 		  include_once './controler/create_vehicule.php';
+		  
 }
 
 elseif(isset($_GET['action']) and $_GET['action']=='udate_vehicule')
