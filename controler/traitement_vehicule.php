@@ -28,7 +28,7 @@ include_once './model/traitement_vehicule.php';
 	$releve_kilometrique=get_last_releve($_GET['vehicule']);
 	if(!empty($releve_kilometrique)) 
 	{
-		print_r($releve_kilometrique);
+echo '</br>$releve_kilometrique:';print_r($releve_kilometrique);
 		foreach ($releve_kilometrique as $key => $value) $releve_kilometrique[$key]=htmlspecialchars($value);
 	}
 
@@ -37,7 +37,6 @@ include_once './model/traitement_vehicule.php';
 	$operations=get_operations($_GET['vehicule']);
 	if(!empty($operations))
 	{
-			print_r($operations);
 			foreach ($operations as $key => $value) $operations[$key]=htmlspecialchars($value);
 	}
 
