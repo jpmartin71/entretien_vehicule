@@ -13,89 +13,43 @@
 		
 		<section>
 			<article>
-
-				<?php/*
-				
-				
-				if((isset($_GET['form'])) and ($_GET['form']=='maj_vehicule'))
-				{
-					*/?>
-			<form class="form_vehicule" method="post" action="?"><!--action=update_vehicule"-->
-				<div class="form_vehicule">
-					<label for="marque">Marque:</label>
-					<input type="text" name="marque" id="marque">
-				</div>
-				<div class="form_vehicule">
-					<label for="modele">Modèle*:</label>
-					<input type="text" name="modele" id="modele">
-				</div>
-				<div class="form_vehicule">
-					<label for="date_1_immat">Date de 1ere mise en circulation:</label>
-					<input type="date" name="date_1_immat" id="date_1_immat">
-				</div>
-				<div class="form_vehicule">
-					<label for="vin">VIN:</label>
-					<input type="text" name="vin" id="vin">
-				</div>
-				<div class="form_vehicule">
-					<label for="immat">Immatriculation:</label>
-					<input type="text" name="immat" id="immat">
-				</div>
-				<div class="form_vehicule">
-					<label for="date_achat">Date d'achat:*</label>
-					<input type="date" name="date_achat" id="date_achat">
-				</div>
-				<div class="form_vehicule">
-					<label for="km_achat">Kilometrage  l'achat:</label>
-					<input type="number" name="km_achat" id="km_achat">
-				</div>
-				<div class="form_vehicule">
-					<label for="possession">Vehicule en ma possession actuellement:</label>
-					<input type="checkbox" name="possession" id="possession"/>
-				</div>
-
-				<input type="submit" value="Mettre a jour"/>
-			</form>
-					<?php/*
-				}
-
-				else 
-				{
-					?>
-					<form class="form_vehicule" method="post" action="?action=create_vehicule">
+				<form class="form_vehicule" method="post" action="?"><!--action=update_vehicule ou action=create_vehicule"-->
+					<div class="form_vehicule">
 						<label for="marque">Marque:</label>
 						<input type="text" name="marque" id="marque">
-						</br>
-
+					</div>
+					<div class="form_vehicule">
 						<label for="modele">Modèle*:</label>
 						<input type="text" name="modele" id="modele">
-						</br>
-
+					</div>
+					<div class="form_vehicule">
 						<label for="date_1_immat">Date de 1ere mise en circulation:</label>
 						<input type="date" name="date_1_immat" id="date_1_immat">
-						</br>
-
+					</div>
+					<div class="form_vehicule">
 						<label for="vin">VIN:</label>
 						<input type="text" name="vin" id="vin">
-						</br>
-
+					</div>
+					<div class="form_vehicule">
 						<label for="immat">Immatriculation:</label>
 						<input type="text" name="immat" id="immat">
-						</br>
-
-						<label for="date_achat">Date d'achat:</label>
+					</div>
+					<div class="form_vehicule">
+						<label for="date_achat">Date d'achat:*</label>
 						<input type="date" name="date_achat" id="date_achat">
-						</br>
-
-						<label for="possession">Possession actuelle:</label>
+					</div>
+					<div class="form_vehicule">
+						<label for="km_achat">Kilometrage  l'achat:</label>
+						<input type="number" name="km_achat" id="km_achat">
+					</div>
+					<div class="form_vehicule">
+						<label for="possession">Vehicule en ma possession actuellement:</label>
 						<input type="checkbox" name="possession" id="possession"/>
-						</br>
-
-						<input type="submit" value="Créer véhicule"/>
-					</form>
-					<?php
-				}*/?>
-
+					</div>
+	
+					<input type="submit" value="Mettre a jour"/>
+				</form>
+					
 				<p>*: champs obligatoire.</p>
 				
 
