@@ -13,7 +13,7 @@
 		
 		<section>
 			<article>
-				<form class="form_vehicule" method="post" action="?"><!--action=update_vehicule ou action=create_vehicule"-->
+				<form class="form_vehicule" method="post" action="<?php echo $action_form;?>" >
 					<div class="form_vehicule">
 						<label for="marque">Marque:</label>
 						<input type="text" name="marque" id="marque">
