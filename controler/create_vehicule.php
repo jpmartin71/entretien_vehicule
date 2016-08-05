@@ -1,6 +1,8 @@
 <?php 
 
+
 //verification des champs
+
 	$erreur=0;
 	
 	if(isset($_POST['marque']))$vehicule['marque']=$_POST['marque'];
@@ -53,8 +55,8 @@
 		$vehicule['date_achat']=null;
 		$erreur+=4;
 	}		
-		
-	if(isset($_POST['km_achat']) and (!empty($_POST['km_achat']) or ($_POST['km_achat'])==0) )	
+	
+	if(isset($_POST['km_achat']) and (is_numeric($_POST['km_achat'])))	
 	{
 		$vehicule['km_achat']=($_POST['km_achat']);
 	}
@@ -70,16 +72,28 @@
 	if(isset($_POST['vin']))$vehicule['vin']=$_POST['vin'];
 	else $vehicule['vin']=null;
 	
-	if(isset($_POST['possession']))$vehicule['possession']=1;
-	else $vehicule['possession']=0;
-	
-		//set_new_vehicule($_POST);
-		
-echo '</br>$vehicule:';print_r($vehicule);
+	if(!isset($_POST['possession']))$vehicule['possession']=0;
+	else $vehicule['possession']=1;
 
-		
-	}
-	else
+//gestion des erreurs
+if($erreur==0)
+{
+	//code pour ajout sql
+	if(set_new_vehicule($vehicule))
 	{
-		
+		$no_erreur_view['view']='Véhicule ajouté avec succès.';
+		$vehicule=array('id'=>null,'marque'=>null,'modele'=>null,'date_1_immat'=>null,'date_achat'=>null,'km_achat'=>null,'vin'=>null,'immatriculation'=>null,'possession'=>1);
+
 	}
+	else $erreur_view['view']='Echec de la création du nouveau véhicule.</br><strong>Le véhicule existe déja.</strong>';
+
+}
+else
+{
+	$erreur_view['view']='Echec de la création du nouveau véhicule.</br>Corriger les champs.';
+	if(($erreur & 1)!=0)$erreur_view['modele']='<p>Veuillez saisir un modèle!</p>';
+	if(($erreur & 2)!=0)$erreur_view['date_1_immat']='<p>Saisir la date de 1ere mise en circulation (format:jj/mm/aaaa)!</p>';
+	if(($erreur & 4)!=0)$erreur_view['date_achat']='<p>Saisir la date d\'achat (format:jj/mm/aaaa)!</p>';
+	if(($erreur & 8)!=0)$erreur_view['km_achat']='<p>Saisir le kilométrage à l\'achat!</p>';
+
+}

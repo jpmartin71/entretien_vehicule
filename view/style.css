@@ -47,8 +47,11 @@ form.form_kilometrage legend
 	display: inline-block;
 }
 
-div.form_operation
+div.form_operation,
+div.form_vehicule,
+.erreur
 {
+	padding:10px;
 	/*display: inline-block;
 	vertical-align: top;
 	width: 49%;*/
@@ -81,7 +84,13 @@ form.form_operation textarea
 }
 
 
-
+div.form_vehicule input:not([type="checkbox"]),
+div.form_vehicule select,
+div.form_vehicule label
+{	
+	width:300px;
+	display:inline-block;	
+}
 
 .erreur
 {
@@ -89,7 +98,7 @@ form.form_operation textarea
 	border: 1px solid red;
 	background-color: AntiqueWhite;
 	color:red;
-	padding:10px;
+
 }
 
 .no_erreur
