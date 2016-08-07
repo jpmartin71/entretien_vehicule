@@ -1,7 +1,7 @@
 
 <?php
-echo '</br>Branche estimation kilometrage.';
 include_once './model/traitement_vehicule.php';
+include_once './model/fonctions_divers.php';
 	if(!is_numeric($_GET['vehicule']))header('location:?');
 
 //update kilometrage
@@ -21,14 +21,17 @@ include_once './model/traitement_vehicule.php';
 	}
 
 //infos véhicule
+	
 	$vehicule=get_infos_vehicule($_GET['vehicule']);
 	foreach ($vehicule as $key => $value) $vehicule[$key]=htmlspecialchars($value);
 
 //relevé kilometrique
 	$releve_kilometrique=get_last_releve($_GET['vehicule']);
+	$estimation_km=estimation_km($vehicule,$releve_kilometrique);
+	$estimation_km['moy_km_totale']=round($estimation_km['moy_km_totale']*365);
+	$estimation_km['moy_km_achat']=round($estimation_km['moy_km_achat']*365);
 	if(!empty($releve_kilometrique)) 
 	{
-echo '</br>$releve_kilometrique:';print_r($releve_kilometrique);
 		foreach ($releve_kilometrique as $key => $value) $releve_kilometrique[$key]=htmlspecialchars($value);
 	}
 
