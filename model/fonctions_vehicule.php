@@ -32,7 +32,7 @@
 		
 		return $return;
 
-	
+	}	
 	function get_infos_vehicule($id_vehicule)
 	{
 		global $bdd;
@@ -83,4 +83,4 @@
 		$req->closecursor();
 		return $operations;
 	}
-	}
+	
