@@ -59,7 +59,8 @@
 					<form class="form_vehicule" method="post" action="?page=vehicule&vehicule=<?php echo $vehicule['id'];?>">
 						<input type="submit" value="Annuler et revenir à la page du vehicule"/>
 					</form>
-				<?php}?>
+				<?php
+				}?>
 					
 				<p>*: champs obligatoire.</p>
 				
