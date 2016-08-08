@@ -26,7 +26,7 @@ if(isset($_GET['action']) and $_GET['action']=='create_vehicule')
 		  
 }
 
-elseif(isset($_GET['action']) and $_GET['action']=='udate_vehicule')
+elseif(isset($_GET['action']) and $_GET['action']=='update_vehicule')
 {
 	$action_form='?action=update_vehicule';
 	$text_submit='Mettre à jour le vehicule';
