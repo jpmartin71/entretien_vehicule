@@ -68,7 +68,7 @@
 						<li>VIN:<br><?php echo $vehicule['vin'];?></li>
 						<li>Date d'achat:<br><?php echo $vehicule['date_achat'];?></li>
 					</ul>
-					<a href="?form=update_vehicule$vehicule=<?php echo $vehicule['id];?>">Modifier le véhicule</a>
+					<a href="?form=update_vehicule$vehicule=<?php echo $vehicule['id'];?>">Modifier le véhicule</a>
 							
 					
 				</div>
