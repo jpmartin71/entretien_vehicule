@@ -1,7 +1,6 @@
 <?php
 	function update_vehicule($infos)
 	{
-echo '$_POST:'; print_r($infos); echo '</br>';
 		global $bdd;
 		$req_update=$bdd->prepare('	UPDATE vehicules 
 						SET 	marque=:marque, 
@@ -23,7 +22,6 @@ echo '$_POST:'; print_r($infos); echo '</br>';
 			'vin'		=>$infos['vin'],
 			'immatriculation'=>$infos['immatriculation'],
 			'possession'	=>$infos['possession']));
-echo '$return:'; print_r($return);
 		return $return;
 	}
 	
