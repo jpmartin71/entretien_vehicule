@@ -97,8 +97,7 @@ if($erreur==0)
 		if(update_vehicule($vehicule))
 		{
 			$no_erreur_view['view']='Véhicule mise à jour avec succès.';
-			//$vehicule=array('id'=>null,'marque'=>null,'modele'=>null,'date_1_immat'=>null,'date_achat'=>null,'km_achat'=>null,'vin'=>null,'immatriculation'=>null,'possession'=>1);
-	
+			$vehicule=get_infos_vehicule($vehicule['id']);
 		}
 		else $erreur_view['view']='Echec de la mise à jour du véhicule.';	
 	}
