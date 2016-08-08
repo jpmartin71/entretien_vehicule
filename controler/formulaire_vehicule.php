@@ -35,7 +35,7 @@ elseif(isset($_GET['action']) and $_GET['action']=='update_vehicule')
 {
 	$action_form='?action=update_vehicule';
 	$text_submit='Mettre à jour le vehicule';
-	include_once './controler/update_vehicule.php';
+	include_once './controler/create_vehicule.php';
 }
 
 include_once './view/formulaire_vehicule.php';
