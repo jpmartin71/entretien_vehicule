@@ -13,7 +13,7 @@ echo '$_POST:'; print_r($infos); echo '</br>';
 							immatriculation=:immatriculation, 	
 							possession=:possession
 						WHERE id=:id');
-		$req_update->execute(array(
+		$return=$req_update->execute(array(
 			'id'		=>$infos['id']	,
 			'marque'	=>$infos['marque'],
 			'modele'	=>$infos['modele'],
@@ -23,6 +23,8 @@ echo '$_POST:'; print_r($infos); echo '</br>';
 			'vin'		=>$infos['vin'],
 			'immatriculation'=>$infos['immatriculation'],
 			'possession'	=>$infos['possession']));
+echo '$return:'; print_r($return);
+		return $return;
 	}
 	
 	function set_new_vehicule($infos)
