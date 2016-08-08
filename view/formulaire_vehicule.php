@@ -50,7 +50,7 @@
 						<label for="possession">Vehicule en ma possession actuellement:</label>
 						<input type="checkbox" name="possession" id="possession"  <?php if($vehicule['possession'])echo 'checked';?>/>
 					</div>
-	
+					<input type="hidden" name="id" id="id" value="<?php echo $vehicule['id'];?>">
 					<input type="submit" value="<?php echo $text_submit;?>"/>
 				</form>
 					
