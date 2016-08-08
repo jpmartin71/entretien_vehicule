@@ -5,7 +5,7 @@
 
 	$erreur=0;
 	
-	if(isset($_POST['id']) and $_POST['id']>0)$vehicule['id']=$_POST['id']);
+	if(isset($_POST['id']) and $_POST['id']>0)$vehicule['id']=$_POST['id'];
 	
 	if(isset($_POST['marque']))$vehicule['marque']=$_POST['marque'];
 	else $vehicule['marque']="";
