@@ -52,7 +52,14 @@
 					</div>
 					<input type="hidden" name="id" id="id" value="<?php echo $vehicule['id'];?>">
 					<input type="submit" value="<?php echo $text_submit;?>"/>
+					<input type="reset" value="Reset"/>
 				</form>
+				<?php if((isset($_GET['form']) and $_GET['form']=='update_vehicule') or (isset($_GET['action']) and $_GET['action']=='update_vehicule'))
+				{?>
+					<form class="form_vehicule" method="post" action="?page=vehicule&vehicule=<?php echo $vehicule['id'];?>">
+						<input type="submit" value="Annuler et revenir à la page du vehicule"/>
+					</form>
+				<?php}?>
 					
 				<p>*: champs obligatoire.</p>
 				
