@@ -1,7 +1,32 @@
 <?php
+	function update_vehicule($infos)
+	{
+echo '$_POST:'; print_r($infos); echo '</br>';
+		global $bdd;
+		$req_update=$bdd->prepare('	UPDATE vehicules 
+						SET 	marque=:marque, 
+							modele=:modele, 	
+							date_1_immat=:date_1_immat,
+							date_achat=:date_achat, 
+							km_achat=:km_achat,	
+							vin=:vin, 	
+							immatriculation=:immatriculation, 	
+							possession=:possession
+						WHERE id=:id');
+		$req_update->execute(array(
+			'id'		=>$infos['id']	,
+			'marque'	=>$infos['marque'],
+			'modele'	=>$infos['modele'],
+			'date_1_immat'	=>$infos['date_1_immat'],
+			'date_achat'	=>$infos['date_achat'],
+			'km_achat'	=>$infos['km_achat'],
+			'vin'		=>$infos['vin'],
+			'immatriculation'=>$infos['immatriculation'],
+			'possession'	=>$infos['possession']));
+	}
+	
 	function set_new_vehicule($infos)
 	{
-		echo '$_POST:'; print_r($infos); echo '</br>';
 		global $bdd;
 		$req_doublon=$bdd->prepare ('SELECT * FROM vehicules WHERE modele=:modele AND date_1_immat=:date_1_immat');
 		$req_doublon->execute(array(
