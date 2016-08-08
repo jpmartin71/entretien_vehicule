@@ -16,6 +16,7 @@ elseif(isset($_GET['form']) and $_GET['form']=='update_vehicule')
 	if(isset($_GET['vehicule']) and !empty($_GET['vehicule'])  and !empty($vehicule=get_infos_vehicule($_GET['vehicule'])) )
 	{
 echo '</br>$vehicule:';print_r($vehicule);
+
 	}
 	$action_form='?action=update_vehicule';
 	$text_submit='Mettre à jour le vehicule';
