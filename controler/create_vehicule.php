@@ -94,7 +94,7 @@ if($erreur==0)
 	elseif($_GET['action']=='update_vehicule')
 	{
 		//code pour ajout sql
-		if(1)//code update à faire
+		if(update_vehicule($vehicule))
 		{
 			$no_erreur_view['view']='Véhicule mise à jour avec succès.';
 			//$vehicule=array('id'=>null,'marque'=>null,'modele'=>null,'date_1_immat'=>null,'date_achat'=>null,'km_achat'=>null,'vin'=>null,'immatriculation'=>null,'possession'=>1);
