@@ -1,6 +1,6 @@
 
 <?php
-include_once './model/traitement_vehicule.php';
+include_once './model/fonctions_vehicule.php';
 include_once './model/fonctions_divers.php';
 	if(!is_numeric($_GET['vehicule']))header('location:?');
 

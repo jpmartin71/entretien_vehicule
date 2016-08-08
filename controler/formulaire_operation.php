@@ -2,7 +2,7 @@
 echo "controler formulaire opération</br>";
 
 include_once './model/formulaire_operation.php';
-include_once './controler/fonctions_divers.php';
+include_once './model/fonctions_divers.php';
 
 //$operation pour le remplissage des champs
 $operation=array('id_vehicule'=>null, 'denomination'=>null, 'periodicite_km'=>null, 'periodicite_tps'=>null, 'effectuee_km'=>null, 'effectuee_date'=>null, 'echeance_km'=>null, 'echeance_date'=>null, 'obs'=>null);

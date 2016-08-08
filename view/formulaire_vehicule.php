@@ -5,12 +5,12 @@
         <title>Entretien des vehicules</title>
 		<link href="./view/style.css" rel="stylesheet" type="text/css" /> 
     </head>
-        
+
     <body>
 		<?php include_once("header.php");?>
 		<?php include_once("navigation.php");?>
 		<?php include_once 'erreurs.php';?>
-		
+
 		<section>
 			<article>
 				<?php if((isset($_GET['form']) and $_GET['form']=='update_vehicule') or (isset($_GET['action']) and $_GET['action']=='update_vehicule'))
@@ -33,12 +33,12 @@
 					<div class="form_vehicule <?php if(isset($erreur_view['date_1_immat']))echo 'erreur';?>">
 						<?php if(isset($erreur_view['date_1_immat']))echo $erreur_view['date_1_immat'];?>
 						<label for="date_1_immat">Date de 1ere mise en circulation*:</label>
-						<input type="date" name="date_1_immat" id="date_1_immat" value="<?php  if($vehicule['date_1_immat']!=null)echo date_create($vehicule['date_1_immat'])->format('d/m/Y');?>">
+						<input type="date" name="date_1_immat" id="date_1_immat" value="<?php  if($vehicule['date_1_immat']!=null)echo date_create($vehicule['date_1_immat'])->format('Y-m-d');?>">
 					</div>
 					<div class="form_vehicule <?php if(isset($erreur_view['date_achat']))echo 'erreur';?>">
 						<?php if(isset($erreur_view['date_achat']))echo $erreur_view['date_achat'];?>
 						<label for="date_achat">Date d'achat*:</label>
-						<input type="date" name="date_achat" id="date_achat" value="<?php if($vehicule['date_achat']!=null)echo date_create($vehicule['date_achat'])->format('d/m/Y');?>">
+						<input type="date" name="date_achat" id="date_achat" value="<?php if($vehicule['date_achat']!=null)echo date_create($vehicule['date_achat'])->format('Y-m-d');?>">
 					</div>
 					<div class="form_vehicule <?php if(isset($erreur_view['km_achat']))echo 'erreur';?>">
 						<?php if(isset($erreur_view['km_achat']))echo $erreur_view['km_achat'];?>
@@ -73,7 +73,7 @@
 			
 			</aside>
 		</section>
-		
+
 		
         
 	</body>

@@ -68,7 +68,7 @@
 						<div class="form_operation <?php if(isset($erreur_view['effectuee_date']))echo 'erreur';?>">
 							<?php if(isset($erreur_view['effectuee_date']))echo $erreur_view['effectuee_date'];?>
 							<label for="effectuee_date">Effectué le (jj/mm/aaaa):</label>
-							<input type="date" name="effectuee_date" id="effectuee_date" value="<?php if($operation['effectuee_date']!=null)echo date_create($operation['effectuee_date'])->format('d/m/Y');?>" <?php if(isset($_POST['inib_effectuee']))echo 'disabled';?>>
+							<input type="date" name="effectuee_date" id="effectuee_date" value="<?php if($operation['effectuee_date']!=null)echo date_create($operation['effectuee_date'])->format('Y-m-d');?>" <?php if(isset($_POST['inib_effectuee']))echo 'disabled';?>>
 							</br>
 						</div>
 							
@@ -82,7 +82,7 @@
 						</br>
 
 						<label for="echeance_date">Prochaine échéance (date)</label>
-						<input type="date" name="echeance_date" id="echeance_date" value="<?php if($operation['echeance_date']!=null)echo date_create($operation['echeance_date'])->format('d/m/Y');?>"  disabled>
+						<input type="date" name="echeance_date" id="echeance_date" value="<?php if($operation['echeance_date']!=null)echo date_create($operation['echeance_date'])->format('Y-m-d');?>"  disabled>
 					</fieldset>
 					
 						<label for="obs">Observations:</label>
