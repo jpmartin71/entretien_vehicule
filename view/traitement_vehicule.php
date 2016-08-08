@@ -18,7 +18,7 @@
 				
 				<div class="kilometrage">
 					<h3>Kilométrage</h3>
-					<p>Kilometrage estimé: depuis l'achat <?php echo $estimation_km['estimation_km_achat'];?> km (<?php echo $estimation_km['moy_km_achat'];?>km/an) / depuis la mise en circulation <?php echo $estimation_km['estimation_km_totale'];?> km (<?php echo $estimation_km['moy_km_totale'];?>km/an).</p>
+					<p>Kilometrage estimé: depuis l'achat <?php echo $estimation_km['estimation_km_achat'];?> km (<?php echo $estimation_km['moy_annuelle_km_achat'];?>km/an) / depuis la mise en circulation <?php echo $estimation_km['estimation_km_totale'];?> km (<?php echo $estimation_km['moy_annuelle_km_totale'];?>km/an).</p>
 					<?php if(!empty($releve_kilometrique))
 					{?>
 						<p>Dernier relevé <?php echo $releve_kilometrique['km_releve'];?>km, le <?php echo $releve_kilometrique['date_releve'];?></p>
@@ -27,6 +27,7 @@
 					{?>
 						<p>Aucun relevé effectué.</p>
 					<?php }?>
+					
 					<form class="form_kilometrage" method='post' action='?page=vehicule&vehicule=<?php echo $vehicule['id'];?>'>
 						<legend for="date_releve">Date du relevé:</legend>
 						<input type='date' name="date_releve" id="date_releve" value=now>
@@ -39,7 +40,20 @@
 
 				<div class="ope_a_echeance">
 					<h3>Opérations arrivées à échéance</h3>
-
+					<table>
+						<?php foreach ($op_echeance as $operation) 
+						{?>
+							<tr>
+								<td><?php echo $operation['denomination'];?></td>
+								<td class="<?php if($operation['its_date']) echo 'erreur';?> "><?php echo $operation['echeance_date'];?></td>
+								<td class="<?php if($operation['its_km']) echo 'erreur';?> "><?php echo $operation['echeance_km'];?></td>
+								<td><?php echo $operation['effectuee_date'];?></td>
+								<td><?php echo $operation['effectuee_km'];?></td>
+								<td><?php echo $operation['delta_km_estim'];?></td>
+							</tr>
+						<?php	
+						}?>
+					</table>
 				</div>
 
 				<div class="ope_a_venir">

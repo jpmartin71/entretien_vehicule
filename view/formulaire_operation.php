@@ -20,10 +20,13 @@
 							<label for="id_vehicule">Véhicule:</label>
 							<select name="id_vehicule" id="id_vehicule" >
 								<option value='0' selected>Choisir un vehicule</option>
-								<?php	foreach($liste_vehicules as $vehicule)?> 
+								<?php	foreach($liste_vehicules as $vehicule)
+								{?> 
 								<option value='<?php echo $vehicule['id'];?>' <?php if ($operation['id_vehicule']==$vehicule['id'])echo 'selected';?>>
 									<?php echo $vehicule['libelle'];?>
 								</option>
+								<?php
+								}?>
 							</select>
 						</div>
 						<div class="form_operation <?php if(isset($erreur_view['denomination']))echo 'erreur';?>">
