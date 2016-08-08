@@ -10,7 +10,7 @@ $operation=array('id_vehicule'=>null, 'denomination'=>null, 'periodicite_km'=>nu
 //verification des information du post avant de creer la ligne sql ou renvoie au formulaire pour correction
 if(isset($_GET['action']) and $_GET['action']=='create_operation')
 {
-	include_once './controler/create_operation.php';
+	include_once './controler/create_update_operation.php';
 }
 	
 $liste_vehicules=get_liste_vehicule();
