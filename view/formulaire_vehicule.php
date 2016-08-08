@@ -16,7 +16,7 @@
 				<?php if((isset($_GET['form']) and $_GET['form']=='update_vehicule') or (isset($_GET['action']) and $_GET['action']=='update_vehicule'))
 				{?>
 					<form class="form_vehicule" method="post" action="?page=vehicule&vehicule=<?php echo $vehicule['id'];?>">
-						<input type="submit" value="Annuler et revenir à la page du vehicule"/>
+						<input type="submit" value="Retour à la page du vehicule"/>
 					</form>
 				<?php
 				}?>
