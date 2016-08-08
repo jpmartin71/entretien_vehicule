@@ -78,19 +78,26 @@
 //gestion des erreurs
 if($erreur==0)
 {
-	//code pour ajout sql
-	if(set_new_vehicule($vehicule))
+	if($_GET['action']=='create_vehicule')
 	{
-		$no_erreur_view['view']='Véhicule ajouté avec succès.';
-		$vehicule=array('id'=>null,'marque'=>null,'modele'=>null,'date_1_immat'=>null,'date_achat'=>null,'km_achat'=>null,'vin'=>null,'immatriculation'=>null,'possession'=>1);
-
+		//code pour ajout sql
+		if(set_new_vehicule($vehicule))
+		{
+			$no_erreur_view['view']='Véhicule ajouté avec succès.';
+			$vehicule=array('id'=>null,'marque'=>null,'modele'=>null,'date_1_immat'=>null,'date_achat'=>null,'km_achat'=>null,'vin'=>null,'immatriculation'=>null,'possession'=>1);
+	
+		}
+		else $erreur_view['view']='Echec de la création du nouveau véhicule.</br><strong>Le véhicule existe déja.</strong>';
 	}
-	else $erreur_view['view']='Echec de la création du nouveau véhicule.</br><strong>Le véhicule existe déja.</strong>';
-
+	elseif($_GET['action']=='update_vehicule')
+	{
+		
+	}
 }
 else
 {
-	$erreur_view['view']='Echec de la création du nouveau véhicule.</br>Corriger les champs.';
+	if($_GET['action']=='create_vehicule')$erreur_view['view']='Echec de la création du nouveau véhicule.</br>Corriger les champs.';
+	elseif($_GET['action']=='update_vehicule')$erreur_view['view']='Echec de la mise à jour du véhicule.</br>Corriger les champs.';
 	if(($erreur & 1)!=0)$erreur_view['modele']='<p>Veuillez saisir un modèle!</p>';
 	if(($erreur & 2)!=0)$erreur_view['date_1_immat']='<p>Saisir la date de 1ere mise en circulation (format:jj/mm/aaaa)!</p>';
 	if(($erreur & 4)!=0)$erreur_view['date_achat']='<p>Saisir la date d\'achat (format:jj/mm/aaaa)!</p>';
