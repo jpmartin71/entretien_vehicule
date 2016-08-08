@@ -112,11 +112,6 @@
 
 	function get_operations_echues($id_vehicule,$date_limite,$km_limite,$moy_journaliere)
 	{
-		echo '</br>$id_vehicule:';print_r($id_vehicule);
-		echo '</br>$date_limite:';print_r($date_limite);
-		echo '</br>$km_limite:';print_r($km_limite);
-		echo '</br>$moy_journaliere:';print_r($moy_journaliere);
-		
 		global $bdd;
 		$req=$bdd->prepare('	SELECT *, 
 									ROUND(GREATEST((DATEDIFF(NOW(),echeance_date)*:moy_journaliere) ,( :km_limite-echeance_km))) as delta_km_estim,
