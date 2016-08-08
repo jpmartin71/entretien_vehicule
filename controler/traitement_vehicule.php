@@ -38,7 +38,7 @@ include_once './model/fonctions_divers.php';
 //oprérations à echeance
 	$date_limite=date_create();
 	$op_echeance=get_operations_echues($_GET['vehicule'],$date_limite->format('Y-m-d'),$estimation_km['estimation_km_achat'],$estimation_km['moy_km_achat']);
-echo '</br>$op_echeance:';print_r($op_echeance);
+//echo '</br>$op_echeance:';print_r($op_echeance);
 
 //toutes opérations du vehicule
 	$operations=get_operations($_GET['vehicule']);
