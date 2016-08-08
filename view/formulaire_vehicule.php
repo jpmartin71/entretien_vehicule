@@ -26,12 +26,12 @@
 					<div class="form_vehicule <?php if(isset($erreur_view['date_1_immat']))echo 'erreur';?>">
 						<?php if(isset($erreur_view['date_1_immat']))echo $erreur_view['date_1_immat'];?>
 						<label for="date_1_immat">Date de 1ere mise en circulation*:</label>
-						<input type="date" name="date_1_immat" id="date_1_immat" value="<?php echo $vehicule['date_1_immat'];?>">
+						<input type="date" name="date_1_immat" id="date_1_immat" value="<?php  if($vehicule['date_1_immat']!=null)echo date_create($vehicule['date_1_immat'])->format('d/m/Y');?>">
 					</div>
 					<div class="form_vehicule <?php if(isset($erreur_view['date_achat']))echo 'erreur';?>">
 						<?php if(isset($erreur_view['date_achat']))echo $erreur_view['date_achat'];?>
 						<label for="date_achat">Date d'achat*:</label>
-						<input type="date" name="date_achat" id="date_achat" value="<?php echo $vehicule['date_achat'];?>">
+						<input type="date" name="date_achat" id="date_achat" value="<?php if($vehicule['date_achat']!=null)echo date_create($vehicule['date_achat'])->format('d/m/Y');?>">
 					</div>
 					<div class="form_vehicule <?php if(isset($erreur_view['km_achat']))echo 'erreur';?>">
 						<?php if(isset($erreur_view['km_achat']))echo $erreur_view['km_achat'];?>
