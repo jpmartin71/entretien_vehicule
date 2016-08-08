@@ -24,7 +24,7 @@ if(isset($_GET['action']) and $_GET['action']=='create_vehicule')
 {
 	$action_form='?action=create_vehicule';
 	$text_submit='Creer le vehicule';
-  	include_once './controler/create_vehicule.php';
+  	include_once './controler/create_update_vehicule.php';
 		  
 }
 
@@ -32,7 +32,7 @@ elseif(isset($_GET['action']) and $_GET['action']=='update_vehicule')
 {
 	$action_form='?action=update_vehicule';
 	$text_submit='Mettre à jour le vehicule';
-	include_once './controler/create_vehicule.php';
+	include_once './controler/create_update_vehicule.php';
 }
 
 include_once './view/formulaire_vehicule.php';
