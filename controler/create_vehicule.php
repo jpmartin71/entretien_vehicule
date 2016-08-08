@@ -5,6 +5,8 @@
 
 	$erreur=0;
 	
+	if(isset($_POST['id']) and $_POST['id'])>0)$vehicule['id']=$_POST['id']);
+	
 	if(isset($_POST['marque']))$vehicule['marque']=$_POST['marque'];
 	else $vehicule['marque']="";
 	
@@ -91,7 +93,14 @@ if($erreur==0)
 	}
 	elseif($_GET['action']=='update_vehicule')
 	{
-		
+		//code pour ajout sql
+		if(0)//code update à faire
+		{
+			$no_erreur_view['view']='Véhicule mise à jour avec succès.';
+			$vehicule=array('id'=>null,'marque'=>null,'modele'=>null,'date_1_immat'=>null,'date_achat'=>null,'km_achat'=>null,'vin'=>null,'immatriculation'=>null,'possession'=>1);
+	
+		}
+		else $erreur_view['view']='Echec de la mise à jour du véhicule.</br><strong>Le véhicule existe déja.</strong>';	
 	}
 }
 else
