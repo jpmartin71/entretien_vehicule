@@ -138,7 +138,7 @@
 									(:date_limite>`echeance_date`) as its_date, 
 									(:km_limite>`echeance_km`) as its_km
 								FROM operations 
-								WHERE id_vehicule=:id_vehicule AND ((echeance_km BETWEEN km_estime AND :km_limite ) OR (echeance_date BETWEEN NOW() AND :date_limite))
+								WHERE id_vehicule=:id_vehicule AND ((echeance_km BETWEEN :km_estime AND :km_limite ) OR (echeance_date BETWEEN NOW() AND :date_limite))
 								ORDER BY delta_km_estim DESC');
 		$req->execute(array(
 				'id_vehicule'		=>$id_vehicule,
