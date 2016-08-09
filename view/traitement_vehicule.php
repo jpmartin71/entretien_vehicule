@@ -79,7 +79,7 @@
 					<h3>Opérations du véhicule</h3>
 					<?php
 					if(!empty($operations))
-					{
+					{?>
 						<table>
 						<?php foreach ($operations as $operation) 
 						{?>
@@ -94,6 +94,7 @@
 						<?php	
 						}?>
 					</table>
+					<?php
 					}
 					else echo "<p>Néant</p>";?>
 				</div>
