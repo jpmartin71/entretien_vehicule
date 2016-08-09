@@ -35,10 +35,16 @@ include_once './model/fonctions_divers.php';
 		foreach ($releve_kilometrique as $key => $value) $releve_kilometrique[$key]=htmlspecialchars($value);
 	}
 
-//oprérations à echeance
+//oprérations à echeance aujourd'hui
 	$date_limite=date_create();
 	$op_echeance=get_operations_echues($_GET['vehicule'],$date_limite->format('Y-m-d'),$estimation_km['estimation_km_achat'],$estimation_km['moy_km_achat']);
 //echo '</br>$op_echeance:';print_r($op_echeance);
+
+//oprérations à echeance dans X mois
+	$date_limite->add(new DateInterval('P12M'));
+	$km_limite=$estimation_km+(date_diff($datetime1, $datetime2)->format('%a')*$estimation_km['moy_km_achat']);
+echo '</br>$op_previ:';print_r($km_limite);	
+	
 
 //toutes opérations du vehicule
 	$operations=get_operations($_GET['vehicule']);
