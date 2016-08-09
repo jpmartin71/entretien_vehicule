@@ -36,10 +36,10 @@ include_once './model/fonctions_divers.php';
 	}
 //toutes opérations du vehicule
 	$operations=get_operations($_GET['vehicule']);
-	if(!empty($operations))
+	/*if(!empty($operations))
 	{
 			foreach ($operations as $key => $value) $operations[$key]=htmlspecialchars($value);
-	}
+	}*/
 echo '</br>$operation:';print_r($operations);
 	
 //oprérations à echeance aujourd'hui
