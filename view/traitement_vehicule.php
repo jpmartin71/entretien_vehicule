@@ -80,7 +80,20 @@
 					<?php
 					if(!empty($operations))
 					{
-
+						<table>
+						<?php foreach ($operations as $operation) 
+						{?>
+							<tr>
+								<td><?php echo $operation['denomination'];?></td>
+								<td><?php echo $operation['echeance_date'];?></td>
+								<td><?php echo $operation['echeance_km'];?></td>
+								<td><?php echo $operation['effectuee_date'];?></td>
+								<td><?php echo $operation['effectuee_km'];?></td>
+								<td><?php echo $operation['delta_km_estim'];?></td>
+							</tr>
+						<?php	
+						}?>
+					</table>
 					}
 					else echo "<p>Néant</p>";?>
 				</div>
