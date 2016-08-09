@@ -58,7 +58,20 @@
 
 				<div class="ope_a_venir">
 					<h3>Opérations à venir</h3>
-
+					<table>
+						<?php foreach ($op_previ as $operation) 
+						{?>
+							<tr>
+								<td><?php echo $operation['denomination'];?></td>
+								<td class="<?php if($operation['its_date']) echo 'erreur';?> "><?php echo $operation['echeance_date'];?></td>
+								<td class="<?php if($operation['its_km']) echo 'erreur';?> "><?php echo $operation['echeance_km'];?></td>
+								<td><?php echo $operation['effectuee_date'];?></td>
+								<td><?php echo $operation['effectuee_km'];?></td>
+								<td><?php echo $operation['delta_km_estim'];?></td>
+							</tr>
+						<?php	
+						}?>
+					</table>
 				</div>
 				
 				<div class="operations">
