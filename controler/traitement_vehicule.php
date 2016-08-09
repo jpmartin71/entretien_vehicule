@@ -42,7 +42,8 @@ include_once './model/fonctions_divers.php';
 
 //oprérations à echeance dans X mois
 	$date_limite->add(new DateInterval('P12M'));
-	$estimation_jours=date_diff(date_create(), $date_limite)->format('%a')
+	$estimation_jours=date_diff(date_create(), $date_limite)->format('%a');
+echo '</br>$estimation_jours:';print_r($estimation_jours);
 	$km_limite=$estimation_km+($estimation_jours*$estimation_km['moy_km_achat']);
 echo '</br>$op_previ:';print_r($km_limite);	
 	
