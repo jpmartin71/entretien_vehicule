@@ -114,8 +114,8 @@
 	{
 		global $bdd;
 		$req=$bdd->prepare('	SELECT *, 
-									ROUND(GREATEST((DATEDIFF(NOW(),echeance_date)*:moy_journaliere) ,( :km_limite-echeance_km))) as delta_km_estim,
-									(NOW()>`echeance_date`) as its_date, 
+									ROUND(GREATEST((DATEDIFF(:date_limite,echeance_date)*:moy_journaliere) ,( :km_limite-echeance_km))) as delta_km_estim,
+									(:date_limite>`echeance_date`) as its_date, 
 									(:km_limite>`echeance_km`) as its_km
 								FROM operations 
 								WHERE id_vehicule=:id_vehicule AND (echeance_km<=:km_limite OR echeance_date<=:date_limite)
@@ -123,7 +123,7 @@
 		$req->execute(array(
 				'id_vehicule'		=>$id_vehicule,
 				'moy_journaliere'	=>$moy_journaliere,
-				'km_limite'			=>$km_limite,
+				'km_limite'		=>$km_limite,
 				'date_limite'		=>$date_limite));
 		$return=$req->fetchall();
 		$req->closecursor();
