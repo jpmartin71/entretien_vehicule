@@ -130,3 +130,23 @@
 		return $return;
 	}
 	
+	function get_operations_previsionnelles($id_vehicule,$date_limite,$km_limite,$km_estime,$moy_journaliere)
+	{
+		global $bdd;
+		$req=$bdd->prepare('	SELECT *, 
+									ROUND(GREATEST((DATEDIFF(:date_limite,echeance_date)*:moy_journaliere) ,( :km_limite-echeance_km))) as delta_km_estim,
+									(:date_limite>`echeance_date`) as its_date, 
+									(:km_limite>`echeance_km`) as its_km
+								FROM operations 
+								WHERE id_vehicule=:id_vehicule AND ((echeance_km BETWEEN km_estime AND :km_limite ) OR (echeance_date BETWEEN NOW() AND :date_limite))
+								ORDER BY delta_km_estim DESC');
+		$req->execute(array(
+				'id_vehicule'		=>$id_vehicule,
+				'moy_journaliere'	=>$moy_journaliere,
+				'km_limite'		=>$km_limite,
+				'km_estime'		=>$km_estime,
+				'date_limite'		=>$date_limite));
+		$return=$req->fetchall();
+		$req->closecursor();
+		return $return;
+	}
