@@ -59,6 +59,7 @@
 
 				<div class="ope_a_venir">
 					<h3>Opérations prévisionnelles (12mois)</h3>
+					<p><?php echo $date_limite->format('d/m/Y');?> ou <?php echo $km_limite;?>km</p>
 					<table>
 						<?php foreach ($op_previ as $operation) 
 						{?>
