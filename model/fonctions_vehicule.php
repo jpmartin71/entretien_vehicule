@@ -107,7 +107,7 @@
 					FROM operations WHERE id_vehicule=:id_vehicule
 					ORDER BY echeance_date');
 		$req->execute(array(	'id_vehicule' 		=> $id_vehicule));
-		$operations=$req->fetch();
+		$operations=$req->fetchall();
 		$req->closecursor();
 		return $operations;
 	}

@@ -19,6 +19,17 @@ table.infos_vehicule td
 		font-size: 2em;
 }
 
+table tr td
+{
+	
+	border: 1px solid black;
+}
+
+table
+{
+	border-collapse: collapse;
+}
+
 article div.infos_vehicule,
 article div.ope_a_echeance,
 article div.ope_a_venir,

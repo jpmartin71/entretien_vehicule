@@ -30,17 +30,9 @@ include_once './model/fonctions_divers.php';
 	$estimation_km=estimation_km($vehicule,$releve_kilometrique);
 	$estimation_km['moy_annuelle_km_totale']=round($estimation_km['moy_km_totale']*365);
 	$estimation_km['moy_annuelle_km_achat']=round($estimation_km['moy_km_achat']*365);
-	if(!empty($releve_kilometrique)) 
-	{
-		foreach ($releve_kilometrique as $key => $value) $releve_kilometrique[$key]=htmlspecialchars($value);
-	}
+
 //toutes opérations du vehicule
 	$operations=get_operations($_GET['vehicule']);
-	/*if(!empty($operations))
-	{
-			foreach ($operations as $key => $value) $operations[$key]=htmlspecialchars($value);
-	}*/
-echo '</br>$operation:';print_r($operations);
 	
 //oprérations à echeance aujourd'hui
 	$date_limite=date_create();

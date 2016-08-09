@@ -41,6 +41,13 @@
 				<div class="ope_a_echeance">
 					<h3>Opérations arrivées à échéance</h3>
 					<table>
+						<tr>
+							<th>Dénomination</th>
+							<th>Date d'échéance</th>
+							<th>Echéance kilométrique</th>
+							<th>Effectuée le</th> 
+							<th>à XX km</th> 
+						</tr>
 						<?php foreach ($op_echeance as $operation) 
 						{?>
 							<tr>
@@ -49,7 +56,6 @@
 								<td class="<?php if($operation['its_km']) echo 'echeance';?> "><?php echo $operation['echeance_km'];?></td>
 								<td><?php echo $operation['effectuee_date'];?></td>
 								<td><?php echo $operation['effectuee_km'];?></td>
-								<td><?php echo $operation['delta_km_estim'];?></td>
 							</tr>
 						<?php	
 						}?>
@@ -60,15 +66,22 @@
 					<h3>Opérations prévisionnelles (12mois)</h3>
 					<p><?php echo $date_limite->format('d/m/Y');?> ou <?php echo $km_limite;?>km</p>
 					<table>
+						<tr>
+							<th>Dénomination</th>
+							<th>Date d'échéance</th>
+							<th>Echéance kilométrique</th>
+							<th>Effectuée le</th> 
+							<th>à XX km</th> 
+						</tr>
 						<?php foreach ($op_previ as $operation) 
 						{?>
+							
 							<tr>
 								<td><?php echo $operation['denomination'];?></td>
 								<td class="<?php if($operation['its_date']) echo 'echeance';?> "><?php echo $operation['echeance_date'];?></td>
 								<td class="<?php if($operation['its_km']) echo 'echeance';?> "><?php echo $operation['echeance_km'];?></td>
 								<td><?php echo $operation['effectuee_date'];?></td>
 								<td><?php echo $operation['effectuee_km'];?></td>
-								<td><?php echo $operation['delta_km_estim'];?></td>
 							</tr>
 						<?php	
 						}?>
@@ -81,6 +94,13 @@
 					if(!empty($operations))
 					{?>
 						<table>
+							<tr>
+								<th>Dénomination</th>
+								<th>Date d'échéance</th>
+								<th>Echéance kilométrique</th>
+								<th>Effectuée le</th> 
+								<th>à XX km</th> 
+							</tr>
 						<?php foreach ($operations as $operation) 
 						{?>
 							<tr>
@@ -89,7 +109,6 @@
 								<td><?php echo $operation['echeance_km'];?></td>
 								<td><?php echo $operation['effectuee_date'];?></td>
 								<td><?php echo $operation['effectuee_km'];?></td>
-								<td><?php echo $operation['delta_km_estim'];?></td>
 							</tr>
 						<?php	
 						}?>
