@@ -34,7 +34,13 @@ include_once './model/fonctions_divers.php';
 	{
 		foreach ($releve_kilometrique as $key => $value) $releve_kilometrique[$key]=htmlspecialchars($value);
 	}
-
+//toutes opérations du vehicule
+	$operations=get_operations($_GET['vehicule'],$estimation_km['estimation_km_achat'],$estimation_km['moy_km_achat']);
+	if(!empty($operations))
+	{
+			foreach ($operations as $key => $value) $operations[$key]=htmlspecialchars($value);
+	}
+	
 //oprérations à echeance aujourd'hui
 	$date_limite=date_create();
 	$op_echeance=get_operations_echues($_GET['vehicule'],$date_limite->format('Y-m-d'),$estimation_km['estimation_km_achat'],$estimation_km['moy_km_achat']);
@@ -44,12 +50,7 @@ include_once './model/fonctions_divers.php';
 	$km_limite=round($estimation_km['estimation_km_achat']+(date_diff(date_create(), $date_limite)->format('%a')*$estimation_km['moy_km_achat']));
 	$op_previ=get_operations_previsionnelles($_GET['vehicule'],$date_limite->format('Y-m-d'),$km_limite,$estimation_km['estimation_km_achat'],$estimation_km['moy_km_achat']);
 
-//toutes opérations du vehicule
-	$operations=get_operations($_GET['vehicule']);
-	if(!empty($operations))
-	{
-			foreach ($operations as $key => $value) $operations[$key]=htmlspecialchars($value);
-	}
+
 
 
 
