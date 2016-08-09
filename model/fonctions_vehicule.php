@@ -100,16 +100,13 @@
 		else return true;
 	}
 	
-	function get_operations($id_vehicule,$moy_journaliere,$km_limite)
+	function get_operations($id_vehicule)
 	{
 		global $bdd;
-		$req=$bdd->prepare('SELECT *,
-					ROUND(GREATEST((DATEDIFF(NOW(),echeance_date)*:moy_journaliere) ,( :km_limite-echeance_km)))as delta_km_estim
+		$req=$bdd->prepare('SELECT *
 					FROM operations WHERE id_vehicule=:id_vehicule
-					ORDER BY delta_km_estim DESC');
-		$req->execute(array(	'id_vehicule' 		=> $id_vehicule,
-					'moy_journaliere'	=>$moy_journaliere,
-					'km_limite'		=>$km_limite));
+					ORDER BY echeance_date');
+		$req->execute(array(	'id_vehicule' 		=> $id_vehicule));
 		$operations=$req->fetch();
 		$req->closecursor();
 		return $operations;
