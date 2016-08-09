@@ -40,6 +40,7 @@ include_once './model/fonctions_divers.php';
 	{
 			foreach ($operations as $key => $value) $operations[$key]=htmlspecialchars($value);
 	}
+echo '</br>$operation:';print_r($operations);
 	
 //oprérations à echeance aujourd'hui
 	$date_limite=date_create();
