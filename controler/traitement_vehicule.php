@@ -35,7 +35,7 @@ include_once './model/fonctions_divers.php';
 		foreach ($releve_kilometrique as $key => $value) $releve_kilometrique[$key]=htmlspecialchars($value);
 	}
 //toutes opérations du vehicule
-	$operations=get_operations($_GET['vehicule'],$estimation_km['estimation_km_achat'],$estimation_km['moy_km_achat']);
+	$operations=get_operations($_GET['vehicule']);
 	if(!empty($operations))
 	{
 			foreach ($operations as $key => $value) $operations[$key]=htmlspecialchars($value);
