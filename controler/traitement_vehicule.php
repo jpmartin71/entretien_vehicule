@@ -41,7 +41,7 @@ include_once './model/fonctions_divers.php';
 
 //oprérations à echeance dans X mois
 	$date_limite->add(new DateInterval('P12M'));
-	$km_limite=$estimation_km['estimation_km_achat']+(date_diff(date_create(), $date_limite)->format('%a')*$estimation_km['moy_km_achat']);
+	$km_limite=round($estimation_km['estimation_km_achat']+(date_diff(date_create(), $date_limite)->format('%a')*$estimation_km['moy_km_achat']));
 	$op_previ=get_operations_previsionnelles($_GET['vehicule'],$date_limite->format('Y-m-d'),$km_limite,$estimation_km['estimation_km_achat'],$estimation_km['moy_km_achat']);
 
 //toutes opérations du vehicule
