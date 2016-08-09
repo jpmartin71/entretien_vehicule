@@ -57,7 +57,7 @@
 				</div>
 
 				<div class="ope_a_venir">
-					<h3>Opérations à venir</h3>
+					<h3>Opérations prévisionnelles (12mois)</h3>
 					<table>
 						<?php foreach ($op_previ as $operation) 
 						{?>
