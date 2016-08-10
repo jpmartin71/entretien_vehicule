@@ -18,6 +18,11 @@ aside
 	vertical-align:top;
 }
 
+aside
+{
+	display:none;
+}
+
 nav ul
 {
 	background-color: navy;
