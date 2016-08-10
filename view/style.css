@@ -126,6 +126,8 @@ article.synthese_vehicule
 aside.synthese_vehicule ul
 {
 	list-style-type: none;
+	padding:0px;
+	margin-bottom:0px;
 }
 
 aside.synthese_vehicule ul li
