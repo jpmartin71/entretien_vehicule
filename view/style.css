@@ -40,7 +40,8 @@ nav ul li a
 
 ul.vehicule_acceuil li
 {
-	display:inline-block;
+	display:table;
+	float:left;
 	width:100px;
 	height:100px;
 	text-align:center;
@@ -54,6 +55,8 @@ ul.vehicule_acceuil li
 ul.vehicule_acceuil li a
 {
 	color:white;
+	vertical-align:middle;
+	display:table-cell;
 }
 
 table.infos_vehicule td 
