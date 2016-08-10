@@ -71,7 +71,7 @@ nav ul li a
 }
 
 /*page acceuil----------------------------------------------------*/
-ul.vehicule_acceuil li
+div.vehicule_acceuil
 {
 	display:table;
 	float:left;
@@ -84,7 +84,7 @@ ul.vehicule_acceuil li
 	background-color:blue;
 }
 
-ul.vehicule_acceuil li a
+div.vehicule_acceuil a
 {
 	color:white;
 	vertical-align:middle;
