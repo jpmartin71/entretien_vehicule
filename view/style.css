@@ -239,7 +239,7 @@ form.form_operation textarea
 form.form_vehicule
 {
 	padding:10px;
-	width:350px;
+	width:400px;
 	margin:10px auto 10px auto;
 	border:1px solid blue;
 	border-radius:5px;
@@ -262,13 +262,12 @@ div.form_vehicule input:not([type="checkbox"]),
 div.form_vehicule select,
 div.form_vehicule label
 {	
-	/*width:300px;*/
 	display:inline-block;	
 }
 
 div.form_vehicule input:not([type="checkbox"])
 {
-	width:100px;
+	width:150px;
 	float:right;
 }
 
