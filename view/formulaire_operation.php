@@ -96,10 +96,10 @@
 							<input type="date" name="echeance_date" id="echeance_date" value="<?php if($operation['echeance_date']!=null)echo date_create($operation['echeance_date'])->format('Y-m-d');?>"  disabled>
 						</div>
 					</fieldset>
-					<fielset>
+					<fieldset>
 						<legend>Observations:</legend>
 						<textarea name="obs" id="obs" ><?php echo $operation['obs'];?></textarea>
-					</fielset>
+					</fieldset>
 					<div class="form_operation">
 						<input type="hidden" name="" id="" value="">
 						<input type="submit" value="Créer">
