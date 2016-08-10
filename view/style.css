@@ -256,7 +256,7 @@ div.form_operation input[type="reset"]
 form.form_operation fieldset textarea
 {
 	width: 100%;
-	resize: height;
+	resize: vertical;
 	height:100px;
 }
 /*
