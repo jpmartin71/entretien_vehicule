@@ -127,7 +127,7 @@
 						<li><strong>Modèle:</strong><br><?php echo $vehicule['modele'];?></li>
 						<li><strong>1ere mise en circulation:</strong><br><?php echo $vehicule['date_1_immat'];?></li>
 						<li><strong>Date d'achat:</strong><br><?php echo $vehicule['date_achat'];?></li>
-						<li><strong>Kilométrage à l'achat:</strong><br><?php echo $vehicule['km_achat'];?></li>
+						<li><strong>Kilométrage à l'achat:</strong><br><?php echo $vehicule['km_achat'];?> km</li>
 						<li><strong>Immatriculation:</strong><br><?php echo $vehicule['immatriculation'];?></li>
 						<li><strong>VIN:</strong><br><?php echo $vehicule['vin'];?></li>
 						<li class="lien_modif"><a href="?form=update_vehicule&vehicule=<?php echo $vehicule['id'];?>">Modifier le véhicule</a></li>
