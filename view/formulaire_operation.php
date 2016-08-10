@@ -59,12 +59,15 @@
 						</div>
 						
 						<div class="form_operation <?php if(isset($erreur_view['periodicite_tps']))echo 'erreur';?>">
-							<?php if(isset($erreur_view['periodicite_tps']))echo $erreur_view['periodicite_tps'];?>		
-							<label for="periodicite_tps">Périodicité (en mois)</label>
-							<input type="number" name="periodicite_tps" id="periodicite_tps" value="<?php echo $operation['periodicite_tps'];?>" <?php if(isset($_POST['inib_periodicite_tps']))echo 'disabled';?>>
-							</br>
-							<input type="checkbox" onchange="checkbox_inib_periodicite_tps()" name="inib_periodicite_tps" id="inib_periodicite_tps" <?php if(isset($_POST['inib_periodicite_tps']))echo 'checked';?>/>
-							<label for="inib_periodicite_tps" class="label_checkbox">Pas de périodicité temporelle</label>
+							<div class="form_operation">
+								<?php if(isset($erreur_view['periodicite_tps']))echo $erreur_view['periodicite_tps'];?>		
+								<label for="periodicite_tps">Périodicité (en mois)</label>
+								<input type="number" name="periodicite_tps" id="periodicite_tps" value="<?php echo $operation['periodicite_tps'];?>" <?php if(isset($_POST['inib_periodicite_tps']))echo 'disabled';?>>
+							</div>
+							<div class="form_operation">
+								<input type="checkbox" onchange="checkbox_inib_periodicite_tps()" name="inib_periodicite_tps" id="inib_periodicite_tps" <?php if(isset($_POST['inib_periodicite_tps']))echo 'checked';?>/>
+								<label for="inib_periodicite_tps" class="label_checkbox">Pas de périodicité temporelle</label>
+							</div>
 						</div>
 					</fieldset>
 						
