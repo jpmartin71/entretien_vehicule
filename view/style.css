@@ -82,6 +82,7 @@ div.vehicule_acceuil
 	padding:5px;
 	border-radius: 5px;
 	background-color:blue;
+	border: 5px outset navy;
 }
 
 div.parent_vehicule_acceuil
