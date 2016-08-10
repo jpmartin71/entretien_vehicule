@@ -84,6 +84,11 @@ div.vehicule_acceuil
 	background-color:blue;
 }
 
+div.parent_vehicule_acceuil
+{
+	margin:auto;
+}
+
 div.vehicule_acceuil a
 {
 	color:white;
