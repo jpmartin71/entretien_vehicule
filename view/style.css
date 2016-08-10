@@ -22,7 +22,7 @@ nav ul
 }
 nav ul li
 {
-	display:inline;
+	display:inline-block;
 	width:150px;
 	text-align:center;
 	border:1px solid white;
@@ -38,6 +38,17 @@ nav ul li a
 	color:white;
 }
 
+ul.vehicule_acceuil li
+{
+	display:inline-block;
+	width:100px;
+	height:100px;
+	text-align:center;
+	border:1px solid white;
+	margin:auto;
+	padding:5px;
+	border-radius: 5px;
+}
 
 table.infos_vehicule td 
 {
