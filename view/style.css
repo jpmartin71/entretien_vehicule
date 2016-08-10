@@ -13,18 +13,29 @@ article
 	width: 79%;
 
 }
+
+nav ul
+{
+	background-color: navy;
+	padding: 5px;
+	border-radius: 5px;
+}
 nav ul li
 {
 	display:inline;
 	width:150px;
 	text-align:center;
-	background-color:lime;
-	border:1px solid green;
+	border:1px solid white;
 	margin:0px;
 	padding:5px;
-	color:white;
 }
 
+nav ul li a
+{
+	background-color: navy;
+	padding: 5px;
+	border-radius: 5px;
+}
 
 
 table.infos_vehicule td 
