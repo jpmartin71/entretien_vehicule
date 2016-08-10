@@ -17,7 +17,9 @@
 					<?php if((isset($_GET['form']) and $_GET['form']=='update_vehicule') or (isset($_GET['action']) and $_GET['action']=='update_vehicule'))
 					{?>
 						<h2>Modification de véhicule</h2>
-						<a href="?page=vehicule&vehicule=<?php echo $vehicule['id'];?>">Retour à la page du vehicule"</a>
+						<div class="form_vehicule">
+							<a href="?page=vehicule&vehicule=<?php echo $vehicule['id'];?>">Retour à la page du vehicule</a>
+						</div> 
 					<?php
 					}
 					else{?> <h2>Création de véhicule</h2> <?php } ?>
