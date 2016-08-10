@@ -257,6 +257,13 @@ div.form_vehicule label
 	width:auto;
 }
 
+div.form_vehicule input[type="submit"]
+{
+	width:49%;
+	background:blue;
+	color:white;
+}
+
 /*div.form_vehicule label[for="possession"]
 {
 	width:auto;
