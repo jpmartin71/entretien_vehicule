@@ -57,25 +57,17 @@
 						<label for="possession">Vehicule en ma possession actuellement:</label>
 						<input type="checkbox" name="possession" id="possession"  <?php if($vehicule['possession'])echo 'checked';?>/>
 					</div>
-					<input type="hidden" name="id" id="id" value="<?php echo $vehicule['id'];?>">
-					<input type="submit" value="<?php echo $text_submit;?>"/>
-					<input type="reset" value="Reset"/>
+					<div class="form_vehicule">
+						<input type="hidden" name="id" id="id" value="<?php echo $vehicule['id'];?>">
+						<input type="submit" value="<?php echo $text_submit;?>"/>
+						<input type="reset" value="Reset"/>
+						<p>*: champs obligatoire.</p>
+					</div>
 				</form>
-				
-					
-				<p>*: champs obligatoire.</p>
-				
-
-				
-
 			</article>
 			<aside>
-			
 			</aside>
 		</section>
-
-		
-        
 	</body>
 </html>
 
