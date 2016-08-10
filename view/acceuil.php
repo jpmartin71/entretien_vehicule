@@ -3,7 +3,7 @@
     <head>
         <meta http-equiv="content-type" content="text/html" charset="utf-8" />
         <title>Entretien des vehicules</title>
-		<link href=".view/style.css" rel="stylesheet" type="text/css" /> 
+		<link href="./view/style.css" rel="stylesheet" type="text/css" /> 
     </head>
         
     <body>
