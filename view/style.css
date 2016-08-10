@@ -203,6 +203,23 @@ form.form_kilometrage legend
 }
 
 /*formulaire operation ----------------------------------------------------------*/
+form.form_operation
+{
+	padding:10px;
+	width:400px;
+	margin:10px auto 10px auto;
+	border:1px solid blue;
+	border-radius:5px;
+}
+	
+form.form_operation h2
+{
+	background-color: blue;
+	color: white;
+	text-align: center;
+	margin: -10px -10px 10px;
+}
+/*
 div.form_operation
 {
 	padding:10px;
@@ -233,7 +250,7 @@ form.form_operation textarea
 {
 	width: 100%;
 }
-
+*/
 
 /*formulaire vehicule------------------------------------------------------*/
 form.form_vehicule
