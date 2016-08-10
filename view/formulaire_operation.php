@@ -87,24 +87,27 @@
 						
 					<fieldset>
 						<legend>Prochaine écheance:</legend>
-							
-						<label for="echeance_km">Prochaine échéance (km)</label>
-						<input type="number" name="echeance_km" id="echeance_km" value="<?php echo $operation['echeance_km'];?>"  disabled>
-						</br>
-
-						<label for="echeance_date">Prochaine échéance (date)</label>
-						<input type="date" name="echeance_date" id="echeance_date" value="<?php if($operation['echeance_date']!=null)echo date_create($operation['echeance_date'])->format('Y-m-d');?>"  disabled>
+						<div class="form_operation">
+							<label for="echeance_km">Prochaine échéance (km)</label>
+							<input type="number" name="echeance_km" id="echeance_km" value="<?php echo $operation['echeance_km'];?>"  disabled>
+						</div>
+						<div class="form_operation">
+							<label for="echeance_date">Prochaine échéance (date)</label>
+							<input type="date" name="echeance_date" id="echeance_date" value="<?php if($operation['echeance_date']!=null)echo date_create($operation['echeance_date'])->format('Y-m-d');?>"  disabled>
+						</div>
 					</fieldset>
-					
-						<label for="obs">Observations:</label>
+					<fielset>
+						<legend>Observations:</legend>
 						<textarea name="obs" id="obs" ><?php echo $operation['obs'];?></textarea>
-					
+					</fielset>
+					<div class="form_operation">
 						<input type="hidden" name="" id="" value="">
-						<input type="submit" valuer="Créer">
-
+						<input type="submit" value="Créer">
+						<input type="reset" value="Reset"
+					</div>
 				</form>
-			<!--</article>
-			<aside>-->
+			</article>
+			<aside>
 			
 			</aside>
 		</section>
