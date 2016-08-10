@@ -249,7 +249,7 @@ div.form_vehicule label
 div.form_vehicule input:not([type="checkbox"])
 {
 	width:100px;
-	float:left;
+	float:right;
 }
 
 div.form_vehicule label
