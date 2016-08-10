@@ -253,7 +253,7 @@ div.form_operation input[type="reset"]
 	float:none;
 }
 
-form.form_operation textarea
+form.form_operation fieldset textarea
 {
 	width: 100%;
 }
