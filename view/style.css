@@ -135,6 +135,20 @@ aside.synthese_vehicule ul li
 	padding:5px;
 }
 
+aside.synthese_vehicule ul li.lien_modif
+{
+	border: medium none;
+	background-color: navy;
+	text-align: center;
+	margin-left: -10px;
+}
+
+aside.synthese_vehicule ul li a
+{
+	color:white;
+}
+
+
 /*formulaire vehicule*/
 form.form_kilometrage input,
 form.form_kilometrage legend
