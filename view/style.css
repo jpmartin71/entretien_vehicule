@@ -4,14 +4,8 @@ aside
 	border: 1px solid navy;
 	border-radius: 4px;
 	margin-top: 10px;
-	display: inline-block;
+	/*display: inline-block;*/
 	vertical-align:top;
-}
-
-article
-{
-	width: 79%;
-
 }
 
 nav ul
@@ -112,13 +106,36 @@ article div.infos_vehicule h2
 	font-weight: bold;
 }
 
-
-aside
+article.synthese_vehicule
 {
-	width: 20%;
+	width: 79%;
 }
 
+aside.synthese_vehicule
+{
+	width: 20%;
+	background-color:wheat;
+}
 
+aside.synthese_vehicule,
+article.synthese_vehicule
+{
+	display:inline-block;
+}
+
+aside.synthese_vehicule ul
+{
+	list-style-type: none;
+	padding-left: 10px;
+}
+
+aside.synthese_vehicule ul li
+{
+	border-bottom:1px solid navy;
+	padding:5px;
+}
+
+/*formulaire vehicule*/
 form.form_kilometrage input,
 form.form_kilometrage legend
 {
