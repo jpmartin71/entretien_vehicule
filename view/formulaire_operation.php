@@ -46,7 +46,7 @@
 					
 					<fieldset>
 						<legend>Périodicité</legend>
-						<div class="<?php if(isset($erreur_view['periodicite_km']))echo 'erreur';?>">
+						<div class="form_operation <?php if(isset($erreur_view['periodicite_km']))echo 'erreur';?>">
 							<div class="form_operation">
 								<?php if(isset($erreur_view['periodicite_km']))echo $erreur_view['periodicite_km'];?>	
 								<label for="periodicite_km">Périodicité (en km)</label>
