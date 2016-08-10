@@ -245,6 +245,14 @@ form.form_vehicule
 	border-radius:5px;
 }
 
+form.form_vehicule h2
+{
+	background-color: blue;
+	color: white;
+	text-align: center;
+	margin: -10px -10px 10px;
+}
+
 div.form_vehicule
 {
 	margin:5px;
