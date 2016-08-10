@@ -121,6 +121,7 @@
 			</article>
 			<aside class="synthese_vehicule">
 				<div class="infos_vehicule">
+					<h3>Infos véhicule</h3>
 					<ul>
 						<li>Constructeur:<br><?php echo $vehicule['marque'];?></li>
 						<li>Modèle:<br><?php echo $vehicule['modele'];?></li>
