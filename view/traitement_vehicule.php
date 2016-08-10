@@ -11,12 +11,12 @@
 		<?php include_once("navigation.php");?>
 		<?php include_once 'erreurs.php';?>
 		<section>
-			<article>
-				<div class="infos_vehicule">
+			<article class="synthese_vehicule">
+				<div class="infos_vehicule synthese_vehicule">
 					<h2><?php echo $vehicule['marque'];?> - <?php echo $vehicule['modele'];?></h2>
 				</div>
 				
-				<div class="kilometrage">
+				<div class="kilometrage synthese_vehicule">
 					<h3>Kilométrage</h3>
 					<p>Kilometrage estimé: depuis l'achat <?php echo $estimation_km['estimation_km_achat'];?> km (<?php echo $estimation_km['moy_annuelle_km_achat'];?>km/an) / depuis la mise en circulation <?php echo $estimation_km['estimation_km_totale'];?> km (<?php echo $estimation_km['moy_annuelle_km_totale'];?>km/an).</p>
 					<?php if(!empty($releve_kilometrique))
@@ -38,7 +38,7 @@
 					</form>
 				</div>
 
-				<div class="ope_a_echeance">
+				<div class="ope_a_echeance synthese_vehicule">
 					<h3>Opérations arrivées à échéance</h3>
 					<table>
 						<tr>
@@ -62,7 +62,7 @@
 					</table>
 				</div>
 
-				<div class="ope_a_venir">
+				<div class="ope_a_venir synthese_vehicule">
 					<h3>Opérations prévisionnelles (12mois)</h3>
 					<p><?php echo $date_limite->format('d/m/Y');?> ou <?php echo $km_limite;?>km</p>
 					<table>
@@ -88,7 +88,7 @@
 					</table>
 				</div>
 				
-				<div class="operations">
+				<div class="operations synthese_vehicule">
 					<h3>Opérations du véhicule</h3>
 					<?php
 					if(!empty($operations))
@@ -119,7 +119,7 @@
 				</div>
 
 			</article>
-			<aside>
+			<aside class="synthese_vehicule">
 				<div class="infos_vehicule">
 					<ul>
 						<li>Constructeur:<br><?php echo $vehicule['marque'];?></li>
