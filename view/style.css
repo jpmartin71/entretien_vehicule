@@ -245,6 +245,10 @@ form.form_vehicule
 	border-radius:5px;
 }
 
+div.form_vehicule
+{
+	margin:5px;
+}
 
 div.form_vehicule input:not([type="checkbox"]),
 div.form_vehicule select,
