@@ -126,13 +126,12 @@ article.synthese_vehicule
 aside.synthese_vehicule ul
 {
 	list-style-type: none;
-	padding-left: 10px;
 }
 
 aside.synthese_vehicule ul li
 {
 	border-bottom:1px solid navy;
-	padding:5px;
+	padding:10px;
 }
 
 aside.synthese_vehicule ul li.lien_modif
@@ -140,7 +139,6 @@ aside.synthese_vehicule ul li.lien_modif
 	border: medium none;
 	background-color: navy;
 	text-align: center;
-	margin-left: -10px;
 }
 
 aside.synthese_vehicule ul li a
