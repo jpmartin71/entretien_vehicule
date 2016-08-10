@@ -13,11 +13,11 @@
 		<section>
 			<article>
 				
-				<ul>
+				<ul class="vehicule_acceuil">
 				<?php
 					foreach ($liste_vehicule as $vehicule) 
 					{?>
-						<li><a class="vehicule_acceuil" href="?page=vehicule&vehicule=<?php echo $vehicule['id'];?>"><?php echo $vehicule['marque'].'</br>'.$vehicule['modele'];?></a></li>
+						<li><a  href="?page=vehicule&vehicule=<?php echo $vehicule['id'];?>"><?php echo $vehicule['marque'].'</br>'.$vehicule['modele'];?></a></li>
 					<?php
 					}
 					?>
