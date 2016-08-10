@@ -14,7 +14,6 @@ aside
 	border: 1px solid navy;
 	border-radius: 4px;
 	margin-top: 10px;
-	/*display: inline-block;*/
 	vertical-align:top;
 }
 
@@ -23,6 +22,25 @@ aside
 	display:none;
 }
 
+.erreur
+{
+	border-radius: 4px;
+	border: 1px solid red;
+	background-color: AntiqueWhite;
+	color:red;
+	padding:10px;
+}
+
+.no_erreur
+{
+	border-radius: 4px;
+	border: 1px solid green;
+	background-color: LightGreen;
+	color:green;
+	padding:10px;
+}
+
+/*barre de navigation---------------------------------------------------------------*/
 nav ul
 {
 	background-color: navy;
@@ -42,11 +60,11 @@ nav ul li
 
 nav ul li a
 {
-	/*background-color: navy;*/
 	padding: 5px;
 	color:white;
 }
 
+/*page acceuil----------------------------------------------------*/
 ul.vehicule_acceuil li
 {
 	display:table;
@@ -54,7 +72,6 @@ ul.vehicule_acceuil li
 	width:100px;
 	height:100px;
 	text-align:center;
-	/*border:1px solid white;*/
 	margin:10px;
 	padding:5px;
 	border-radius: 5px;
@@ -84,6 +101,8 @@ table
 {
 	border-collapse: collapse;
 }
+
+/*page synthese vehicule-------------------------------------------------*/
 article div.synthese_vehicule
 {
  	text-align:center;
@@ -170,8 +189,6 @@ aside.synthese_vehicule ul li a
 	color:white;
 }
 
-
-/*formulaire vehicule*/
 form.form_kilometrage input,
 form.form_kilometrage legend
 {
@@ -179,14 +196,10 @@ form.form_kilometrage legend
 	display: inline-block;
 }
 
-div.form_operation,
-div.form_vehicule,
-.erreur
+/*formulaire operation ----------------------------------------------------------*/
+div.form_operation
 {
 	padding:10px;
-	/*display: inline-block;
-	vertical-align: top;
-	width: 49%;*/
 
 }
 form.form_operation input:not([type="checkbox"]),
@@ -216,29 +229,38 @@ form.form_operation textarea
 }
 
 
+/*formulaire vehicule------------------------------------------------------*/
+div.form_vehicule
+{
+	padding:10px;
+	width:330px;
+	margin:auto;
+}
+
+
 div.form_vehicule input:not([type="checkbox"]),
 div.form_vehicule select,
 div.form_vehicule label
 {	
-	width:300px;
+	/*width:300px;*/
 	display:inline-block;	
 }
 
-.erreur
+div.form_vehicule input:not([type="checkbox"])
 {
-	border-radius: 4px;
-	border: 1px solid red;
-	background-color: AntiqueWhite;
-	color:red;
-
+	width:100px;
+	float:left;
 }
 
-.no_erreur
+div.form_vehicule label
 {
-	border-radius: 4px;
-	border: 1px solid green;
-	background-color: LightGreen;
-	color:green;
-	padding:10px;
+	width:auto;
 }
-}
+
+/*div.form_vehicule label[for="possession"]
+{
+	width:auto;
+}*/
+	
+	
+	
