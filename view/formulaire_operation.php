@@ -50,7 +50,8 @@
 							<?php if(isset($erreur_view['periodicite_km']))echo $erreur_view['periodicite_km'];?>	
 							<label for="periodicite_km">Périodicité (en km)</label>
 							<input type="number" name="periodicite_km" id="periodicite_km" value="<?php echo $operation['periodicite_km'];?>" <?php if(isset($_POST['inib_periodicite_km']))echo 'disabled';?>>
-							</br>
+						</div>	
+						<div class="form_operation">
 							<input type="checkbox" onchange="checkbox_inib_periodicite_km()" name="inib_periodicite_km" id="inib_periodicite_km" <?php if(isset($_POST['inib_periodicite_km']))echo 'checked';?> />
 							<label for="inib_periodicite_km" class="label_checkbox">Pas de périodicité kilométrique</label>
 						</div>
