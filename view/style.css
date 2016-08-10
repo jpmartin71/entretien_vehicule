@@ -59,9 +59,15 @@ ul.vehicule_acceuil li a
 	display:table-cell;
 }
 
-table.infos_vehicule td 
+div.synthese_vehicule
 {
-		font-size: 2em;
+ 	text-align:center;
+}
+
+table
+{
+	text-align:center;
+	width:100%;
 }
 
 table tr td
