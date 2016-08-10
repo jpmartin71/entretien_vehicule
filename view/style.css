@@ -79,6 +79,19 @@ article div.synthese_vehicule
 {
  	text-align:center;
  	border-bottom: 1px solid navy;
+ 	padding:10px;
+}
+
+article div.synthese_vehicule h2
+{
+	margin: 0px;
+	padding: 5px;
+	color: white;
+	background: blue;
+}
+article div.synthese_vehicule p
+{
+	margin:0px;	
 }
 
 article div.infos_vehicule
