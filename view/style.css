@@ -20,8 +20,13 @@ nav ul li
 	text-align:center;
 	background-color:lime;
 	border:1px solid green;
-	
+	margin:0px;
+	padding:5px;
+	color:white;
 }
+
+
+
 table.infos_vehicule td 
 {
 		font-size: 2em;
