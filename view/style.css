@@ -33,7 +33,7 @@ nav ul li
 
 nav ul li a
 {
-	background-color: navy;
+	/*background-color: navy;*/
 	padding: 5px;
 	color:white;
 }
@@ -44,10 +44,16 @@ ul.vehicule_acceuil li
 	width:100px;
 	height:100px;
 	text-align:center;
-	border:1px solid white;
-	margin:auto;
+	/*border:1px solid white;*/
+	margin:10px;
 	padding:5px;
 	border-radius: 5px;
+	background-color:mediumblue;
+}
+
+ul.vehicule_acceuil li a
+{
+	color:white;
 }
 
 table.infos_vehicule td 
