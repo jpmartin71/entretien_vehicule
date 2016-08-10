@@ -18,10 +18,10 @@
 				
 				<div class="kilometrage synthese_vehicule">
 					<h3>Kilométrage</h3>
-					<p>Kilometrage estimé: depuis l'achat <?php echo $estimation_km['estimation_km_achat'];?> km (<?php echo $estimation_km['moy_annuelle_km_achat'];?>km/an) / depuis la mise en circulation <?php echo $estimation_km['estimation_km_totale'];?> km (<?php echo $estimation_km['moy_annuelle_km_totale'];?>km/an).</p>
+					<p><strong>Kilometrage estimé:</strong> depuis l'achat <strong><?php echo $estimation_km['estimation_km_achat'];?> km </strong>(<?php echo $estimation_km['moy_annuelle_km_achat'];?>km/an) / depuis la mise en circulation <?php echo $estimation_km['estimation_km_totale'];?> km (<?php echo $estimation_km['moy_annuelle_km_totale'];?>km/an).
 					<?php if(!empty($releve_kilometrique))
 					{?>
-						<p>Dernier relevé <?php echo $releve_kilometrique['km_releve'];?>km, le <?php echo $releve_kilometrique['date_releve'];?></p>
+						</br>Dernier relevé <strong><?php echo $releve_kilometrique['km_releve'];?>km, le <?php echo $releve_kilometrique['date_releve'];?></strong> </p>
 					<?php }
 					else 
 					{?>
