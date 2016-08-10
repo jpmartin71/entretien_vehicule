@@ -84,14 +84,14 @@ article div.synthese_vehicule
 
 article div.synthese_vehicule h3
 {
-	margin: 0px;
+	margin: -10px -10px 0px -10px;
 	padding: 5px;
 	color: white;
 	background: blue;
 }
 article div.synthese_vehicule p
 {
-	margin:0px;	
+	margin:5px;	
 }
 
 article div.infos_vehicule
