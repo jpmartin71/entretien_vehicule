@@ -1,7 +1,7 @@
 article,
 aside
 {
-	border: 1px solid blue;
+	border: 1px solid navy;
 	border-radius: 4px;
 	margin-top: 10px;
 	display: inline-block;
@@ -59,11 +59,6 @@ ul.vehicule_acceuil li a
 	display:table-cell;
 }
 
-div.synthese_vehicule
-{
- 	text-align:center;
-}
-
 table
 {
 	text-align:center;
@@ -80,20 +75,21 @@ table
 {
 	border-collapse: collapse;
 }
-
-article div.infos_vehicule,
-article div.ope_a_echeance,
-article div.ope_a_venir,
-article div.kilometrage
+article div.synthese_vehicule
 {
-	border-bottom: 1px solid blue;
+ 	text-align:center;
+ 	border-bottom: 1px solid blue;
+}
+
+article div.infos_vehicule
+{
+	background:navy;
+	color:white;
 }
 
 article div.infos_vehicule h2
 {
-	background-color: silver;
 	margin: 0px;
-	padding: 20px;
 }
 
 aside
