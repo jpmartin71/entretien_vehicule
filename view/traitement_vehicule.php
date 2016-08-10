@@ -128,7 +128,7 @@
 						<li>1ere mise en circulation:<br><?php echo $vehicule['date_1_immat'];?></li>
 						<li>VIN:<br><?php echo $vehicule['vin'];?></li>
 						<li>Date d'achat:<br><?php echo $vehicule['date_achat'];?></li>
-						<li><a href="?form=update_vehicule&vehicule=<?php echo $vehicule['id'];?>">Modifier le véhicule</a></li>
+						<li class="lien_modif"><a href="?form=update_vehicule&vehicule=<?php echo $vehicule['id'];?>">Modifier le véhicule</a></li>
 					</ul>
 							
 					
