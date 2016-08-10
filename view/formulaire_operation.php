@@ -1,4 +1,3 @@
-<?php 	echo "</br>view formulaire opération"; ?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -14,6 +13,15 @@
 		<section>
 			<article >
 				<form class="form_operation" method="post" action="?action=create_operation">
+					<?php if((isset($_GET['form']) and $_GET['form']=='update_operation') or (isset($_GET['action']) and $_GET['action']=='update_operation'))
+					{?>
+						<h2>Modification de l'opération</h2>
+						<div class="form_operation retour_operation">
+							<a href="#">lien à definir</a>
+						</div> 
+					<?php
+					}
+					else{?> <h2>Création d'une opération</h2> <?php } ?>
 					<fieldset>
 						<div class="form_operation <?php if(isset($erreur_view['vehicule']))echo 'erreur';?>">
 							<?php if(isset($erreur_view['vehicule']))echo $erreur_view['vehicule'];?>
