@@ -1,5 +1,4 @@
 <?php
-echo "controler formulaire opération</br>";
 
 include_once './model/formulaire_operation.php';
 include_once './model/fonctions_divers.php';
@@ -22,5 +21,5 @@ if(!empty($liste_vehicules))
 	}
 }
 
-echo '</br>$liste_vehicules:';print_r($liste_vehicules);
+//echo '</br>$liste_vehicules:';print_r($liste_vehicules);
 include_once './view/formulaire_operation.php';
