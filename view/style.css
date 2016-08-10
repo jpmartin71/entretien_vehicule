@@ -31,6 +31,12 @@ aside
 	padding:10px;
 }
 
+.erreur p
+{
+	font-weight:bold;
+	margin:0px;
+}
+
 .no_erreur
 {
 	border-radius: 4px;
@@ -257,11 +263,13 @@ div.form_vehicule label
 	width:auto;
 }
 
-div.form_vehicule input[type="submit"]
+div.form_vehicule input[type="submit"],
+div.form_vehicule input[type="reset"]
 {
 	width:49%;
 	background:blue;
 	color:white;
+	float:none;
 }
 
 /*div.form_vehicule label[for="possession"]
