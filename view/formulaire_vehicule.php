@@ -13,23 +13,14 @@
 
 		<section>
 			<article>
-				<?php if((isset($_GET['form']) and $_GET['form']=='update_vehicule') or (isset($_GET['action']) and $_GET['action']=='update_vehicule'))
-				{?>
-					<form class="form_vehicule" method="post" action="?page=vehicule&vehicule=<?php echo $vehicule['id'];?>">
-						<input type="submit" value="Retour à la page du vehicule"/>
-					</form>
-				<?php
-				}?>
 				<form class="form_vehicule" method="post" action="<?php echo $action_form;?>" >
 					<?php if((isset($_GET['form']) and $_GET['form']=='update_vehicule') or (isset($_GET['action']) and $_GET['action']=='update_vehicule'))
-				{?>
-					<h2>Modification de véhicule</h2>
-					<form class="form_vehicule" method="post" action="?page=vehicule&vehicule=<?php echo $vehicule['id'];?>">
-						<input type="submit" value="Retour à la page du vehicule"/>
-					</form>
-				<?php
-				}
-				else{?> <h2>Création de véhicule</h2> <?php } ?>
+					{?>
+						<h2>Modification de véhicule</h2>
+						<a href="?page=vehicule&vehicule=<?php echo $vehicule['id'];?>">Retour à la page du vehicule"</a>
+					<?php
+					}
+					else{?> <h2>Création de véhicule</h2> <?php } ?>
 					<div class="form_vehicule">
 						<label for="marque">Marque:</label>
 						<input type="text" name="marque" id="marque"  value="<?php echo $vehicule['marque'];?>">
