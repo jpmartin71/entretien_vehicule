@@ -285,11 +285,23 @@ div.form_vehicule input[type="reset"]
 	color:white;
 	float:none;
 }
-
-/*div.form_vehicule label[for="possession"]
-{
-	width:auto;
-}*/
 	
+	
+div.retour_vehicule
+{
+	text-align: center;
+	background: blue none repeat scroll 0% 0%;
+	color: white;
+	width: 60%;
+	margin: 0px auto 10px;
+	border: 2px outset;
+}
+
+div.retour_vehicule a
+{
+	color: white;
+	text-decoration: none;
+}	
+
 	
 	
