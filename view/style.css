@@ -232,7 +232,8 @@ div.form_operation label
 	display:inline-block;	
 }
 
-div.form_operation input:not([type="checkbox"])
+div.form_operation input:not([type="checkbox"]),
+div.form_operation select
 {
 	width:150px;
 	float:right;
@@ -250,6 +251,11 @@ div.form_operation input[type="reset"]
 	background:blue;
 	color:white;
 	float:none;
+}
+
+div.form_operation textarea
+{
+	width: 100%;
 }
 /*
 div.form_operation
@@ -278,10 +284,7 @@ form.form_operation label.label_checkbox
 	width:auto;
 }
 
-form.form_operation textarea
-{
-	width: 100%;
-}
+
 */
 
 /*formulaire vehicule------------------------------------------------------*/
