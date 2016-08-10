@@ -18,7 +18,7 @@ nav ul
 {
 	background-color: navy;
 	padding: 5px;
-	border-radius: 5px;
+	border-radius: 10px;
 }
 nav ul li
 {
@@ -28,13 +28,14 @@ nav ul li
 	border:1px solid white;
 	margin:0px;
 	padding:5px;
+	border-radius: 5px;
 }
 
 nav ul li a
 {
 	background-color: navy;
 	padding: 5px;
-	border-radius: 5px;
+	color:white;
 }
 
 
