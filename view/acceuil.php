@@ -12,13 +12,15 @@
 		<?php include_once 'erreurs.php';?>
 		<section>
 			<article>
-				<?php
-				foreach ($liste_vehicule as $vehicule) 
-				{?>
-					<div class="vehicule_acceuil"><a  href="?page=vehicule&vehicule=<?php echo $vehicule['id'];?>"><?php echo $vehicule['marque'].'</br>'.$vehicule['modele'];?></a></div>
-				<?php
-				}
-				?>
+				<div class="parent_vehicule_acceuil">
+					<?php
+					foreach ($liste_vehicule as $vehicule) 
+					{?>
+						<div class="vehicule_acceuil"><a  href="?page=vehicule&vehicule=<?php echo $vehicule['id'];?>"><?php echo $vehicule['marque'].'</br>'.$vehicule['modele'];?></a></div>
+					<?php
+					}
+					?>	
+				</div>
 
 			</article>
 			<aside>
