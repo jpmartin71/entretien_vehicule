@@ -122,12 +122,19 @@ article.synthese_vehicule
 {
 	display:inline-block;
 }
+aside.synthese_vehicule h3
+{
+	margin: 0px;
+	text-align: center;
+	background: navy;
+	color: white;
+}
 
 aside.synthese_vehicule ul
 {
 	list-style-type: none;
 	padding:0px;
-	margin-bottom:0px;
+	margin:0px;
 }
 
 aside.synthese_vehicule ul li
@@ -139,7 +146,7 @@ aside.synthese_vehicule ul li
 aside.synthese_vehicule ul li.lien_modif
 {
 	border: medium none;
-	background-color: navy;
+	background-color: blue;
 	text-align: center;
 }
 
