@@ -319,7 +319,7 @@ form.form_vehicule h2
 
 div.form_vehicule
 {
-	margin:5px;
+	margin:10px;
 }
 
 div.form_vehicule input:not([type="checkbox"]),
