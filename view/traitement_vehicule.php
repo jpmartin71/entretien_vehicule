@@ -42,6 +42,7 @@
 					<h3>Opérations arrivées à échéance</h3>
 					<table>
 						<tr>
+							<th>Valider</th>
 							<th>Dénomination</th>
 							<th>Date d'échéance</th>
 							<th>Echéance kilométrique</th>
