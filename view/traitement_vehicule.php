@@ -51,7 +51,12 @@
 						<?php foreach ($op_echeance as $operation) 
 						{?>
 							<tr>
-								<td><?php echo $operation['denomination'];?></td>
+								<td>
+									<form method='post' action='#'>
+										<input type='hidden' id='id' name='id' value'<?php echo $operation['id'];?>'>
+										<input type='submit' value='valid'>
+									</form>
+								</td>								<td><?php echo $operation['denomination'];?></td>
 								<td class="<?php if($operation['its_date']) echo 'echeance';?> "><?php echo $operation['echeance_date'];?></td>
 								<td class="<?php if($operation['its_km']) echo 'echeance';?> "><?php echo $operation['echeance_km'];?></td>
 								<td><?php echo $operation['effectuee_date'];?></td>
