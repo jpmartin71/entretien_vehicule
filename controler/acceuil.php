@@ -5,7 +5,7 @@
 
 	if(empty($liste_vehicule))
 	{
-		include_once './view/formulaire_vehicule.php';
+		include_once './controler/formulaire_vehicule.php';
 	}
 	else
 	{
