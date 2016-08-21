@@ -57,7 +57,8 @@
 										<input type='hidden' id='id' name='id' value'<?php echo $operation['id'];?>'>
 										<input type='submit' value='valid'>
 									</form>
-								</td>								<td><?php echo $operation['denomination'];?></td>
+								</td>			
+								<td><?php echo $operation['denomination'];?></td>
 								<td class="<?php if($operation['its_date']) echo 'echeance';?> "><?php echo $operation['echeance_date'];?></td>
 								<td class="<?php if($operation['its_km']) echo 'echeance';?> "><?php echo $operation['echeance_km'];?></td>
 								<td><?php echo $operation['effectuee_date'];?></td>
@@ -89,7 +90,7 @@
 										<input type='hidden' id='id' name='id' value'<?php echo $operation['id'];?>'>
 										<input type='submit' value='valid'>
 									</form>
-								</td>								<td><?php echo $operation['denomination'];?></td>
+								</td>
 								<td><?php echo $operation['denomination'];?></td>
 								<td class="<?php if($operation['its_date']) echo 'echeance';?> "><?php echo $operation['echeance_date'];?></td>
 								<td class="<?php if($operation['its_km']) echo 'echeance';?> "><?php echo $operation['echeance_km'];?></td>
@@ -123,7 +124,7 @@
 										<input type='hidden' id='id' name='id' value'<?php echo $operation['id'];?>'>
 										<input type='submit' value='valid'>
 									</form>
-								</td>								<td><?php echo $operation['denomination'];?></td>
+								</td>
 								<td><?php echo $operation['denomination'];?></td>
 								<td><?php echo $operation['echeance_date'];?></td>
 								<td><?php echo $operation['echeance_km'];?></td>
