@@ -322,6 +322,11 @@ div.form_vehicule
 	margin:10px;
 }
 
+div.form-vehicule.erreur
+{
+	margin:10px -5px 10px -5px;
+}
+
 div.form_vehicule input:not([type="checkbox"]),
 div.form_vehicule select,
 div.form_vehicule label
