@@ -18,6 +18,11 @@ elseif(isset($_GET['form']) and $_GET['form']=='update_vehicule')
 	}
 	else header('location:?');
 }
+else
+{
+	$action_form='?action=create_vehicule';
+	$text_submit='Creer le vehicule';	
+}
 
 	
 if(isset($_GET['action']) and $_GET['action']=='create_vehicule')
