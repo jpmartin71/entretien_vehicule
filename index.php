@@ -8,8 +8,8 @@ ini_set('display_startup_errors',1);
 
 foreach ($_GET as $key => $value) $_GET[$key]=htmlspecialchars($value);
 foreach ($_POST as $key => $value) $_POST[$key]=htmlspecialchars($value);
-/*	echo '$_GET:';print_r($_GET);	
-	echo '</br>$_POST:';print_r($_POST);*/
+	//echo '$_GET:';print_r($_GET);	
+	//echo '</br>$_POST:';print_r($_POST);
 
 	include_once("./model/connexion_sql.php");
 	
