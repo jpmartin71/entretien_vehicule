@@ -73,6 +73,7 @@
 					<p><?php echo $date_limite->format('d/m/Y');?> ou <?php echo $km_limite;?>km</p>
 					<table>
 						<tr>
+							<th>Valider</th>
 							<th>Dénomination</th>
 							<th>Date d'échéance</th>
 							<th>Echéance kilométrique</th>
@@ -83,6 +84,12 @@
 						{?>
 							
 							<tr>
+								<td>
+									<form method='post' action='#'>
+										<input type='hidden' id='id' name='id' value'<?php echo $operation['id'];?>'>
+										<input type='submit' value='valid'>
+									</form>
+								</td>								<td><?php echo $operation['denomination'];?></td>
 								<td><?php echo $operation['denomination'];?></td>
 								<td class="<?php if($operation['its_date']) echo 'echeance';?> "><?php echo $operation['echeance_date'];?></td>
 								<td class="<?php if($operation['its_km']) echo 'echeance';?> "><?php echo $operation['echeance_km'];?></td>
@@ -101,6 +108,7 @@
 					{?>
 						<table>
 							<tr>
+								<th>Valider</th>
 								<th>Dénomination</th>
 								<th>Date d'échéance</th>
 								<th>Echéance kilométrique</th>
@@ -110,6 +118,12 @@
 						<?php foreach ($operations as $operation) 
 						{?>
 							<tr>
+								<td>
+									<form method='post' action='#'>
+										<input type='hidden' id='id' name='id' value'<?php echo $operation['id'];?>'>
+										<input type='submit' value='valid'>
+									</form>
+								</td>								<td><?php echo $operation['denomination'];?></td>
 								<td><?php echo $operation['denomination'];?></td>
 								<td><?php echo $operation['echeance_date'];?></td>
 								<td><?php echo $operation['echeance_km'];?></td>
