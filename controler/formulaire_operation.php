@@ -34,6 +34,7 @@ if (isset($_GET['form']) and $_GET['form']=='valid_operation')
 		$opreration['effectuee_date']=date('Y-m-d');
 		if(isset($_POST['km_estimes']) and is_numeric($_POST['km_estimes']))$operation['effectuee_km']=$_POST['km_estimes'];
 		else $operation['effectuee_km']=0;
+		$action='?action=valid_operation';
 		
 	}
 	else header('location:?');
@@ -48,6 +49,7 @@ else
 			$liste_vehicules[$key]['libelle']=$vehicule['marque'].' - '.$vehicule['modele'];
 		}
 	}
+	$action='?action=create_operation';
 }
 	
 
