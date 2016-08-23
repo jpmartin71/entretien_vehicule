@@ -20,6 +20,9 @@ if(isset($_GET['action']) and $_GET['action']=='create_operation')
 {
 	include_once './controler/create_update_operation.php';
 }
+
+$liste_vehicules=get_liste_vehicule();
+	
 if (isset($_GET['form']) and $_GET['form']=='valid_operation')
 {
 	if(isset($_POST['id_vehicule']) and isset($_POST['id_operation']))
@@ -37,7 +40,6 @@ if (isset($_GET['form']) and $_GET['form']=='valid_operation')
 }
 else
 {
-	$liste_vehicules=get_liste_vehicule();
 	if(!empty($liste_vehicules))
 	{
 		foreach ($liste_vehicules as $key => $vehicule) 
