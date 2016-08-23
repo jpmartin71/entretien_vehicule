@@ -26,16 +26,26 @@
 						<div class="form_operation <?php if(isset($erreur_view['vehicule']))echo 'erreur';?>">
 							<?php if(isset($erreur_view['vehicule']))echo $erreur_view['vehicule'];?>
 							<label for="id_vehicule">Véhicule:</label>
-							<select name="id_vehicule" id="id_vehicule" >
-								<option value='0' selected>Choisir un vehicule</option>
-								<?php	foreach($liste_vehicules as $vehicule)
-								{?> 
-								<option value='<?php echo $vehicule['id'];?>' <?php if ($operation['id_vehicule']==$vehicule['id'])echo 'selected';?>>
-									<?php echo $vehicule['libelle'];?>
-								</option>
-								<?php
-								}?>
-							</select>
+							<?php if(isset($_GET['form']) and $_GET['form']=='valid_operation')
+							{ ?>
+								<input type='text' value='<?php echo $vehicule['id']; ?>' <?php echo $enable_input['id_vehicule']; ?>><?php echo $vehicule['libelle'];?> >
+							<?php
+							}
+							else
+							{ ?>
+								<select name="id_vehicule" id="id_vehicule" >
+									<option value='0' selected>Choisir un vehicule</option>
+									<?php	foreach($liste_vehicules as $vehicule)
+									{?> 
+									<option value='<?php echo $vehicule['id'];?>' <?php if ($operation['id_vehicule']==$vehicule['id'])echo 'selected';?>>
+										<?php echo $vehicule['libelle'];?>
+									</option>
+									<?php
+									}?>
+								</select>
+							<?php
+							}?>
+						
 						</div>
 						<div class="form_operation <?php if(isset($erreur_view['denomination']))echo 'erreur';?>">
 							<?php if(isset($erreur_view['denomination']))echo $erreur_view['denomination'];?>
