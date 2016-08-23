@@ -21,13 +21,12 @@ if(isset($_GET['action']) and $_GET['action']=='create_operation')
 	include_once './controler/create_update_operation.php';
 }
 
-$liste_vehicules=get_liste_vehicule();
-	
 if (isset($_GET['form']) and $_GET['form']=='valid_operation')
 {
 	if(isset($_POST['id_vehicule']) and isset($_POST['id_operation']))
 	{
 		$vehicule=get_infos_vehicule($_POST['id_vehicule']);
+		$vehicule['libelle']=$vehicule['marque'].' - '.$vehicule['modele'];
 		$operation=get_operation($_POST['id_vehicule']);
 		$enable_input['effectuee_km']='';
 		$enable_input['effectuee_date']='';
@@ -35,11 +34,13 @@ if (isset($_GET['form']) and $_GET['form']=='valid_operation')
 		$opreration['effectuee_date']=date('Y-m-d');
 		if(isset($_POST['km_estimes']) and is_numeric($_POST['km_estimes']))$operation['effectuee_km']=$_POST['km_estimes'];
 		else $operation['effectuee_km']=0;
+		
 	}
 	else header('location:?');
 }
 else
 {
+	$liste_vehicules=get_liste_vehicule();
 	if(!empty($liste_vehicules))
 	{
 		foreach ($liste_vehicules as $key => $vehicule) 
