@@ -12,7 +12,7 @@
 		<?php include_once 'erreurs.php';?>
 		<section>
 			<article >
-				<form class="form_operation" method="post" action="?action=create_operation">
+				<form class="form_operation" method="post" action='<?php echo $action; ?>'>
 					<?php if((isset($_GET['form']) and $_GET['form']=='update_operation') or (isset($_GET['action']) and $_GET['action']=='update_operation'))
 					{?>
 						<h2>Modification de l'opération</h2>
@@ -34,7 +34,7 @@
 							}
 							else
 							{ ?>
-								<select name="id_vehicule" name="id_vehicule" >
+								<select name="id_vehicule" name="id_vehicule" <?php echo $enable_input['id_vehicule']; ?>>
 									<option value='0' selected>Choisir un vehicule</option>
 									<?php	foreach($liste_vehicules as $vehicule)
 									{?> 
@@ -51,7 +51,7 @@
 						<div class="form_operation <?php if(isset($erreur_view['denomination']))echo 'erreur';?>">
 							<?php if(isset($erreur_view['denomination']))echo $erreur_view['denomination'];?>
 							<label for="denomination">Dénomination:</label>
-							<input type="text" name="denomination" id="denomination" value="<?php echo $operation['denomination'];?>">
+							<input type="text" name="denomination" id="denomination" value="<?php echo $operation['denomination'];?>" <?php echo $enable_input['denomination']; ?>>
 						</div>
 					</fieldset>
 					
@@ -61,7 +61,7 @@
 							<div class="form_operation">
 								<?php if(isset($erreur_view['periodicite_km']))echo $erreur_view['periodicite_km'];?>	
 								<label for="periodicite_km">Périodicité (en km)</label>
-								<input type="number" name="periodicite_km" id="periodicite_km" value="<?php echo $operation['periodicite_km'];?>" <?php if(isset($_POST['inib_periodicite_km']))echo 'disabled';?>>
+								<input type="number" name="periodicite_km" id="periodicite_km" value="<?php echo $operation['periodicite_km'];?>" <?php echo $enable_input['inib_periodicite_km']; ?>><!--<?php if(isset($_POST['inib_periodicite_km']))echo 'disabled';?>-->
 							</div>	
 							<div class="form_operation">
 								<input type="checkbox" onchange="checkbox_inib_periodicite_km()" name="inib_periodicite_km" id="inib_periodicite_km" <?php if(isset($_POST['inib_periodicite_km']))echo 'checked';?> />
