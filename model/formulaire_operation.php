@@ -20,7 +20,7 @@ function get_infos_vehicule($id_vehicule)
 	$req->execute(array('id' => $id_vehicule));
 	$infos=$req->fetch();
 	$req->closecursor();
-return $infos;
+	return $infos;
 }
 
 //ajout d'une nouvelle opération
@@ -39,4 +39,15 @@ function create_operation($operation)
 				':echeance_date'=>$operation['echeance_date'],
 				':observations'=>$operation['obs']));
 	
+}
+
+//recupere une operation
+function get_operation($id_operation)
+{
+	global $bdd;
+	$req=$bdd->prepare('SELECT * FROM operations WHERE id=:id');
+	$req->execute(array('id' => $id_operation));
+	$infos=$req->fetch();
+	$req->closecursor();
+	return $infos;
 }
