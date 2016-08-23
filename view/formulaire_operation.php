@@ -28,12 +28,13 @@
 							<label for="id_vehicule">Véhicule:</label>
 							<?php if(isset($_GET['form']) and $_GET['form']=='valid_operation')
 							{ ?>
-								<input type='text' value='<?php echo $vehicule['id']; ?>' <?php echo $enable_input['id_vehicule']; ?>><?php echo $vehicule['libelle'];?> >
+								<input type='hidden' id='id_vehicule' name='id_vehicule' value='<?php echo $vehicule['id']; ?>'
+								<input type='text' value='<?php echo $vehicule['libelle'];?>' <?php echo $enable_input['id_vehicule']; ?>>
 							<?php
 							}
 							else
 							{ ?>
-								<select name="id_vehicule" id="id_vehicule" >
+								<select name="id_vehicule" name="id_vehicule" >
 									<option value='0' selected>Choisir un vehicule</option>
 									<?php	foreach($liste_vehicules as $vehicule)
 									{?> 
