@@ -53,9 +53,10 @@
 						{?>
 							<tr>
 								<td>
-									<form method='post' action='#'>
+									<form method='post' action='?form=valid_operation'>
 										<input type='hidden' id='id_operation' name='id_operation' value='<?php echo $operation['id'];?>'>
 										<input type='hidden' id='id_vehicule' name='id_vehicule' value='<?php echo $vehicule['id'];?>'>
+										<input type='hidden' id='km_estimes' name='km_estimes' value='<?php echo $estimation_km['estimation_km_achat'];?>'>
 										<input type='submit' value='valid'>
 									</form>
 								</td>			
