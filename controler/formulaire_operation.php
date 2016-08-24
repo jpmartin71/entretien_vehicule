@@ -4,7 +4,16 @@ include_once './model/formulaire_operation.php';
 include_once './model/fonctions_divers.php';
 
 //$operation pour le remplissage des champs
-$operation=array('id'=>null,'id_vehicule'=>null, 'denomination'=>null, 'periodicite_km'=>null, 'periodicite_tps'=>null, 'effectuee_km'=>null, 'effectuee_date'=>null, 'echeance_km'=>null, 'echeance_date'=>null, 'obs'=>null);
+$operation=array('id'=>null,
+			'id_vehicule'=>null, 
+			'denomination'=>null, 
+			'periodicite_km'=>null, 
+			'periodicite_tps'=>null, 
+			'effectuee_km'=>null, 
+			'effectuee_date'=>null, 
+			'echeance_km'=>null, 
+			'echeance_date'=>null, 
+			'observations'=>null);
 //$enable_input pour l'activation des champs
 $enable_input=array('id_vehicule'=>'disabled', 
 			'denomination'=>'disabled', 
@@ -15,7 +24,7 @@ $enable_input=array('id_vehicule'=>'disabled',
 			'echeance_km'=>'disabled','echeance_date'=>'disabled',
 			'obs'=>'disabled');
 
-$btn_retour='';
+$btn_retour='<a href="?">Retour aceuil</a>';
 
 //verification des information du post avant de creer la ligne sql ou renvoie au formulaire pour correction
 if(isset($_GET['action']) and $_GET['action']=='create_operation')
@@ -56,5 +65,5 @@ else
 	$titre_formulaire='Création d\'une opération';
 }	
 
-echo '</br>$enable_input:';print_r($enable_input);
+//echo '</br>$enable_input:';print_r($enable_input);
 include_once './view/formulaire_operation.php';
