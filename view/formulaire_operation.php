@@ -105,7 +105,7 @@
 									onchange="checkbox_inib_periodicite_tps()" 
 									name="inib_periodicite_tps" 
 									id="inib_periodicite_tps" 
-									<?php echo $enable_input['inib_periodicite_tps']; ?> 
+									<?php echo $enable_input['inib_periodicite_tps'].' '; ?> 
 									<?php if(isset($_POST['inib_periodicite_tps']))echo 'checked';?>/>
 								<label for="inib_periodicite_tps" 
 									class="label_checkbox"
@@ -138,8 +138,8 @@
 							<label for="effectuee_date">Effectué le (jj/mm/aaaa):</label>
 							<input type="date" 
 								name="effectuee_date" 
-								id="effectuee_date" value="
-								<?php if($operation['effectuee_date']!=null)echo date_create($operation['effectuee_date'])->format('Y-m-d');?>" 
+								id="effectuee_date" 
+								value="<?php if($operation['effectuee_date']!=null)echo date_create($operation['effectuee_date'])->format('Y-m-d');?>" 
 								<?php echo $enable_input['effectuee_date']; ?>>
 							</br>
 						</div>
