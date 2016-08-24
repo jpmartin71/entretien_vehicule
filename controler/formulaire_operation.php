@@ -40,7 +40,7 @@ if (isset($_GET['form']) and $_GET['form']=='valid_operation')
 	}
 	else header('location:?');
 }
-else
+else 
 {
 	$liste_vehicules=get_liste_vehicule();
 	if(!empty($liste_vehicules))
@@ -52,7 +52,7 @@ else
 	}
 	$action='?action=create_operation';
 	$titre_formulaire='Création d\'une opération';
-	
+}	
 
 //echo '</br>$liste_vehicules:';print_r($liste_vehicules);
 include_once './view/formulaire_operation.php';
