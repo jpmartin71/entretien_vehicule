@@ -15,7 +15,6 @@
 				<form class="form_operation" method="post" action='<?php echo $action; ?>'>
 					<h2><?php echo $titre_formulaire; ?></h2>
 					<div class="retour_vehicule"><?php echo $btn_retour; ?></div>
-					<?php echo $btn_retour; ?>
 					<?php if((isset($_GET['form']) and $_GET['form']=='update_operation') or (isset($_GET['action']) and $_GET['action']=='update_operation'))
 					{?>
 						
