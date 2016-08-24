@@ -136,14 +136,25 @@ echo '</br>$erreur effectuée date:';print_r($erreur&32);*/
 if($erreur==0)
 {
 	//code pour ajout sql
-	create_operation($operation);
-	$no_erreur_view['view']='Opération ajoutée avec succès.';
-	$operation=array('id_vehicule'=>null, 'denomination'=>null, 'periodicite_km'=>null, 'periodicite_tps'=>null, 'effectuee_km'=>null, 'effectuee_date'=>null, 'echeance_km'=>null, 'echeance_date'=>null, 'obs'=>null);
+	if($_GET['action']=='create_operation')
+	{
+		create_operation($operation);
+		$no_erreur_view['view']='Opération ajoutée avec succès.';
+		$operation=array('id_vehicule'=>null, 'denomination'=>null, 'periodicite_km'=>null, 'periodicite_tps'=>null, 'effectuee_km'=>null, 'effectuee_date'=>null, 'echeance_km'=>null, 'echeance_date'=>null, 'obs'=>null);
+	}
+	elseif($_GET['action']=='valid_operation')
+	{
+		//update operation
+		//archive operation
+		
+		$no_erreur_view['view']='Opération realisé avec succès.';
+	}
 
 }
 else
 {
-	$erreur_view['view']='Echec de la création de l\'opération.</br>Corriger les champs.';
+	if($_GET['action']=='create_operation')$erreur_view['view']='Echec de la création de l\'opération.</br>Corriger les champs.';
+	elseif($_GET['action']=='valid_operation')$erreur_view['view']='Echec de la l\'enregistrement de l\'opération.</br>Corriger les champs.';
 	if(($erreur & 1)!=0)$erreur_view['vehicule']='<p>Veuillez selectionner un véhicule</p>';
 	if(($erreur & 2)!=0)$erreur_view['denomination']='<p>Saisir l\'intitulé de l\'operation</p>';
 	if(($erreur & 4)!=0)$erreur_view['periodicite_km']='<p>Saisir un nombre de km ou cocher la case "Pas de périodicité kilométrique"</p>';
