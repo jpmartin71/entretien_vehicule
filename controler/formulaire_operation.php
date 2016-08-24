@@ -38,7 +38,7 @@ if (isset($_GET['form']) and $_GET['form']=='valid_operation')
 		else $operation['effectuee_km']=0;
 		$action='?action=valid_operation';
 		$titre_formulaire='Réalisation d\'une opération<br>sur '.$vehicule['libelle'];
-		$btn_retour='<div class="retour_vehicule""><a href="?page=vehicule&vehicule='.$vehicule['id'].'">Retour au vehicule</a></div>';
+		$btn_retour='<a href="?page=vehicule&vehicule='.$vehicule['id'].'">Retour au vehicule</a>';
 	}
 	else header('location:?');
 }
