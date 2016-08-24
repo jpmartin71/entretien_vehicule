@@ -17,12 +17,12 @@ $operation=array('id'=>null,
 //$enable_input pour l'activation des champs
 $enable_input=array('id_vehicule'=>'readonly', 
 			'denomination'=>'readonly', 
-			'periodicite_km'=>'disabled', 'inib_periodicite_km'=>'disabled',
-			'periodicite_tps'=>'disabled', 'inib_periodicite_tps'=>'disabled',
-			'inib_effectuee'=>'disabled',
-			'effectuee_km'=>'disabled', 'effectuee_date'=>'disabled',
-			'echeance_km'=>'disabled','echeance_date'=>'disabled',
-			'obs'=>'disabled');
+			'periodicite_km'=>'readonly', 'inib_periodicite_km'=>'readonly',
+			'periodicite_tps'=>'readonly', 'inib_periodicite_tps'=>'readonly',
+			'inib_effectuee'=>'readonly',
+			'effectuee_km'=>'readonly', 'effectuee_date'=>'readonly',
+			'echeance_km'=>'readonly','echeance_date'=>'readonly',
+			'obs'=>'readonly');
 
 $btn_retour='<a href="?">Retour aceuil</a>';
 
