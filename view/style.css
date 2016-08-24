@@ -55,6 +55,10 @@ form
 	color:green;
 	padding:10px;
 }
+[readonly]
+{
+	background: #dddddd;
+}
 
 /*barre de navigation---------------------------------------------------------------*/
 nav ul
