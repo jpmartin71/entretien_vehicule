@@ -35,8 +35,7 @@ if (isset($_GET['form']) and $_GET['form']=='valid_operation')
 		if(isset($_POST['km_estimes']) and is_numeric($_POST['km_estimes']))$operation['effectuee_km']=$_POST['km_estimes'];
 		else $operation['effectuee_km']=0;
 		$action='?action=valid_operation';
-		$titre_formulaire='Réalisation d\'une opération<br>sur'.$vehicule['libelle'];
-		
+		$titre_formulaire='Réalisation d\'une opération<br>sur '.$vehicule['libelle'];
 	}
 	else header('location:?');
 }
