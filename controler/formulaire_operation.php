@@ -15,6 +15,8 @@ $enable_input=array('id_vehicule'=>'disabled',
 			'echeance_km'=>'disabled','echeance_date'=>'disabled',
 			'obs'=>'disabled');
 
+$btn_retour='';
+
 //verification des information du post avant de creer la ligne sql ou renvoie au formulaire pour correction
 if(isset($_GET['action']) and $_GET['action']=='create_operation')
 {
@@ -36,6 +38,7 @@ if (isset($_GET['form']) and $_GET['form']=='valid_operation')
 		else $operation['effectuee_km']=0;
 		$action='?action=valid_operation';
 		$titre_formulaire='Réalisation d\'une opération<br>sur '.$vehicule['libelle'];
+		$btn_retour='<div class="retour_vehicule""><a href="?page=vehicule&vehicule='.$vehicule['id'].'">Retour au vehicule</a></div>';
 	}
 	else header('location:?');
 }
