@@ -178,6 +178,11 @@
 					</fieldset>
 					<div class="form_operation">
 						<input type="hidden" name="id_operation" id="id_operation" value="<?php echo $operation['id'];?>">
+						<?php if(isset($_POST['km_estimes']) and is_numeric($_POST['km_estimes']))
+						{?>
+							<input type="hidden" name="km_estimes" id="km_estimes" value="<?php echo $_POST['km_estimes'];?>">	
+						<?php
+						}?>
 						<input type="submit" value="Créer">
 						<input type="reset" value="Reset"
 					</div>
