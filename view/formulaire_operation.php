@@ -177,7 +177,7 @@
 						<textarea name="obs" id="obs" ><?php echo $operation['observations'];?></textarea>
 					</fieldset>
 					<div class="form_operation">
-						<input type="hidden" name="" id="" value="">
+						<input type="hidden" name="id_operation" id="id_operation" value="<?php echo $operation['id'];?>">
 						<input type="submit" value="Créer">
 						<input type="reset" value="Reset"
 					</div>
