@@ -93,11 +93,6 @@
 							<div class="form_operation">
 								<?php if(isset($erreur_view['periodicite_tps']))echo $erreur_view['periodicite_tps'];?>		
 								<label for="periodicite_tps">Périodicité (en mois)</label>
-								<!--<input type="number" 
-									name="periodicite_tps" 
-									id="periodicite_tps" 
-									value="<?php echo $operation['periodicite_tps']; ?>" 
-									<?php echo $enable_input['periodicite_tps']; ?> >-->
 								<input type="number" 
 									name="periodicite_tps" 
 									id="periodicite_tps" 
