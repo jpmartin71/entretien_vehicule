@@ -54,5 +54,5 @@ else
 	$titre_formulaire='Création d\'une opération';
 }	
 
-//echo '</br>$liste_vehicules:';print_r($liste_vehicules);
+echo '</br>$enable_input:';print_r($enable_input);
 include_once './view/formulaire_operation.php';
