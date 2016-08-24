@@ -66,7 +66,7 @@
 							</div>	
 							<div class="form_operation">
 								<input type="checkbox" onchange="checkbox_inib_periodicite_km()" name="inib_periodicite_km" id="inib_periodicite_km" <?php echo $enable_input['inib_periodicite_km']; ?> <?php if(isset($_POST['inib_periodicite_km']))echo 'checked';?> />
-								<label for="inib_periodicite_km" class="label_checkbox">Pas de périodicité kilométrique</label>
+								<label for="inib_periodicite_km" class="label_checkbox" <?php echo $enable_input['inib_periodicite_km']; ?>>Pas de périodicité kilométrique</label>
 							</div>
 						</div>
 						
@@ -117,7 +117,7 @@
 					</fieldset>
 					<fieldset>
 						<legend>Observations:</legend>
-						<textarea name="obs" id="obs" ><?php echo $operation['obs'];?></textarea>
+						<textarea name="obs" id="obs" ><?php echo $operation['observations'];?></textarea>
 					</fieldset>
 					<div class="form_operation">
 						<input type="hidden" name="" id="" value="">
