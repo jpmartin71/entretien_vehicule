@@ -22,7 +22,7 @@
 						</div> 
 					<?php
 					}
-					
+					?>
 					<fieldset>
 						<div class="form_operation <?php if(isset($erreur_view['vehicule']))echo 'erreur';?>">
 							<?php if(isset($erreur_view['vehicule']))echo $erreur_view['vehicule'];?>
