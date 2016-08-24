@@ -15,8 +15,8 @@ $operation=array('id'=>null,
 			'echeance_date'=>null, 
 			'observations'=>null);
 //$enable_input pour l'activation des champs
-$enable_input=array('id_vehicule'=>'disabled', 
-			'denomination'=>'disabled', 
+$enable_input=array('id_vehicule'=>'readonly', 
+			'denomination'=>'readonly', 
 			'periodicite_km'=>'disabled', 'inib_periodicite_km'=>'disabled',
 			'periodicite_tps'=>'disabled', 'inib_periodicite_tps'=>'disabled',
 			'inib_effectuee'=>'disabled',
