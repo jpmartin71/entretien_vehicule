@@ -96,8 +96,8 @@
 								<input type="number" 
 									name="periodicite_tps" 
 									id="periodicite_tps" 
-									value="<?php echo $operation['periodicite_tps'];?>" 
-									<?php echo $enable_input['periodicite_tps']; ?>><?php echo $enable_input['periodicite_tps']; ?>
+									value="<?php echo $operation['periodicite_tps']; ?>" 
+									<?php echo $enable_input['periodicite_tps']; ?> ><
 	
 							</div>
 							<div class="form_operation">
@@ -105,7 +105,7 @@
 									onchange="checkbox_inib_periodicite_tps()" 
 									name="inib_periodicite_tps" 
 									id="inib_periodicite_tps" 
-									<?php echo $enable_input['inib_periodicite_tps'].' '; ?> 
+									<?php echo $enable_input['inib_periodicite_tps']; ?> 
 									<?php if(isset($_POST['inib_periodicite_tps']))echo 'checked';?>/>
 								<label for="inib_periodicite_tps" 
 									class="label_checkbox"
