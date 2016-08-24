@@ -51,7 +51,7 @@ else
 		}
 	}
 	$action='?action=create_operation';
-	$titre_formulaire='Création d\'une opération';'
+	$titre_formulaire='Création d\'une opération';
 	
 
 //echo '</br>$liste_vehicules:';print_r($liste_vehicules);
