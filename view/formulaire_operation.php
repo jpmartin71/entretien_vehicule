@@ -97,7 +97,7 @@
 									name="periodicite_tps" 
 									id="periodicite_tps" 
 									value="<?php echo $operation['periodicite_tps'];?>" 
-									<?php echo $enable_input['periodicite_tps']; ?>>
+									<?php echo $enable_input['periodicite_tps']; ?>><?php echo $enable_input['periodicite_tps']; ?>
 	
 							</div>
 							<div class="form_operation">
