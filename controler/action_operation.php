@@ -145,9 +145,12 @@ if($erreur==0)
 	elseif($_GET['action']=='valid_operation')
 	{
 		//update operation
+		//update_operation($operation);
 		//archive operation
+		//archive_operation($)
 		
-		$no_erreur_view['view']='Opération realisé avec succès.';
+		$no_erreur='valid_operation';
+		header('location:?page=vehicule&vehicule='.$operation['id_vehicule']);
 	}
 
 }
