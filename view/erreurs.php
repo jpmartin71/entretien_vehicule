@@ -5,6 +5,7 @@
 	{
 		if($_GET['no_erreur']=='create_vehicule')echo '<p class="no_erreur">Véhicule crée.</p>';
 		else if($_GET['no_erreur']=='releve_kilometrique')echo '<p class="no_erreur">Relevé kilométrique enregistré.</p>';
+		else if($_GET['no_erreur']=='valid_operation')echo '<p class="no_erreur">Opération réalisée.</p>';
 	}
 
 	if(isset($_GET['erreur']))
