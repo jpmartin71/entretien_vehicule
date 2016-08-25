@@ -150,7 +150,7 @@ if($erreur==0)
 		//archive_operation($)
 		
 		$no_erreur='valid_operation';
-		header('location:?page=vehicule&vehicule='.$operation['id_vehicule']);
+		header('location:?page=vehicule&vehicule='.$operation['id_vehicule'].'&no_erreur='.$noerreur);
 	}
 
 }
