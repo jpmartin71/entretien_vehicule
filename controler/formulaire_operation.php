@@ -49,6 +49,7 @@ if ((isset($_GET['form']) and $_GET['form']=='valid_operation') or
 		$action='?action=valid_operation';
 		$titre_formulaire='Réalisation d\'une opération<br>sur '.$vehicule['libelle'];
 		$btn_retour='<a href="?page=vehicule&vehicule='.$vehicule['id'].'">Retour au vehicule</a>';
+		$btn_submit='Valider';
 	}
 	else header('location:?');
 }
@@ -64,6 +65,7 @@ else
 	}
 	$action='?action=create_operation';
 	$titre_formulaire='Création d\'une opération';
+	$btn_submit='Valider';
 }	
 
 //echo '</br>$enable_input:';print_r($enable_input);
