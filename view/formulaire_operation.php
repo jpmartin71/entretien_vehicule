@@ -184,7 +184,7 @@
 							<input type="hidden" name="km_estimes" id="km_estimes" value="<?php echo $_POST['km_estimes'];?>">	
 						<?php
 						}?>
-						<input type="submit" value="Créer">
+						<input type="submit" value="<?php echo $btn_submit;?>">
 						<input type="reset" value="Reset"
 					</div>
 				</form>
