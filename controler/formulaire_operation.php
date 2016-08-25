@@ -27,7 +27,7 @@ $enable_input=array('id_vehicule'=>'readonly',
 $btn_retour='<a href="?">Retour aceuil</a>';
 
 //verification des information du post avant de creer la ligne sql ou renvoie au formulaire pour correction
-if(isset($_GET['action']) and ($_GET['action']=='create_operation' or $_GET['action']=='valid_operation')
+if(isset($_GET['action']) and ($_GET['action']=='create_operation' or $_GET['action']=='valid_operation'))
 {
 	include_once './controler/create_update_operation.php';
 }
