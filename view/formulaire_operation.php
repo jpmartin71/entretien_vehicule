@@ -30,7 +30,8 @@
 						<div class="form_operation <?php if(isset($erreur_view['vehicule']))echo 'erreur';?>">
 							<?php if(isset($erreur_view['vehicule']))echo $erreur_view['vehicule'];?>
 							<label for="id_vehicule">Véhicule:</label>
-							<?php if(isset($_GET['form']) and $_GET['form']=='valid_operation')
+							<?php if((isset($_GET['form']) and $_GET['form']=='valid_operation') or 
+									(isset($_GET['action']) and $_GET['action']=='valid_operation'))
 							{ ?>
 								<input type='hidden' id='id_vehicule' name='id_vehicule' value='<?php echo $vehicule['id']; ?>'>
 								<input type='text' id='lib_vehicule' name='lib_vehicule' value='<?php echo $vehicule['libelle'];?>' <?php echo $enable_input['id_vehicule']; ?>>
