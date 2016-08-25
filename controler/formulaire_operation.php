@@ -32,7 +32,8 @@ if(isset($_GET['action']) and ($_GET['action']=='create_operation' or $_GET['act
 	include_once './controler/create_update_operation.php';
 }
 
-if (isset($_GET['form']) and $_GET['form']=='valid_operation')
+if ((isset($_GET['form']) and $_GET['form']=='valid_operation') or
+	(isset($_GET['action']) and $_GET['action']=='valid_operation'))
 {
 	if(isset($_POST['id_vehicule']) and isset($_POST['id_operation']))
 	{
