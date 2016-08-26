@@ -145,7 +145,7 @@ if($erreur==0)
 	elseif($_GET['action']=='valid_operation')
 	{
 		//update operation
-		//update_operation($operation);
+		update_operation($operation);
 		//archive operation
 		//archive_operation($)
 		
