@@ -44,7 +44,7 @@ function create_operation($operation)
 //mise a jour operation
 function update_operation($operation)
 {
-echo '$operation model';print_r($operation);echo '<br>';
+echo '$operation model: ';print_r($operation);echo '<br>';
 	global $bdd;
 	$req=$bdd->prepare('	UPDATE 	operations 
 				SET 	id_vehicule=:id_vehicule,
@@ -69,6 +69,34 @@ echo '$operation model';print_r($operation);echo '<br>';
 				':observations'=>$operation['obs']));
 echo '$return';print_r($return);echo '<br>';
 }
+
+function archive_operation($operation)
+{
+	global $bdd;
+	$req=$bdd->prepare('INSERT INTO historique_operations (id_operation,
+													id_vehicule,
+													denomination,
+													periodicite_km,
+													periodicite_tps,
+													effectuee_km,
+													effectuee_date,
+													echeance_km,
+													echeance_date,
+													observations)
+				VALUE (:id_operation,:id_vehicule,:denomination,:periodicite_km,:periodicite_tps,:effectuee_km,:effectuee_date,:echeance_km,:echeance_date,:observations)');
+	$req->execute(array(':id_operation'=>$operation['id'],
+						':id_vehicule'=>$operation['id_vehicule'],
+						':denomination'=>$operation['denomination'],
+						':periodicite_km'=>$operation['periodicite_km'],
+						':periodicite_tps'=>$operation['periodicite_tps'],
+						':effectuee_km'=>$operation['effectuee_km'],
+						':effectuee_date'=>$operation['effectuee_date'],
+						':echeance_km'=>$operation['echeance_km'],
+						':echeance_date'=>$operation['echeance_date'],
+						':observations'=>$operation['obs']));
+	
+}
+
 
 //recupere une operation
 function get_operation($id_operation)

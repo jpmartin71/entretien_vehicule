@@ -153,7 +153,7 @@ if($erreur==0)
 		//update operation
 		update_operation($operation);
 		//archive operation
-		//archive_operation($)
+		archive_operation($operation);
 		
 		$no_erreur='valid_operation';
 		header('location:?page=vehicule&vehicule='.$operation['id_vehicule'].'&no_erreur='.$no_erreur);
