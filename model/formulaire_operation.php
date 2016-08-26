@@ -57,7 +57,7 @@ echo '$operation model';print_r($operation);echo '<br>';
 					echeance_date=:echeance_date,
 					observations=:observations
 				WHERE id=:id');
-	$req->execute(array(	':id'=>$operation['id'],
+	$return=$req->execute(array(	':id'=>$operation['id'],
 				':id_vehicule'=>$operation['id_vehicule'],
 				':denomination'=>$operation['denomination'],
 				':periodicite_km'=>$operation['periodicite_km'],
@@ -67,7 +67,7 @@ echo '$operation model';print_r($operation);echo '<br>';
 				':echeance_km'=>$operation['echeance_km'],
 				':echeance_date'=>$operation['echeance_date'],
 				':observations'=>$operation['obs']));
-echo '$req';print_r($req);echo '<br>';
+echo '$return';print_r($return);echo '<br>';
 }
 
 //recupere une operation
