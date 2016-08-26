@@ -43,7 +43,7 @@ if ((isset($_GET['form']) and $_GET['form']=='valid_operation') or
 		$enable_input['effectuee_km']='';
 		$enable_input['effectuee_date']='';
 		$enable_input['obs']='';
-		$opreration['effectuee_date']=date('Y-m-d');
+		$opreration['effectuee_date']=date_create()->format('Y-m-d');
 		if(isset($_POST['km_estimes']) and is_numeric($_POST['km_estimes']))$operation['effectuee_km']=$_POST['km_estimes'];
 		else $operation['effectuee_km']=0;
 		$action='?action=valid_operation';
