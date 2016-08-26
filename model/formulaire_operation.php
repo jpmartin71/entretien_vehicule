@@ -44,6 +44,7 @@ function create_operation($operation)
 //mise a jour operation
 function update_operation($operation)
 {
+echo '$operation model';print_r($operation);echo '<br>';
 	global $bdd;
 	$req=$bdd->prepare('	UPDATE 	operations 
 				SET 	id_vehicule=:id_vehicule,
@@ -66,6 +67,7 @@ function update_operation($operation)
 				':echeance_km'=>$operation['echeance_km'],
 				':echeance_date'=>$operation['echeance_date'],
 				':observations'=>$operation['obs']));
+echo '$req';print_r($req);echo '<br>';
 }
 
 //recupere une operation
