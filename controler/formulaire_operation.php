@@ -39,7 +39,7 @@ if ((isset($_GET['form']) and $_GET['form']=='valid_operation') or
 	{
 		$vehicule=get_infos_vehicule($_POST['id_vehicule']);
 		$vehicule['libelle']=$vehicule['marque'].' - '.$vehicule['modele'];
-		$operation=get_operation($_POST['id_vehicule']);
+		$operation=get_operation($_POST['id_operation']);
 		$enable_input['effectuee_km']='';
 		$enable_input['effectuee_date']='';
 		$enable_input['obs']='';
