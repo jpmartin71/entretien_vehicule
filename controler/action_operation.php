@@ -4,6 +4,12 @@
 	$erreur=0;
 	$vehicule=get_infos_vehicule($_POST['id_vehicule']);
 	
+	##id operation
+	if(isset($_POST['id_operation']) and $_GET['action']=='valid_operation')
+	{
+		$operation['id']=$_POST['id_operation'];
+	}
+	
 	##Vehicule
 	if(isset($_POST['id_vehicule']) and !empty($vehicule))
 	{//si id_vehicule est present et que le vehicule existe
