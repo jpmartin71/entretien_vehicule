@@ -178,7 +178,7 @@
 						<textarea name="obs" id="obs" ><?php echo $operation['observations'];?></textarea>
 					</fieldset>
 					<div class="form_operation">
-						<input type="hidden" name="id_operation" id="id_operation" value="<?php echo $operation['id'];?>">
+						<input type="hidden" name="id_operation" id="id_operation" value="<?php echo $operation['id_operation'];?>">
 						<?php if(isset($_POST['km_estimes']) and is_numeric($_POST['km_estimes']))
 						{?>
 							<input type="hidden" name="km_estimes" id="km_estimes" value="<?php echo $_POST['km_estimes'];?>">	
