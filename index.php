@@ -26,6 +26,7 @@ foreach ($_POST as $key => $value) $_POST[$key]=htmlspecialchars($value);
 	else if(isset($_GET['page']) and !empty($_GET['page']))
 	{
 		if($_GET['page']=='vehicule' and isset($_GET['vehicule']) and !empty($_GET['vehicule']))include_once './controler/traitement_vehicule.php';
+		elseif($_GET['page']=='operation')include_once './controler/traitement_operation.php';
 		else include_once './controler/acceuil.php';
 	}
 	else

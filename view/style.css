@@ -221,6 +221,22 @@ form.form_kilometrage legend
 	width: 150px;
 	display: inline-block;
 }
+/*traitement operation ----------------------------------------------------------*/
+article div.liste_operations
+{
+ 	text-align:center;
+ 	border-bottom: 1px solid navy;
+ 	padding:10px 10px 30px 10px;
+}
+
+article div.liste_operations h3
+{
+	margin: -10px -10px 0px -10px;
+	padding: 5px;
+	color: white;
+	background: blue;
+}
+
 
 /*formulaire operation ----------------------------------------------------------*/
 form.form_operation
@@ -279,35 +295,6 @@ form.form_operation fieldset textarea
 	resize: vertical;
 	height:100px;
 }
-/*
-div.form_operation
-{
-	padding:10px;
-
-}
-form.form_operation input:not([type="checkbox"]),
-form.form_operation select
-{
-	height: 30px;
-	margin-bottom: 5px;
-
-}
-
-form.form_operation input:not([type="checkbox"]),
-form.form_operation select,
-form.form_operation label
-{	
-	width:170px;
-	display:inline-block;	
-}
-
-form.form_operation label.label_checkbox
-{
-	width:auto;
-}
-
-
-*/
 
 /*formulaire vehicule------------------------------------------------------*/
 form.form_vehicule
