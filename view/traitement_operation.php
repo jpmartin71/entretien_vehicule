@@ -19,6 +19,7 @@
 						<tr>
 							<th>Modifier</th>
 							<th>Supprimer</th>
+							<th>Véhicule</th>
 							<th>Dénomination</th>
 							<th>Date d'échéance</th>
 							<th>Echéance kilométrique</th>
@@ -40,6 +41,7 @@
 										<input type='submit' value='Supprimer'>
 									</form>
 								</td>			
+								<td><?php echo $operation['marque'].' - '.$operation['modele'];?></td>
 								<td><?php echo $operation['denomination'];?></td>
 								<td class="<?php if($operation['its_date']) echo 'echeance';?> "><?php echo $operation['echeance_date'];?></td>
 								<td class="<?php if($operation['its_km']) echo 'echeance';?> "><?php echo $operation['echeance_km'];?></td>
